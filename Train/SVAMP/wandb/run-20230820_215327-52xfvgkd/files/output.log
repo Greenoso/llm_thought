@@ -1,0 +1,442 @@
+
+[2023-08-20 21:53:33,496] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.9.1, git-hash=unknown, git-branch=unknown
+[2023-08-20 21:53:43,556] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2023-08-20 21:53:43,560] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the client Optimizer
+[2023-08-20 21:53:43,560] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2023-08-20 21:53:43,585] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2023-08-20 21:53:43,585] [INFO] [utils.py:51:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2023-08-20 21:53:43,586] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 2 optimizer
+[2023-08-20 21:53:43,586] [INFO] [stage_1_and_2.py:133:__init__] Reduce bucket size 500,000,000
+[2023-08-20 21:53:43,586] [INFO] [stage_1_and_2.py:134:__init__] Allgather bucket size 500,000,000
+[2023-08-20 21:53:43,586] [INFO] [stage_1_and_2.py:135:__init__] CPU Offload: False
+[2023-08-20 21:53:43,586] [INFO] [stage_1_and_2.py:136:__init__] Round robin gradient partitioning: False
+Time to load utils op: 0.3148157596588135 seconds
+Rank: 0 partition count [1] and sizes[(50348034, False)]
+[2023-08-20 21:53:44,907] [INFO] [utils.py:785:see_memory_usage] Before initializing optimizer states
+[2023-08-20 21:53:44,908] [INFO] [utils.py:786:see_memory_usage] MA 12.9 GB         Max_MA 12.99 GB         CA 13.03 GB         Max_CA 13 GB
+[2023-08-20 21:53:44,909] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 32.63 GB, percent = 5.2%
+[2023-08-20 21:53:45,051] [INFO] [utils.py:785:see_memory_usage] After initializing optimizer states
+[2023-08-20 21:53:45,052] [INFO] [utils.py:786:see_memory_usage] MA 13.27 GB         Max_MA 13.83 GB         CA 13.97 GB         Max_CA 14 GB
+[2023-08-20 21:53:45,052] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 32.64 GB, percent = 5.2%
+[2023-08-20 21:53:45,052] [INFO] [stage_1_and_2.py:489:__init__] optimizer state initialized
+[2023-08-20 21:53:45,188] [INFO] [utils.py:785:see_memory_usage] After initializing ZeRO optimizer
+[2023-08-20 21:53:45,189] [INFO] [utils.py:786:see_memory_usage] MA 13.27 GB         Max_MA 13.27 GB         CA 13.97 GB         Max_CA 14 GB
+[2023-08-20 21:53:45,189] [INFO] [utils.py:793:see_memory_usage] CPU Virtual Memory:  used = 32.64 GB, percent = 5.2%
+[2023-08-20 21:53:45,193] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = AdamW
+[2023-08-20 21:53:45,193] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2023-08-20 21:53:45,193] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2023-08-20 21:53:45,193] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[1e-05], mom=[(0.9, 0.95)]
+[2023-08-20 21:53:45,195] [INFO] [config.py:953:print] DeepSpeedEngine configuration:
+[2023-08-20 21:53:45,196] [INFO] [config.py:957:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2023-08-20 21:53:45,196] [INFO] [config.py:957:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2023-08-20 21:53:45,196] [INFO] [config.py:957:print]   amp_enabled .................. False
+[2023-08-20 21:53:45,196] [INFO] [config.py:957:print]   amp_params ................... False
+[2023-08-20 21:53:45,197] [INFO] [config.py:957:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2023-08-20 21:53:45,197] [INFO] [config.py:957:print]   bfloat16_enabled ............. True
+[2023-08-20 21:53:45,197] [INFO] [config.py:957:print]   checkpoint_parallel_write_pipeline  False
+[2023-08-20 21:53:45,197] [INFO] [config.py:957:print]   checkpoint_tag_validation_enabled  True
+[2023-08-20 21:53:45,197] [INFO] [config.py:957:print]   checkpoint_tag_validation_fail  False
+[2023-08-20 21:53:45,197] [INFO] [config.py:957:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f5a7693af40>
+[2023-08-20 21:53:45,197] [INFO] [config.py:957:print]   communication_data_type ...... None
+[2023-08-20 21:53:45,198] [INFO] [config.py:957:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2023-08-20 21:53:45,198] [INFO] [config.py:957:print]   curriculum_enabled_legacy .... False
+[2023-08-20 21:53:45,198] [INFO] [config.py:957:print]   curriculum_params_legacy ..... False
+[2023-08-20 21:53:45,198] [INFO] [config.py:957:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2023-08-20 21:53:45,198] [INFO] [config.py:957:print]   data_efficiency_enabled ...... False
+[2023-08-20 21:53:45,198] [INFO] [config.py:957:print]   dataloader_drop_last ......... False
+[2023-08-20 21:53:45,198] [INFO] [config.py:957:print]   disable_allgather ............ False
+[2023-08-20 21:53:45,198] [INFO] [config.py:957:print]   dump_state ................... False
+[2023-08-20 21:53:45,198] [INFO] [config.py:957:print]   dynamic_loss_scale_args ...... None
+[2023-08-20 21:53:45,199] [INFO] [config.py:957:print]   eigenvalue_enabled ........... False
+[2023-08-20 21:53:45,199] [INFO] [config.py:957:print]   eigenvalue_gas_boundary_resolution  1
+[2023-08-20 21:53:45,199] [INFO] [config.py:957:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2023-08-20 21:53:45,199] [INFO] [config.py:957:print]   eigenvalue_layer_num ......... 0
+[2023-08-20 21:53:45,199] [INFO] [config.py:957:print]   eigenvalue_max_iter .......... 100
+[2023-08-20 21:53:45,199] [INFO] [config.py:957:print]   eigenvalue_stability ......... 1e-06
+[2023-08-20 21:53:45,199] [INFO] [config.py:957:print]   eigenvalue_tol ............... 0.01
+[2023-08-20 21:53:45,199] [INFO] [config.py:957:print]   eigenvalue_verbose ........... False
+[2023-08-20 21:53:45,199] [INFO] [config.py:957:print]   elasticity_enabled ........... False
+[2023-08-20 21:53:45,200] [INFO] [config.py:957:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2023-08-20 21:53:45,200] [INFO] [config.py:957:print]   fp16_auto_cast ............... None
+[2023-08-20 21:53:45,200] [INFO] [config.py:957:print]   fp16_enabled ................. False
+[2023-08-20 21:53:45,200] [INFO] [config.py:957:print]   fp16_master_weights_and_gradients  False
+[2023-08-20 21:53:45,200] [INFO] [config.py:957:print]   global_rank .................. 0
+[2023-08-20 21:53:45,200] [INFO] [config.py:957:print]   grad_accum_dtype ............. None
+[2023-08-20 21:53:45,200] [INFO] [config.py:957:print]   gradient_accumulation_steps .. 8
+[2023-08-20 21:53:45,200] [INFO] [config.py:957:print]   gradient_clipping ............ 1.0
+[2023-08-20 21:53:45,200] [INFO] [config.py:957:print]   gradient_predivide_factor .... 1.0
+[2023-08-20 21:53:45,201] [INFO] [config.py:957:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2023-08-20 21:53:45,201] [INFO] [config.py:957:print]   initial_dynamic_scale ........ 1
+[2023-08-20 21:53:45,201] [INFO] [config.py:957:print]   load_universal_checkpoint .... False
+[2023-08-20 21:53:45,201] [INFO] [config.py:957:print]   loss_scale ................... 1.0
+[2023-08-20 21:53:45,201] [INFO] [config.py:957:print]   memory_breakdown ............. False
+[2023-08-20 21:53:45,201] [INFO] [config.py:957:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2023-08-20 21:53:45,201] [INFO] [config.py:957:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2023-08-20 21:53:45,202] [INFO] [config.py:957:print]   optimizer_legacy_fusion ...... False
+[2023-08-20 21:53:45,202] [INFO] [config.py:957:print]   optimizer_name ............... None
+[2023-08-20 21:53:45,202] [INFO] [config.py:957:print]   optimizer_params ............. None
+[2023-08-20 21:53:45,202] [INFO] [config.py:957:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2023-08-20 21:53:45,202] [INFO] [config.py:957:print]   pld_enabled .................. False
+[2023-08-20 21:53:45,202] [INFO] [config.py:957:print]   pld_params ................... False
+[2023-08-20 21:53:45,202] [INFO] [config.py:957:print]   prescale_gradients ........... False
+[2023-08-20 21:53:45,202] [INFO] [config.py:957:print]   scheduler_name ............... None
+[2023-08-20 21:53:45,202] [INFO] [config.py:957:print]   scheduler_params ............. None
+[2023-08-20 21:53:45,203] [INFO] [config.py:957:print]   sparse_attention ............. None
+[2023-08-20 21:53:45,203] [INFO] [config.py:957:print]   sparse_gradients_enabled ..... False
+[2023-08-20 21:53:45,203] [INFO] [config.py:957:print]   steps_per_print .............. inf
+[2023-08-20 21:53:45,203] [INFO] [config.py:957:print]   train_batch_size ............. 8
+[2023-08-20 21:53:45,203] [INFO] [config.py:957:print]   train_micro_batch_size_per_gpu  1
+[2023-08-20 21:53:45,203] [INFO] [config.py:957:print]   use_node_local_storage ....... False
+[2023-08-20 21:53:45,203] [INFO] [config.py:957:print]   wall_clock_breakdown ......... False
+[2023-08-20 21:53:45,203] [INFO] [config.py:957:print]   world_size ................... 1
+[2023-08-20 21:53:45,203] [INFO] [config.py:957:print]   zero_allow_untested_optimizer  True
+[2023-08-20 21:53:45,204] [INFO] [config.py:957:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=False load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False memory_efficient_linear=True
+[2023-08-20 21:53:45,204] [INFO] [config.py:957:print]   zero_enabled ................. True
+[2023-08-20 21:53:45,204] [INFO] [config.py:957:print]   zero_force_ds_cpu_optimizer .. True
+[2023-08-20 21:53:45,204] [INFO] [config.py:957:print]   zero_optimization_stage ...... 2
+[2023-08-20 21:53:45,204] [INFO] [config.py:943:print_user_config]   json = {
+    "train_batch_size": 8,
+    "train_micro_batch_size_per_gpu": 1,
+    "gradient_accumulation_steps": 8,
+    "zero_optimization": {
+        "stage": 2,
+        "offload_optimizer": {
+            "device": "none"
+        },
+        "offload_param": {
+            "device": "none"
+        },
+        "stage3_gather_16bit_weights_on_model_save": false
+    },
+    "gradient_clipping": 1.0,
+    "steps_per_print": inf,
+    "bf16": {
+        "enabled": true
+    },
+    "fp16": {
+        "enabled": false,
+        "auto_cast": false
+    },
+    "zero_allow_untested_optimizer": true
+}
+Time to load utils op: 0.0008578300476074219 seconds
+Using /root/.cache/torch_extensions/py38_cu117 as PyTorch extensions root...
+Emitting ninja build file /root/.cache/torch_extensions/py38_cu117/utils/build.ninja...
+Building extension module utils...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Loading extension module utils...
+Using /root/.cache/torch_extensions/py38_cu117 as PyTorch extensions root...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+[RANK 0] Starting training
+[RANK 0] Collecting rollouts
+[rollout 0 / 8]:   0%|                                                                                                                                                                 | 0/8 [00:00<?, ?it/s]You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+%%%%%%%%%% 654 true answer: 654
+%%%%%%%%%% 804 true answer: 420
+%%%%%%%%%% [invalid] true answer: 7
+%%%%%%%%%% 14 true answer: 14
+[rollout 4 / 8]:  50%|████████████████████████████████████████████████████████████████████████████▌                                                                            | 4/8 [00:39<00:39,  9.82s/it]
+%%%%%%%%%% 42 true answer: 42
+%%%%%%%%%% 1 true answer: 1
+%%%%%%%%%% [invalid] true answer: 146
+[rollout 8 / 8]: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [01:40<00:00, 12.50s/it]
+[RANK 0] Evaluating model
+
+
+
+
+
+
+
+
+
+
+
+
+[generation sweep 1/1 | eval batch 12/13]:  92%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍         | 12/13 [06:14<00:34, 34.13s/it]
+%%%%%%%%%% 54 true answer: 9
+%%%%%%%%%% [invalid] true answer: 4
+%%%%%%%%%% 10 true answer: 6
+%%%%%%%%%% 22 true answer: 4
+%%%%%%%%%% 3 true answer: 3
+%%%%%%%%%% 15072 true answer: 15089
+%%%%%%%%%% [invalid] true answer: 4
+%%%%%%%%%% 17 true answer: 17
+%%%%%%%%%% 60 true answer: 44
+%%%%%%%%%% [invalid] true answer: 21
+%%%%%%%%%% [invalid] true answer: 106
+%%%%%%%%%% 2 true answer: 2
+%%%%%%%%%% 2 true answer: 2
+%%%%%%%%%% [invalid] true answer: 324775
+%%%%%%%%%% 4 true answer: 8
+%%%%%%%%%% 2 true answer: 2
+%%%%%%%%%% [invalid] true answer: 1538832
+%%%%%%%%%% 14 true answer: 90
+%%%%%%%%%% [invalid] true answer: 5
+%%%%%%%%%% 24 true answer: 16
+%%%%%%%%%% 6 true answer: 6
+%%%%%%%%%% 3 true answer: 9
+%%%%%%%%%% 6 true answer: 6
+%%%%%%%%%% 3 true answer: 3
+%%%%%%%%%% [invalid] true answer: 1
+%%%%%%%%%% 19 true answer: 4
+%%%%%%%%%% 12 true answer: 8
+%%%%%%%%%% 9 true answer: 9
+%%%%%%%%%% 1149 true answer: 1455
+%%%%%%%%%% 68 true answer: 13
+%%%%%%%%%% [invalid] true answer: 56
+%%%%%%%%%% 1 true answer: 1
+%%%%%%%%%% 6 true answer: 6
+%%%%%%%%%% ... true answer: 2
+%%%%%%%%%% [invalid] true answer: 1453
+%%%%%%%%%% 126 true answer: 126
+%%%%%%%%%% [invalid] true answer: 62
+%%%%%%%%%% 1542 true answer: 1542
+%%%%%%%%%% 76104 true answer: 1862
+%%%%%%%%%% 613 true answer: 1081
+%%%%%%%%%% 108 true answer: 98
+%%%%%%%%%% 2 true answer: 2
+%%%%%%%%%% 10 true answer: 10
+%%%%%%%%%% [invalid] true answer: 5852
+%%%%%%%%%% [invalid] true answer: 10
+%%%%%%%%%% 80 true answer: 80
+%%%%%%%%%% 9 true answer: 204
+%%%%%%%%%% [invalid] true answer: 1080
+%%%%%%%%%% 1 true answer: 1
+%%%%%%%%%% 21 true answer: 21
+%%%%%%%%%% 54 true answer: 9
+%%%%%%%%%% [invalid] true answer: 4
+%%%%%%%%%% 10 true answer: 6
+%%%%%%%%%% 22 true answer: 4
+%%%%%%%%%% 3 true answer: 3
+%%%%%%%%%% 15072 true answer: 15089
+%%%%%%%%%% [invalid] true answer: 4
+%%%%%%%%%% 17 true answer: 17
+%%%%%%%%%% 60 true answer: 44
+%%%%%%%%%% [invalid] true answer: 21
+%%%%%%%%%% [invalid] true answer: 106
+%%%%%%%%%% 2 true answer: 2
+%%%%%%%%%% 2 true answer: 2
+%%%%%%%%%% [invalid] true answer: 324775
+%%%%%%%%%% 4 true answer: 8
+%%%%%%%%%% 2 true answer: 2
+%%%%%%%%%% [invalid] true answer: 1538832
+%%%%%%%%%% 14 true answer: 90
+%%%%%%%%%% [invalid] true answer: 5
+%%%%%%%%%% 24 true answer: 16
+%%%%%%%%%% 6 true answer: 6
+%%%%%%%%%% 3 true answer: 9
+%%%%%%%%%% 6 true answer: 6
+%%%%%%%%%% 3 true answer: 3
+%%%%%%%%%% [invalid] true answer: 1
+%%%%%%%%%% 19 true answer: 4
+%%%%%%%%%% 12 true answer: 8
+%%%%%%%%%% 9 true answer: 9
+%%%%%%%%%% 1149 true answer: 1455
+%%%%%%%%%% 68 true answer: 13
+%%%%%%%%%% [invalid] true answer: 56
+%%%%%%%%%% 1 true answer: 1
+%%%%%%%%%% 6 true answer: 6
+%%%%%%%%%% ... true answer: 2
+%%%%%%%%%% [invalid] true answer: 1453
+%%%%%%%%%% 126 true answer: 126
+%%%%%%%%%% [invalid] true answer: 62
+%%%%%%%%%% 1542 true answer: 1542
+%%%%%%%%%% 76104 true answer: 1862
+%%%%%%%%%% 613 true answer: 1081
+%%%%%%%%%% 108 true answer: 98
+%%%%%%%%%% 2 true answer: 2
+%%%%%%%%%% 10 true answer: 10
+%%%%%%%%%% [invalid] true answer: 5852
+%%%%%%%%%% [invalid] true answer: 10
+%%%%%%%%%% 80 true answer: 80
+%%%%%%%%%% 9 true answer: 204
+%%%%%%%%%% [invalid] true answer: 1080
+%%%%%%%%%% 1 true answer: 1
+%%%%%%%%%% 21 true answer: 21
+[3m                                                                        Evaluation #0 reward/mean: 0.36 metrics/Answer Matching: 0.36                                                                        
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃[1m prompt                                                                                 [22m┃[1m output                                                                                [22m┃[1m reward [22m┃[1m Answer Matching [22m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ ### Instruction:                                                                       │                                                                                       │ 0.0    │ 0.0             │
+│ Given a question, generate some helpful and creative thoughts step by step and then    │ Thought:                                                                              │        │                 │
+│ answer the question.                                                                   │ There were 5 children initially on the bus.                                           │        │                 │
+│                                                                                        │ 63 children got off.                                                                  │        │                 │
+│ ### Examples:                                                                          │ So total no of children on the bus before they got off was 5 + 63 = 68.               │        │                 │
+│                                                                                        │ Now there are 14 children on the bus.                                                 │        │                 │
+│ Question:                                                                              │ So the difference between those who got off and those who got on is 68 - 14 = 54.     │        │                 │
+│ There are 15 trees in the grove. Grove workers will plant trees in the grove today.    │ #Answer: 54                                                                           │        │                 │
+│ After they are done, there will be 21 trees. How many trees did the grove workers      │                                                                                       │        │                 │
+│ plant today?                                                                           │                                                                                       │        │                 │
+│ Thought:                                                                               │                                                                                       │        │                 │
+│ There are 15 trees originally.                                                         │                                                                                       │        │                 │
+│ Then there were 21 trees after some more were planted.                                 │                                                                                       │        │                 │
+│ So there must have been 21 - 15 = 6.                                                   │                                                                                       │        │                 │
+│ #Answer: 6                                                                             │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ Question:                                                                              │                                                                                       │        │                 │
+│ If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in    │                                                                                       │        │                 │
+│ the parking lot?                                                                       │                                                                                       │        │                 │
+│ Thought:                                                                               │                                                                                       │        │                 │
+│ There are originally 3 cars.                                                           │                                                                                       │        │                 │
+│ 2 more cars arrive.                                                                    │                                                                                       │        │                 │
+│ 3 + 2 = 5.                                                                             │                                                                                       │        │                 │
+│ #Answer: 5                                                                             │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ Question:                                                                              │                                                                                       │        │                 │
+│ Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they  │                                                                                       │        │                 │
+│ have left in total?                                                                    │                                                                                       │        │                 │
+│ Thought:                                                                               │                                                                                       │        │                 │
+│ Originally, Leah had 32 chocolates.                                                    │                                                                                       │        │                 │
+│ Her sister had 42.                                                                     │                                                                                       │        │                 │
+│ So in total they had 32 + 42 = 74.                                                     │                                                                                       │        │                 │
+│ After eating 35, they had 74 - 35 = 39.                                                │                                                                                       │        │                 │
+│ #Answer: 39                                                                            │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ ### Input:                                                                             │                                                                                       │        │                 │
+│ Question:                                                                              │                                                                                       │        │                 │
+│ 5 children were riding on the bus. At the bus stop 63 children got off the bus while   │                                                                                       │        │                 │
+│ some more got on the bus. Then there were 14 children altogether on the bus.           │                                                                                       │        │                 │
+│ How many more children got on the bus than those that got off?                         │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ ### Response:                                                                          │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+├────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────┼────────┼─────────────────┤
+│ ### Instruction:                                                                       │ Step 1: Helpful Thoughts                                                              │ 0.0    │ 0.0             │
+│ Given a question, generate some helpful and creative thoughts step by step and then    │ Think about what you know about the problem:                                          │        │                 │
+│ answer the question.                                                                   │ * Paige helped her mom plant flowers in 8 flowerbeds.                                 │        │                 │
+│                                                                                        │ * They planted a total of 32 seeds.                                                   │        │                 │
+│ ### Examples:                                                                          │ Step 2: Creative Thoughts                                                             │        │                 │
+│                                                                                        │ Try to think of different ways to solve the problem:                                  │        │                 │
+│ Question:                                                                              │ * If they planted an equal number of seeds in each flowerbed, then we can divide the  │        │                 │
+│ There are 15 trees in the grove. Grove workers will plant trees in the grove today.    │ total number of seeds by the number of flowerbeds to find out how many seeds each     │        │                 │
+│ After they are done, there will be 21 trees. How many trees did the grove workers      │ flowerbed has.                                                                        │        │                 │
+│ plant today?                                                                           │ Step 3: Answer the Question                                                           │        │                 │
+│ Thought:                                                                               │ Using the information from the helpful and creative thoughts above, come up with an   │        │                 │
+│ There are 15 trees originally.                                                         │ answer to the question: How many seeds did they plant in each flowerbed?              │        │                 │
+│ Then there were 21 trees after some more were planted.                                 │ In this case, if they planted an equal number of seeds in each flowerbed, then we can │        │                 │
+│ So there must have been 21 - 15 = 6.                                                   │ divide the total number of seeds (32) by the number of flowerbeds (8) to get the      │        │                 │
+│ #Answer: 6                                                                             │ number of seeds in each flowerbed: 32 ÷ 8 = 4 seeds per flowerbed.                    │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ Question:                                                                              │                                                                                       │        │                 │
+│ If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in    │                                                                                       │        │                 │
+│ the parking lot?                                                                       │                                                                                       │        │                 │
+│ Thought:                                                                               │                                                                                       │        │                 │
+│ There are originally 3 cars.                                                           │                                                                                       │        │                 │
+│ 2 more cars arrive.                                                                    │                                                                                       │        │                 │
+│ 3 + 2 = 5.                                                                             │                                                                                       │        │                 │
+│ #Answer: 5                                                                             │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ Question:                                                                              │                                                                                       │        │                 │
+│ Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they  │                                                                                       │        │                 │
+│ have left in total?                                                                    │                                                                                       │        │                 │
+│ Thought:                                                                               │                                                                                       │        │                 │
+│ Originally, Leah had 32 chocolates.                                                    │                                                                                       │        │                 │
+│ Her sister had 42.                                                                     │                                                                                       │        │                 │
+│ So in total they had 32 + 42 = 74.                                                     │                                                                                       │        │                 │
+│ After eating 35, they had 74 - 35 = 39.                                                │                                                                                       │        │                 │
+│ #Answer: 39                                                                            │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ ### Input:                                                                             │                                                                                       │        │                 │
+│ Question:                                                                              │                                                                                       │        │                 │
+│ Paige was helping her mom plant flowers in 8 flowerbeds. They planted 32 seeds         │                                                                                       │        │                 │
+│ altogether. If they put same number of seeds in each flower bed                        │                                                                                       │        │                 │
+│ How many seeds did they plant in each flowerbed?                                       │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ ### Response:                                                                          │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+├────────────────────────────────────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────┼────────┼─────────────────┤
+│ ### Instruction:                                                                       │ Thought:                                                                              │ 0.0    │ 0.0             │
+│ Given a question, generate some helpful and creative thoughts step by step and then    │ There are 11 different books.                                                         │        │                 │
+│ answer the question.                                                                   │ There are 17 different movies.                                                        │        │                 │
+│                                                                                        │ Let's say we read 13 books which means there are 11 - 13 = 8 books left.              │        │                 │
+│ ### Examples:                                                                          │ Now let's assume we watched 63 movies which means there are 17 - 63 = 10 movies left. │        │                 │
+│                                                                                        │ So, there are 10 more movies than books in the 'crazy silly school ' series.          │        │                 │
+│ Question:                                                                              │ #Answer: 10                                                                           │        │                 │
+│ There are 15 trees in the grove. Grove workers will plant trees in the grove today.    │                                                                                       │        │                 │
+│ After they are done, there will be 21 trees. How many trees did the grove workers      │                                                                                       │        │                 │
+│ plant today?                                                                           │                                                                                       │        │                 │
+│ Thought:                                                                               │                                                                                       │        │                 │
+│ There are 15 trees originally.                                                         │                                                                                       │        │                 │
+│ Then there were 21 trees after some more were planted.                                 │                                                                                       │        │                 │
+│ So there must have been 21 - 15 = 6.                                                   │                                                                                       │        │                 │
+│ #Answer: 6                                                                             │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ Question:                                                                              │                                                                                       │        │                 │
+│ If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in    │                                                                                       │        │                 │
+│ the parking lot?                                                                       │                                                                                       │        │                 │
+│ Thought:                                                                               │                                                                                       │        │                 │
+│ There are originally 3 cars.                                                           │                                                                                       │        │                 │
+│ 2 more cars arrive.                                                                    │                                                                                       │        │                 │
+│ 3 + 2 = 5.                                                                             │                                                                                       │        │                 │
+│ #Answer: 5                                                                             │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ Question:                                                                              │                                                                                       │        │                 │
+│ Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they  │                                                                                       │        │                 │
+│ have left in total?                                                                    │                                                                                       │        │                 │
+│ Thought:                                                                               │                                                                                       │        │                 │
+│ Originally, Leah had 32 chocolates.                                                    │                                                                                       │        │                 │
+│ Her sister had 42.                                                                     │                                                                                       │        │                 │
+│ So in total they had 32 + 42 = 74.                                                     │                                                                                       │        │                 │
+│ After eating 35, they had 74 - 35 = 39.                                                │                                                                                       │        │                 │
+│ #Answer: 39                                                                            │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ ### Input:                                                                             │                                                                                       │        │                 │
+│ Question:                                                                              │                                                                                       │        │                 │
+│ There are 17 different movies and 11 different books in the ' crazy silly school '     │                                                                                       │        │                 │
+│ series. If you read 13 of the books and watched 63 of the movies                       │                                                                                       │        │                 │
+│ How many more movies than books are there in the ' crazy silly school ' series?        │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+│ ### Response:                                                                          │                                                                                       │        │                 │
+│                                                                                        │                                                                                       │        │                 │
+[generation sweep 1/1 | eval batch 13/13]: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [06:32<00:00, 30.16s/it]
+[RANK 0] Computing rewards
+[RANK 0] Computing metrics
