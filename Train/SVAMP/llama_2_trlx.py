@@ -1,3 +1,4 @@
+# import the libraries
 import json
 import os
 import sys
@@ -25,14 +26,14 @@ import re
 
 
 
-################################ path and hyperparameters
+################################ set path for llm pre-trained-weights and saving directory for checkpoints and hyperparameters
 
 
 dataset_name='SVAMP' # SVAMP or PIQA
 
-svamp_checkpoint_dir='/root/autodl-tmp/msc_ml/llama_2/ckpts_svamp'
-piqa_checkpoint_dir='/root/autodl-tmp/msc_ml/llama_2/ckpts_piqa'
-model_path="/root/autodl-tmp/Llama-2-7b-chat-hf" #path for llama2-7b weight
+svamp_checkpoint_dir='/root/autodl-tmp/msc_ml/llama_2/ckpts_svamp' # path for checkpoints trained with svamp
+piqa_checkpoint_dir='/root/autodl-tmp/msc_ml/llama_2/ckpts_piqa' # path for checkpoints trined with piqa
+model_path="/root/autodl-tmp/Llama-2-7b-chat-hf" #path for llama2-7b pre trined weight
 batch_size=1
 
 ############################### fix random seed
@@ -58,7 +59,7 @@ if dataset_name not in supported_datasets:
     raise ValueError(f"Unsupported dataset name: {dataset_name}. Supported datasets are {supported_datasets}")
 
 
-
+# (optional)cot examples for datasets
 svamp_cot_examples = """### Instruction:
 Given a question, generate some helpful and creative thoughts step by step and then answer the question.
 
@@ -88,7 +89,8 @@ After eating 35, they had 74 - 35 = 39.
 #Answer: 39
 """
 
-"""
+# (optional)cot examples for datasets
+piqa_cot_examples = """
 Choose the solution to achieve the goal and give answer in bracket:
 ### goal: When boiling butter, when it's ready, you can: 
 ### sol1: Pour it onto a plate
@@ -111,7 +113,7 @@ Choose the solution to achieve the goal and give answer in bracket:
 ### Therefore, the answer is sol [1]
 """
 
-
+# zero shot prompting for svamp
 svamp_format="""[INST] «SYS»\nGiven an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
 
 Thoughts:
@@ -125,8 +127,8 @@ Qestion:
 Thoughts:[/INST]"""
     
     
-    
-piqa_format="""[INST] «SYS»\nGiven a physical commensense question, generate thoughts about the question step by step, then choose the solution to achieve the goal and give answer in bracket:. Please follow the format below:
+# zero shot prompting for piqa    
+piqa_format="""[INST] «SYS»\nGiven a physical commensense question, generate thoughts about the question step by step, then choose the solution to achieve the goal and give answer in bracket: Please follow the format below:
 
 Thoughts:
 <Step by Step Thoughts>
