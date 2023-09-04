@@ -30,7 +30,6 @@ import re
 
 
 dataset_name='SVAMP' # SVAMP or PIQA
-
 svamp_checkpoint_dir='/root/autodl-tmp/msc_ml/llama_2/ckpts_svamp' # path for checkpoints trained with svamp
 piqa_checkpoint_dir='/root/autodl-tmp/msc_ml/llama_2/ckpts_piqa' # path for checkpoints trined with piqa
 model_path="/root/autodl-tmp/Llama-2-7b-chat-hf" #path for llama2-7b pre trined weight
@@ -69,7 +68,7 @@ Thought:
 There are 15 trees originally.
 Then there were 21 trees after some more were planted.
 So there must have been 21 - 15 = 6.
-#Answer: 6
+Answer: 6
 
 Question: 
 If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?
@@ -77,7 +76,7 @@ Thought:
 There are originally 3 cars.
 2 more cars arrive.
 3 + 2 = 5.
-#Answer: 5
+Answer: 5
 
 Question: 
 Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they have left in total?
@@ -86,7 +85,7 @@ Originally, Leah had 32 chocolates.
 Her sister had 42.
 So in total they had 32 + 42 = 74.
 After eating 35, they had 74 - 35 = 39.
-#Answer: 39
+Answer: 39
 """
 
 # (optional)cot examples for datasets
@@ -114,7 +113,8 @@ Choose the solution to achieve the goal and give answer in bracket:
 """
 
 # zero shot prompting for svamp
-svamp_format="""[INST] «SYS»\nGiven an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
+svamp_format="""[INST] «SYS»\n
+Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
 
 Thoughts:
 <Step by Step Thoughts>
@@ -122,13 +122,14 @@ Answer:
 <Number>
 
 \n«/SYS»
-Qestion: 
+Qestion:
 {}
 Thoughts:[/INST]"""
     
     
 # zero shot prompting for piqa    
-piqa_format="""[INST] «SYS»\nGiven a physical commensense question, generate thoughts about the question step by step, then choose the solution to achieve the goal and give answer in bracket: Please follow the format below:
+piqa_format="""[INST] «SYS»\n
+Given a physical commensense question, generate thoughts about the question step by step, then choose the solution to achieve the goal and give answer in bracket. Please follow the format below:
 
 Thoughts:
 <Step by Step Thoughts>
@@ -160,7 +161,7 @@ def build_dataset(
             The name of the dataset to be loaded.
 
     Returns:
-        ds_train (`dict`):
+        ds (`dict`):
             The dict for the dataset.
     """
     supported_datasets = ['SVAMP', 'PIQA']
@@ -170,8 +171,8 @@ def build_dataset(
     if dataset_name=='SVAMP':
         dataset_dir="ChilleD/SVAMP"
 
-        ds_train = load_dataset(dataset_dir, split="train")
-        original_columns = ds_train.column_names
+        ds_all = load_dataset(dataset_dir, split="all")
+        original_columns = ds_all.column_names
 
         def preprocess_function(examples):
 
@@ -182,20 +183,20 @@ def build_dataset(
 
             return {"query": query }
 
-        ds_train = ds_train.map(
+        ds_all = ds_all.map(
             preprocess_function,
             batched=False,
             #remove_columns=original_columns,
         )
 
-        print(ds_train)
-        return ds_train
+        print(ds_all)
+        return ds_all
     ################# PIQA
     elif dataset_name=='PIQA':
         dataset_dir="piqa"
         
-        ds_train = load_dataset(dataset_dir, split="train")
-        original_columns = ds_train.column_names
+        ds_all = load_dataset(dataset_dir, split="all")
+        original_columns = ds_all.column_names
 
         def preprocess_function(examples):
             string=''
@@ -209,15 +210,15 @@ def build_dataset(
             return {"query": query }
         
 
-        ds_train = ds_train.map(
+        ds_all = ds_all.map(
             preprocess_function,
             batched=False,
             #remove_columns=original_columns,
         )
 
 
-        print(ds_train)
-        return ds_train   
+        print(ds_all)
+        return ds_all   
     
 
 
@@ -226,8 +227,10 @@ dataset = build_dataset(dataset_name=dataset_name)
 prompt_all=dataset["query"]
 if dataset_name=='SVAMP':
     answer_all=dataset["Answer"]
+    checkpoint_dir=svamp_checkpoint_dir
 elif dataset_name=='PIQA':
     answer_all=dataset["Answer"]
+    checkpoint_dir=piqa_checkpoint_dir
     
 
 def collator(data):
@@ -241,30 +244,34 @@ def collator(data):
 
 
 if dataset_name=='SVAMP':
-    ANS_RE = re.compile(r"Answer: (\-?[0-9\.\,]+)")
+    ANS_RE =re.compile(r"Answer:.*?(\$?)(\-?[0-9\.\,]+)", re.DOTALL)
 elif dataset_name=='PIQA':
     ANS_RE = re.compile(r"Answer: (\[\d\])")
     
 INVALID_ANS = "[invalid]"
 
+    
 def _extract_answer(completion: str):
     match = ANS_RE.search(completion)
     if match:
-        match_str = match.group(1).strip()
+        match_str = match.group(2).strip()
         match_str = match_str.replace(",", "")
         return match_str
     else:
+        print('&&&&&&&&&&&&&&&&&&&&&&&&&',completion)
         return INVALID_ANS
 
 def _is_correct(completion, answer):
-    answer=str(int(answer)) 
-    extracted_answer = _extract_answer(completion)
-    print('\n%%%%%%%%%%',extracted_answer,'true answer:',answer)
 
-    if extracted_answer == answer:
-        return 1.0
-    else:
+    extracted_answer = _extract_answer(completion)
+    print('\n%%%%%%%%%%','extracted answer: ',extracted_answer,' true answer:',answer)
+    if extracted_answer=="[invalid]":
         return 0.0
+    else:
+        if float(extracted_answer) == float(answer):
+            return 1.0
+        else:
+            return 0.0
     
 
 def svamp_real_reward( prompts: List[str], outputs: List[str], **kwargs) -> List[float]:
@@ -273,6 +280,7 @@ def svamp_real_reward( prompts: List[str], outputs: List[str], **kwargs) -> List
 
         index = prompt_all.index(prompt)
         answer=answer_all[index]
+        #print('$$$$$$$$$$$',prompt)
         reward=_is_correct(output,answer)
 
         rewards.append(reward)
@@ -330,17 +338,20 @@ def llama_config():
     return TRLConfig(
         train=TrainConfig(
             seq_length=1024,
-            epochs=10,
-            total_steps=6000,
+            epochs=100,
+            total_steps=100000,
             batch_size=batch_size,
-            checkpoint_interval=1000,
+            # save checkpoint every 10 epoch
+            checkpoint_interval=(10*700*4)//(batch_size*8),
             eval_interval=100,
             pipeline="PromptPipeline",
             trainer="AcceleratePPOTrainer",
             save_best=True,
             checkpoint_dir=checkpoint_dir
         ),
-        model=ModelConfig(model_path=model_path, num_layers_unfrozen=2),
+        model=ModelConfig(model_path=model_path, 
+                          #num_layers_unfrozen=2
+                         ),
         tokenizer=TokenizerConfig(tokenizer_path=model_path, truncation_side="left"),
         optimizer=OptimizerConfig(
             name="adamw", kwargs=dict(lr=1.0e-5, betas=(0.9, 0.95), eps=1.0e-8, weight_decay=1.0e-6)
@@ -349,7 +360,7 @@ def llama_config():
         method=PPOConfig(
             name="PPOConfig",
             num_rollouts=128,
-            chunk_size=4,
+            chunk_size=16,
             ppo_epochs=4,
             init_kl_coef=0.05,
             target=6,
@@ -364,7 +375,7 @@ def llama_config():
             ref_std=None,
             cliprange_reward=10,
             gen_kwargs=dict(
-                max_new_tokens=256,
+                max_new_tokens=512,
                 top_k=50,
                 temperature=1.0,
                 top_p=0.95,
@@ -381,9 +392,9 @@ def main(hparams={}):
     
     ###################################
     config.model.peft_config = LoraConfig(
-        lora_alpha=32,
+        lora_alpha=16,
         lora_dropout=0.1,
-        r=32,
+        r=64,
         bias="none",
         task_type="CAUSAL_LM",
         )
@@ -399,8 +410,8 @@ def main(hparams={}):
         trlx.train(
             reward_fn=svamp_real_reward,
             metric_fn=svamp_metric_answer,
-            prompts=prompt_all[:-50],
-            eval_prompts=prompt_all[-50:],
+            prompts=prompt_all[:700],
+            eval_prompts=prompt_all[700:800],
             config=config,
         )
     elif dataset_name=='PIQA':
@@ -411,4 +422,6 @@ def main(hparams={}):
             config=config,
         )
         
-     
+if __name__ == "__main__":
+    hparams = {} if len(sys.argv) == 1 else json.loads(sys.argv[1])
+    main(hparams)

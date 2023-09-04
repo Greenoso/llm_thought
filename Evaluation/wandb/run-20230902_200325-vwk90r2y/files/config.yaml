@@ -1,0 +1,136 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.10
+    cli_version: 0.15.0
+    framework: huggingface
+    huggingface_version: 4.31.0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1693656205.635003
+    t:
+      1:
+      - 1
+      - 11
+      - 30
+      - 49
+      - 51
+      - 55
+      - 71
+      - 85
+      2:
+      - 1
+      - 11
+      - 30
+      - 49
+      - 51
+      - 55
+      - 71
+      - 85
+      3:
+      - 13
+      - 15
+      - 23
+      4: 3.8.10
+      5: 0.15.0
+      6: 4.31.0
+      8:
+      - 5
+method:
+  desc: null
+  value:
+    name: PPOConfig
+    ppo_epochs: 4
+    num_rollouts: 4
+    chunk_size: 4
+    init_kl_coef: 0.05
+    target: 6
+    horizon: 10000
+    gamma: 1
+    lam: 0.95
+    cliprange: 0.2
+    cliprange_value: 0.2
+    vf_coef: 1
+    scale_reward: ignored
+    ref_mean: null
+    ref_std: null
+    cliprange_reward: 10
+    gen_kwargs:
+      max_new_tokens: 256
+      top_k: 50
+      temperature: 1.0
+      top_p: 0.95
+      do_sample: true
+    gen_experience_kwargs: null
+    num_value_layers_unfrozen: 0
+model:
+  desc: null
+  value:
+    model_path: /root/autodl-tmp/Llama-2-7b-chat-hf
+    model_arch_type: causal
+    num_layers_unfrozen: 2
+    peft_config: 'LoraConfig(peft_type=<PeftType.LORA: ''LORA''>, base_model_name_or_path=''/root/autodl-tmp/Llama-2-7b-chat-hf'',
+      task_type=''CAUSAL_LM'', inference_mode=False, r=32, target_modules=[''q_proj'',
+      ''v_proj''], lora_alpha=64, lora_dropout=0.1, fan_in_fan_out=False, bias=''none'',
+      modules_to_save=None, init_lora_weights=True)'
+optimizer:
+  desc: null
+  value:
+    name: adamw
+    kwargs:
+      lr: 1.0e-05
+      betas:
+      - 0.9
+      - 0.95
+      eps: 1.0e-08
+      weight_decay: 1.0e-06
+scheduler:
+  desc: null
+  value:
+    name: cosine_annealing
+    kwargs:
+      T_max: 10000
+      eta_min: 1.0e-05
+tokenizer:
+  desc: null
+  value:
+    tokenizer_path: /root/autodl-tmp/Llama-2-7b-chat-hf
+    padding_side: left
+    truncation_side: left
+train:
+  desc: null
+  value:
+    total_steps: 10000
+    seq_length: 1024
+    epochs: 10
+    batch_size: 1
+    checkpoint_interval: 1000
+    eval_interval: 100
+    pipeline: PromptPipeline
+    trainer: AcceleratePPOTrainer
+    trainer_kwargs: {}
+    project_name: trlx
+    entity_name: null
+    group_name: null
+    checkpoint_dir: /root/autodl-tmp/msc_ml/llama_2/ckpts_svamp
+    rollout_logging_dir: null
+    save_best: true
+    save_optimizer: true
+    resume_from_checkpoint: null
+    tracker: wandb
+    logging_dir: null
+    tags: []
+    seed: 1000
+    minibatch_size: null
+distributed:
+  desc: null
+  value:
+    mixed_precision: bf16
+    num_gpus: 1
+    gradient_accumulation_steps: 8
+    gradient_clipping: 1.0
+    zero_stage: 2
+    offload_optimizer_device: none
+    offload_param_device: none

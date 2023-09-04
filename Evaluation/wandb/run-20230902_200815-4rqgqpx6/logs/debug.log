@@ -1,0 +1,27 @@
+2023-09-02 20:08:15,938 INFO    MainThread:3672 [wandb_setup.py:_flush():76] Configure stats pid to 3672
+2023-09-02 20:08:15,939 INFO    MainThread:3672 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2023-09-02 20:08:15,939 INFO    MainThread:3672 [wandb_setup.py:_flush():76] Loading settings from /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/settings
+2023-09-02 20:08:15,939 INFO    MainThread:3672 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-09-02 20:08:15,939 INFO    MainThread:3672 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-09-02 20:08:15,939 INFO    MainThread:3672 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'Train/SVAMP/llama_2_trlx.py', 'program': '/root/autodl-tmp/msc_ml/llm_thought/Train/SVAMP/llama_2_trlx.py'}
+2023-09-02 20:08:15,939 INFO    MainThread:3672 [wandb_init.py:_log_setup():507] Logging user logs to /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/logs/debug.log
+2023-09-02 20:08:15,939 INFO    MainThread:3672 [wandb_init.py:_log_setup():508] Logging internal logs to /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/logs/debug-internal.log
+2023-09-02 20:08:15,939 INFO    MainThread:3672 [wandb_init.py:init():547] calling init triggers
+2023-09-02 20:08:15,939 INFO    MainThread:3672 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-09-02 20:08:15,940 INFO    MainThread:3672 [wandb_init.py:init():595] starting backend
+2023-09-02 20:08:15,940 INFO    MainThread:3672 [wandb_init.py:init():599] setting up manager
+2023-09-02 20:08:15,942 INFO    MainThread:3672 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-09-02 20:08:15,945 INFO    MainThread:3672 [wandb_init.py:init():605] backend started and connected
+2023-09-02 20:08:15,950 INFO    MainThread:3672 [wandb_init.py:init():695] updated telemetry
+2023-09-02 20:08:17,331 INFO    MainThread:3672 [wandb_init.py:init():732] communicating run to backend with 60.0 second timeout
+2023-09-02 20:08:17,975 INFO    MainThread:3672 [wandb_run.py:_on_init():2176] communicating current version
+2023-09-02 20:08:18,290 INFO    MainThread:3672 [wandb_run.py:_on_init():2185] got version response upgrade_message: "wandb version 0.15.9 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-09-02 20:08:18,290 INFO    MainThread:3672 [wandb_init.py:init():782] starting run threads in backend
+2023-09-02 20:08:21,950 INFO    MainThread:3672 [wandb_run.py:_console_start():2157] atexit reg
+2023-09-02 20:08:21,950 INFO    MainThread:3672 [wandb_run.py:_redirect():2012] redirect: SettingsConsole.WRAP_RAW
+2023-09-02 20:08:21,950 INFO    MainThread:3672 [wandb_run.py:_redirect():2077] Wrapping output streams.
+2023-09-02 20:08:21,950 INFO    MainThread:3672 [wandb_run.py:_redirect():2102] Redirects installed.
+2023-09-02 20:08:21,951 INFO    MainThread:3672 [wandb_init.py:init():824] run started, returning control to user process
+2023-09-02 20:08:21,953 INFO    MainThread:3672 [wandb_run.py:_config_callback():1285] config_cb None None {'method': {'name': 'PPOConfig', 'ppo_epochs': 4, 'num_rollouts': 4, 'chunk_size': 4, 'init_kl_coef': 0.05, 'target': 6, 'horizon': 10000, 'gamma': 1, 'lam': 0.95, 'cliprange': 0.2, 'cliprange_value': 0.2, 'vf_coef': 1, 'scale_reward': 'ignored', 'ref_mean': None, 'ref_std': None, 'cliprange_reward': 10, 'gen_kwargs': {'max_new_tokens': 256, 'top_k': 50, 'temperature': 1.0, 'top_p': 0.95, 'do_sample': True}, 'gen_experience_kwargs': None, 'num_value_layers_unfrozen': 0}, 'model': {'model_path': '/root/autodl-tmp/Llama-2-7b-chat-hf', 'model_arch_type': 'causal', 'num_layers_unfrozen': 2, 'peft_config': "LoraConfig(peft_type=<PeftType.LORA: 'LORA'>, base_model_name_or_path='/root/autodl-tmp/Llama-2-7b-chat-hf', task_type='CAUSAL_LM', inference_mode=False, r=32, target_modules=['q_proj', 'v_proj'], lora_alpha=64, lora_dropout=0.1, fan_in_fan_out=False, bias='none', modules_to_save=None, init_lora_weights=True)"}, 'optimizer': {'name': 'adamw', 'kwargs': {'lr': 1e-05, 'betas': [0.9, 0.95], 'eps': 1e-08, 'weight_decay': 1e-06}}, 'scheduler': {'name': 'cosine_annealing', 'kwargs': {'T_max': 10000, 'eta_min': 1e-05}}, 'tokenizer': {'tokenizer_path': '/root/autodl-tmp/Llama-2-7b-chat-hf', 'padding_side': 'left', 'truncation_side': 'left'}, 'train': {'total_steps': 10000, 'seq_length': 1024, 'epochs': 10, 'batch_size': 1, 'checkpoint_interval': 1000, 'eval_interval': 100, 'pipeline': 'PromptPipeline', 'trainer': 'AcceleratePPOTrainer', 'trainer_kwargs': {}, 'project_name': 'trlx', 'entity_name': None, 'group_name': None, 'checkpoint_dir': '/root/autodl-tmp/msc_ml/llama_2/ckpts_svamp', 'rollout_logging_dir': None, 'save_best': True, 'save_optimizer': True, 'resume_from_checkpoint': None, 'tracker': 'wandb', 'logging_dir': None, 'tags': [], 'seed': 1000, 'minibatch_size': None}, 'distributed': {'mixed_precision': 'bf16', 'num_gpus': 1, 'gradient_accumulation_steps': 2, 'gradient_clipping': 1.0, 'zero_stage': 2, 'offload_optimizer_device': 'none', 'offload_param_device': 'none'}}

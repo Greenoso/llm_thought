@@ -1,0 +1,640 @@
+2023-09-02 20:08:15,946 INFO    StreamThr :3776 [internal.py:wandb_internal():86] W&B internal server running at pid: 3776, started at: 2023-09-02 20:08:15.946088
+2023-09-02 20:08:15,950 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status
+2023-09-02 20:08:15,951 INFO    WriterThread:3776 [datastore.py:open_for_write():85] open: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/run-4rqgqpx6.wandb
+2023-09-02 20:08:15,952 DEBUG   SenderThread:3776 [sender.py:send():375] send: header
+2023-09-02 20:08:17,332 DEBUG   SenderThread:3776 [sender.py:send():375] send: run
+2023-09-02 20:08:17,975 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: check_version
+2023-09-02 20:08:17,976 INFO    SenderThread:3776 [dir_watcher.py:__init__():219] watching files in: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files
+2023-09-02 20:08:17,976 INFO    SenderThread:3776 [sender.py:_start_run_threads():1124] run started: 4rqgqpx6 with start time 1693656495.945274
+2023-09-02 20:08:17,976 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: summary_record
+2023-09-02 20:08:17,976 INFO    SenderThread:3776 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-02 20:08:17,977 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: check_version
+2023-09-02 20:08:18,294 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: run_start
+2023-09-02 20:08:18,304 DEBUG   HandlerThread:3776 [system_info.py:__init__():31] System info init
+2023-09-02 20:08:18,304 DEBUG   HandlerThread:3776 [system_info.py:__init__():46] System info init done
+2023-09-02 20:08:18,305 INFO    HandlerThread:3776 [system_monitor.py:start():181] Starting system monitor
+2023-09-02 20:08:18,305 INFO    SystemMonitor:3776 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-02 20:08:18,306 INFO    HandlerThread:3776 [system_monitor.py:probe():201] Collecting system info
+2023-09-02 20:08:18,307 INFO    SystemMonitor:3776 [interfaces.py:start():190] Started cpu monitoring
+2023-09-02 20:08:18,308 INFO    SystemMonitor:3776 [interfaces.py:start():190] Started disk monitoring
+2023-09-02 20:08:18,309 INFO    SystemMonitor:3776 [interfaces.py:start():190] Started gpu monitoring
+2023-09-02 20:08:18,309 INFO    SystemMonitor:3776 [interfaces.py:start():190] Started memory monitoring
+2023-09-02 20:08:18,310 INFO    SystemMonitor:3776 [interfaces.py:start():190] Started network monitoring
+2023-09-02 20:08:18,327 DEBUG   HandlerThread:3776 [system_info.py:probe():195] Probing system
+2023-09-02 20:08:18,337 DEBUG   HandlerThread:3776 [system_info.py:_probe_git():180] Probing git
+2023-09-02 20:08:18,352 DEBUG   HandlerThread:3776 [system_info.py:_probe_git():188] Probing git done
+2023-09-02 20:08:18,353 DEBUG   HandlerThread:3776 [system_info.py:probe():240] Probing system done
+2023-09-02 20:08:18,353 DEBUG   HandlerThread:3776 [system_monitor.py:probe():210] {'os': 'Linux-5.4.0-99-generic-x86_64-with-glibc2.17', 'python': '3.8.10', 'heartbeatAt': '2023-09-02T12:08:18.327545', 'startedAt': '2023-09-02T12:08:15.935911', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/root/autodl-tmp/msc_ml/llm_thought/Train/SVAMP/llama_2_trlx.py', 'codePath': 'Train/SVAMP/llama_2_trlx.py', 'git': {'remote': 'https://github.com/Greenoso/llm_thought.git', 'commit': '24305a3a985102cd18f50a6e8694b77e36025f3a'}, 'email': 'jiacheng.liu.19.ucl@gmail.com', 'root': '/root/autodl-tmp/msc_ml/llm_thought', 'host': 'autodl-container-55da118bfa-7e0e117f', 'username': 'root', 'executable': '/root/miniconda3/bin/python', 'cpu_count': 40, 'cpu_count_logical': 80, 'cpu_freq': {'current': 2999.864000000001, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 30.0, 'used': 12.480758666992188}, 'gpu': 'Tesla V100S-PCIE-32GB', 'gpu_count': 2, 'gpu_devices': [{'name': 'Tesla V100S-PCIE-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100S-PCIE-32GB', 'memory_total': 34359738368}], 'memory': {'total': 629.8885612487793}}
+2023-09-02 20:08:18,353 INFO    HandlerThread:3776 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-02 20:08:18,353 INFO    HandlerThread:3776 [system_monitor.py:probe():214] Publishing system info
+2023-09-02 20:08:18,353 DEBUG   HandlerThread:3776 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-09-02 20:08:18,354 DEBUG   HandlerThread:3776 [system_info.py:_save_pip():67] Saving pip packages done
+2023-09-02 20:08:18,354 DEBUG   HandlerThread:3776 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-09-02 20:08:18,977 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_created():278] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/conda-environment.yaml
+2023-09-02 20:08:18,978 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_created():278] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/wandb-summary.json
+2023-09-02 20:08:18,978 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_created():278] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/requirements.txt
+2023-09-02 20:08:21,931 DEBUG   HandlerThread:3776 [system_info.py:_save_conda():86] Saving conda packages done
+2023-09-02 20:08:21,932 INFO    HandlerThread:3776 [system_monitor.py:probe():216] Finished publishing system info
+2023-09-02 20:08:21,939 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:08:21,940 DEBUG   SenderThread:3776 [sender.py:send():375] send: files
+2023-09-02 20:08:21,940 INFO    SenderThread:3776 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-09-02 20:08:21,949 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:08:21,951 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:08:21,980 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/conda-environment.yaml
+2023-09-02 20:08:21,981 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_created():278] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/wandb-metadata.json
+2023-09-02 20:08:22,364 DEBUG   SenderThread:3776 [sender.py:send():375] send: telemetry
+2023-09-02 20:08:22,364 DEBUG   SenderThread:3776 [sender.py:send():375] send: config
+2023-09-02 20:08:22,522 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/4rqgqpx6/wandb-metadata.json?Expires=1693742902&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=r9MSIBbiE3Dw4w3c4YrMy4uLvIefoDvtVo04u2RlClQ2HCh%2B7pkGIBl9ZmSazam2bYLlVmmid%2BbPurWRmUX8vJguk0to9RT5DRHG%2B6uBQNkxLcR0QqONyL9a0Ti%2Fy4yVF2hnyj9it6lMaiq9Zm80RfYZFTF%2FwArYxefdjSpwBlI45LdmdNE6td%2BC%2FR7chuxqKBsiRJkXwaLuN3To7iYLEnquz8UL71X4dD4zs6lly96Mw%2B3PcdMldoVEzlb04ZZK0yveKa9AKIT710UXs8yutVkLltMejNAR1i7YCUUmENOj8%2B85I%2BHYW6FqAPnM0%2BlqlyIMtbhFor1uqqdTwZhvWg%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-production.appspot.com/ucl_2023_com00087/trlx/4rqgqpx6/wandb-metadata.json?Expires=1693742902&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=r9MSIBbiE3Dw4w3c4YrMy4uLvIefoDvtVo04u2RlClQ2HCh%2B7pkGIBl9ZmSazam2bYLlVmmid%2BbPurWRmUX8vJguk0to9RT5DRHG%2B6uBQNkxLcR0QqONyL9a0Ti%2Fy4yVF2hnyj9it6lMaiq9Zm80RfYZFTF%2FwArYxefdjSpwBlI45LdmdNE6td%2BC%2FR7chuxqKBsiRJkXwaLuN3To7iYLEnquz8UL71X4dD4zs6lly96Mw%2B3PcdMldoVEzlb04ZZK0yveKa9AKIT710UXs8yutVkLltMejNAR1i7YCUUmENOj8%2B85I%2BHYW6FqAPnM0%2BlqlyIMtbhFor1uqqdTwZhvWg%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:08:22,523 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9453'}
+2023-09-02 20:08:22,523 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:08:22,981 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_created():278] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:08:23,961 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/4rqgqpx6/wandb-metadata.json?Expires=1693742902&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=r9MSIBbiE3Dw4w3c4YrMy4uLvIefoDvtVo04u2RlClQ2HCh%2B7pkGIBl9ZmSazam2bYLlVmmid%2BbPurWRmUX8vJguk0to9RT5DRHG%2B6uBQNkxLcR0QqONyL9a0Ti%2Fy4yVF2hnyj9it6lMaiq9Zm80RfYZFTF%2FwArYxefdjSpwBlI45LdmdNE6td%2BC%2FR7chuxqKBsiRJkXwaLuN3To7iYLEnquz8UL71X4dD4zs6lly96Mw%2B3PcdMldoVEzlb04ZZK0yveKa9AKIT710UXs8yutVkLltMejNAR1i7YCUUmENOj8%2B85I%2BHYW6FqAPnM0%2BlqlyIMtbhFor1uqqdTwZhvWg%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-production.appspot.com/ucl_2023_com00087/trlx/4rqgqpx6/wandb-metadata.json?Expires=1693742902&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=r9MSIBbiE3Dw4w3c4YrMy4uLvIefoDvtVo04u2RlClQ2HCh%2B7pkGIBl9ZmSazam2bYLlVmmid%2BbPurWRmUX8vJguk0to9RT5DRHG%2B6uBQNkxLcR0QqONyL9a0Ti%2Fy4yVF2hnyj9it6lMaiq9Zm80RfYZFTF%2FwArYxefdjSpwBlI45LdmdNE6td%2BC%2FR7chuxqKBsiRJkXwaLuN3To7iYLEnquz8UL71X4dD4zs6lly96Mw%2B3PcdMldoVEzlb04ZZK0yveKa9AKIT710UXs8yutVkLltMejNAR1i7YCUUmENOj8%2B85I%2BHYW6FqAPnM0%2BlqlyIMtbhFor1uqqdTwZhvWg%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:08:23,961 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9453'}
+2023-09-02 20:08:23,961 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:08:24,982 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:08:26,239 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/4rqgqpx6/wandb-metadata.json?Expires=1693742902&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=r9MSIBbiE3Dw4w3c4YrMy4uLvIefoDvtVo04u2RlClQ2HCh%2B7pkGIBl9ZmSazam2bYLlVmmid%2BbPurWRmUX8vJguk0to9RT5DRHG%2B6uBQNkxLcR0QqONyL9a0Ti%2Fy4yVF2hnyj9it6lMaiq9Zm80RfYZFTF%2FwArYxefdjSpwBlI45LdmdNE6td%2BC%2FR7chuxqKBsiRJkXwaLuN3To7iYLEnquz8UL71X4dD4zs6lly96Mw%2B3PcdMldoVEzlb04ZZK0yveKa9AKIT710UXs8yutVkLltMejNAR1i7YCUUmENOj8%2B85I%2BHYW6FqAPnM0%2BlqlyIMtbhFor1uqqdTwZhvWg%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-production.appspot.com/ucl_2023_com00087/trlx/4rqgqpx6/wandb-metadata.json?Expires=1693742902&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=r9MSIBbiE3Dw4w3c4YrMy4uLvIefoDvtVo04u2RlClQ2HCh%2B7pkGIBl9ZmSazam2bYLlVmmid%2BbPurWRmUX8vJguk0to9RT5DRHG%2B6uBQNkxLcR0QqONyL9a0Ti%2Fy4yVF2hnyj9it6lMaiq9Zm80RfYZFTF%2FwArYxefdjSpwBlI45LdmdNE6td%2BC%2FR7chuxqKBsiRJkXwaLuN3To7iYLEnquz8UL71X4dD4zs6lly96Mw%2B3PcdMldoVEzlb04ZZK0yveKa9AKIT710UXs8yutVkLltMejNAR1i7YCUUmENOj8%2B85I%2BHYW6FqAPnM0%2BlqlyIMtbhFor1uqqdTwZhvWg%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:08:26,239 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9453'}
+2023-09-02 20:08:26,240 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:08:26,240 INFO    wandb-upload_0:3776 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 711, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1007, in _prepare_proxy
+    conn.connect()
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-production.appspot.com/ucl_2023_com00087/trlx/4rqgqpx6/wandb-metadata.json?Expires=1693742902&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=r9MSIBbiE3Dw4w3c4YrMy4uLvIefoDvtVo04u2RlClQ2HCh%2B7pkGIBl9ZmSazam2bYLlVmmid%2BbPurWRmUX8vJguk0to9RT5DRHG%2B6uBQNkxLcR0QqONyL9a0Ti%2Fy4yVF2hnyj9it6lMaiq9Zm80RfYZFTF%2FwArYxefdjSpwBlI45LdmdNE6td%2BC%2FR7chuxqKBsiRJkXwaLuN3To7iYLEnquz8UL71X4dD4zs6lly96Mw%2B3PcdMldoVEzlb04ZZK0yveKa9AKIT710UXs8yutVkLltMejNAR1i7YCUUmENOj8%2B85I%2BHYW6FqAPnM0%2BlqlyIMtbhFor1uqqdTwZhvWg%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2094, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-production.appspot.com/ucl_2023_com00087/trlx/4rqgqpx6/wandb-metadata.json?Expires=1693742902&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=r9MSIBbiE3Dw4w3c4YrMy4uLvIefoDvtVo04u2RlClQ2HCh%2B7pkGIBl9ZmSazam2bYLlVmmid%2BbPurWRmUX8vJguk0to9RT5DRHG%2B6uBQNkxLcR0QqONyL9a0Ti%2Fy4yVF2hnyj9it6lMaiq9Zm80RfYZFTF%2FwArYxefdjSpwBlI45LdmdNE6td%2BC%2FR7chuxqKBsiRJkXwaLuN3To7iYLEnquz8UL71X4dD4zs6lly96Mw%2B3PcdMldoVEzlb04ZZK0yveKa9AKIT710UXs8yutVkLltMejNAR1i7YCUUmENOj8%2B85I%2BHYW6FqAPnM0%2BlqlyIMtbhFor1uqqdTwZhvWg%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2123, in upload_file
+    raise _e.with_traceback(sys.exc_info()[2])
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2094, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+wandb.sdk.lib.retry.TransientError: None
+2023-09-02 20:08:26,368 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:08:31,340 INFO    wandb-upload_0:3776 [upload_job.py:push():137] Uploaded file /tmp/tmp_z3095diwandb/5dvn1pg1-wandb-metadata.json
+2023-09-02 20:08:31,369 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:08:36,371 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:08:37,052 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:08:37,052 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:08:38,987 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:08:39,988 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:08:41,457 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:08:46,463 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:08:46,990 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/config.yaml
+2023-09-02 20:08:51,832 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:08:52,052 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:08:52,053 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:08:57,357 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:02,358 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:07,052 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:09:07,053 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:09:08,280 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:13,282 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:18,283 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:18,311 DEBUG   SystemMonitor:3776 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-09-02 20:09:18,314 DEBUG   SenderThread:3776 [sender.py:send():375] send: stats
+2023-09-02 20:09:22,052 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:09:22,054 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:09:23,422 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:28,424 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:31,007 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:09:33,401 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-02 20:09:34,407 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:36,009 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:09:37,053 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:09:37,054 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:09:40,339 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:45,340 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:48,315 DEBUG   SenderThread:3776 [sender.py:send():375] send: stats
+2023-09-02 20:09:51,317 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:09:52,053 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:09:52,054 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:09:56,328 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:01,330 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:06,331 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:07,053 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:10:07,054 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:10:11,352 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:16,353 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:18,316 DEBUG   SenderThread:3776 [sender.py:send():375] send: stats
+2023-09-02 20:10:21,522 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:22,030 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:10:22,053 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:10:22,054 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:10:27,357 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:32,358 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:37,054 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:10:37,054 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:10:38,319 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:43,320 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:48,318 DEBUG   SenderThread:3776 [sender.py:send():375] send: stats
+2023-09-02 20:10:49,319 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:52,054 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:10:52,054 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:10:54,370 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:10:59,371 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:04,372 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:07,054 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:11:07,054 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:11:09,442 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:12,053 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:11:15,045 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:18,320 DEBUG   SenderThread:3776 [sender.py:send():375] send: stats
+2023-09-02 20:11:20,322 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:22,054 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:11:22,055 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:11:25,341 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:30,343 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:35,344 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:37,054 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-02 20:11:37,055 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: stop_status
+2023-09-02 20:11:40,383 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:45,384 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:48,321 DEBUG   SenderThread:3776 [sender.py:send():375] send: stats
+2023-09-02 20:11:48,989 DEBUG   SenderThread:3776 [sender.py:send():375] send: exit
+2023-09-02 20:11:48,989 INFO    SenderThread:3776 [sender.py:send_exit():598] handling exit code: 1
+2023-09-02 20:11:48,990 INFO    SenderThread:3776 [sender.py:send_exit():600] handling runtime: 210
+2023-09-02 20:11:48,990 INFO    SenderThread:3776 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-02 20:11:48,990 INFO    SenderThread:3776 [sender.py:send_exit():606] send defer
+2023-09-02 20:11:48,990 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:48,991 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 0
+2023-09-02 20:11:48,991 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: defer
+2023-09-02 20:11:48,991 INFO    SenderThread:3776 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-09-02 20:11:48,991 INFO    SenderThread:3776 [sender.py:transition_state():626] send defer: 1
+2023-09-02 20:11:48,991 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:48,991 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 1
+2023-09-02 20:11:48,991 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: defer
+2023-09-02 20:11:48,992 INFO    SenderThread:3776 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-09-02 20:11:48,992 INFO    SenderThread:3776 [sender.py:transition_state():626] send defer: 2
+2023-09-02 20:11:48,992 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:48,992 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 2
+2023-09-02 20:11:48,992 INFO    HandlerThread:3776 [system_monitor.py:finish():190] Stopping system monitor
+2023-09-02 20:11:48,992 DEBUG   SystemMonitor:3776 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-09-02 20:11:48,992 DEBUG   SystemMonitor:3776 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-09-02 20:11:48,994 INFO    HandlerThread:3776 [interfaces.py:finish():202] Joined cpu monitor
+2023-09-02 20:11:48,994 INFO    HandlerThread:3776 [interfaces.py:finish():202] Joined disk monitor
+2023-09-02 20:11:49,012 INFO    HandlerThread:3776 [interfaces.py:finish():202] Joined gpu monitor
+2023-09-02 20:11:49,012 INFO    HandlerThread:3776 [interfaces.py:finish():202] Joined memory monitor
+2023-09-02 20:11:49,012 INFO    HandlerThread:3776 [interfaces.py:finish():202] Joined network monitor
+2023-09-02 20:11:49,013 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: defer
+2023-09-02 20:11:49,014 INFO    SenderThread:3776 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-09-02 20:11:49,014 INFO    SenderThread:3776 [sender.py:transition_state():626] send defer: 3
+2023-09-02 20:11:49,014 DEBUG   SenderThread:3776 [sender.py:send():375] send: stats
+2023-09-02 20:11:49,015 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:49,015 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 3
+2023-09-02 20:11:49,016 DEBUG   SenderThread:3776 [sender.py:send():375] send: history
+2023-09-02 20:11:49,017 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: summary_record
+2023-09-02 20:11:49,017 INFO    SenderThread:3776 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-02 20:11:49,018 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: defer
+2023-09-02 20:11:49,018 INFO    SenderThread:3776 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-09-02 20:11:49,018 INFO    SenderThread:3776 [sender.py:transition_state():626] send defer: 4
+2023-09-02 20:11:49,018 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:49,018 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 4
+2023-09-02 20:11:49,018 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: defer
+2023-09-02 20:11:49,018 INFO    SenderThread:3776 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-09-02 20:11:49,019 INFO    SenderThread:3776 [sender.py:transition_state():626] send defer: 5
+2023-09-02 20:11:49,019 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:49,019 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 5
+2023-09-02 20:11:49,019 DEBUG   SenderThread:3776 [sender.py:send():375] send: summary
+2023-09-02 20:11:49,020 INFO    SenderThread:3776 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-09-02 20:11:49,020 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: defer
+2023-09-02 20:11:49,020 INFO    SenderThread:3776 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-09-02 20:11:49,020 INFO    SenderThread:3776 [sender.py:transition_state():626] send defer: 6
+2023-09-02 20:11:49,021 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:49,021 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 6
+2023-09-02 20:11:49,021 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: defer
+2023-09-02 20:11:49,021 INFO    SenderThread:3776 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-09-02 20:11:49,022 INFO    SenderThread:3776 [sender.py:transition_state():626] send defer: 7
+2023-09-02 20:11:49,022 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: status_report
+2023-09-02 20:11:49,022 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:49,022 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 7
+2023-09-02 20:11:49,022 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: defer
+2023-09-02 20:11:49,022 INFO    SenderThread:3776 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-09-02 20:11:49,068 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/wandb-summary.json
+2023-09-02 20:11:49,989 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: poll_exit
+2023-09-02 20:11:50,069 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:11:51,069 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:11:51,689 INFO    SenderThread:3776 [sender.py:transition_state():626] send defer: 8
+2023-09-02 20:11:51,689 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: poll_exit
+2023-09-02 20:11:51,690 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:51,690 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 8
+2023-09-02 20:11:51,690 DEBUG   SenderThread:3776 [sender.py:send_request():402] send_request: defer
+2023-09-02 20:11:51,690 INFO    SenderThread:3776 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-09-02 20:11:51,698 INFO    SenderThread:3776 [sender.py:transition_state():626] send defer: 9
+2023-09-02 20:11:51,698 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: defer
+2023-09-02 20:11:51,698 INFO    HandlerThread:3776 [handler.py:handle_request_defer():170] handle defer: 9
+2023-09-02 20:11:51,699 DEBUG   SenderThread:3776 [sender.py:send():375] send: artifact
+2023-09-02 20:11:52,070 INFO    Thread-12 :3776 [dir_watcher.py:_on_file_modified():295] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/files/output.log
+2023-09-02 20:11:53,310 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/e90691de0f334b62cf2d8f7f82eceb55?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=dKef8f4r7jHXA%2Fb8k%2FFmnu80iW3mma7Mv9mb2m9tziyvs1Z%2B0Mc6icPh3P31vpRzfNt%2BtZ8tK2DI5jvPU2utIoflfMtfWbXY%2BlqP43IB4IOB6A8klfxdGngqirCkmSfsaytLuRYx1hL85eJsHDh3qIS8KQWDEVl5xJqj3EJkHfio3RcZj%2B7LEh7t66hZRv5D%2FXYB9sZ6ssC9y0DPbOYDYhM%2Fo9MHjvi4vmLC7gg9YOjlLXVQYs7XmqViSBvkqTRR8GUltkwfCg4zvnScNxHOEp5J8ajHWraw%2Bw5Eu0yWzAihvFaWBM2iuCGKT6TmalF6qlcajtmXE7scZ0dX2bwEVA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/e90691de0f334b62cf2d8f7f82eceb55?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=dKef8f4r7jHXA%2Fb8k%2FFmnu80iW3mma7Mv9mb2m9tziyvs1Z%2B0Mc6icPh3P31vpRzfNt%2BtZ8tK2DI5jvPU2utIoflfMtfWbXY%2BlqP43IB4IOB6A8klfxdGngqirCkmSfsaytLuRYx1hL85eJsHDh3qIS8KQWDEVl5xJqj3EJkHfio3RcZj%2B7LEh7t66hZRv5D%2FXYB9sZ6ssC9y0DPbOYDYhM%2Fo9MHjvi4vmLC7gg9YOjlLXVQYs7XmqViSBvkqTRR8GUltkwfCg4zvnScNxHOEp5J8ajHWraw%2Bw5Eu0yWzAihvFaWBM2iuCGKT6TmalF6qlcajtmXE7scZ0dX2bwEVA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:11:53,311 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': '6QaR3g8zS2LPLY9/guzrVQ==', 'Content-Type': 'application/json', 'Content-Length': '13956'}
+2023-09-02 20:11:53,311 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:11:53,311 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:11:53,311 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:11:53,311 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:11:54,607 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/e90691de0f334b62cf2d8f7f82eceb55?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=dKef8f4r7jHXA%2Fb8k%2FFmnu80iW3mma7Mv9mb2m9tziyvs1Z%2B0Mc6icPh3P31vpRzfNt%2BtZ8tK2DI5jvPU2utIoflfMtfWbXY%2BlqP43IB4IOB6A8klfxdGngqirCkmSfsaytLuRYx1hL85eJsHDh3qIS8KQWDEVl5xJqj3EJkHfio3RcZj%2B7LEh7t66hZRv5D%2FXYB9sZ6ssC9y0DPbOYDYhM%2Fo9MHjvi4vmLC7gg9YOjlLXVQYs7XmqViSBvkqTRR8GUltkwfCg4zvnScNxHOEp5J8ajHWraw%2Bw5Eu0yWzAihvFaWBM2iuCGKT6TmalF6qlcajtmXE7scZ0dX2bwEVA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/e90691de0f334b62cf2d8f7f82eceb55?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=dKef8f4r7jHXA%2Fb8k%2FFmnu80iW3mma7Mv9mb2m9tziyvs1Z%2B0Mc6icPh3P31vpRzfNt%2BtZ8tK2DI5jvPU2utIoflfMtfWbXY%2BlqP43IB4IOB6A8klfxdGngqirCkmSfsaytLuRYx1hL85eJsHDh3qIS8KQWDEVl5xJqj3EJkHfio3RcZj%2B7LEh7t66hZRv5D%2FXYB9sZ6ssC9y0DPbOYDYhM%2Fo9MHjvi4vmLC7gg9YOjlLXVQYs7XmqViSBvkqTRR8GUltkwfCg4zvnScNxHOEp5J8ajHWraw%2Bw5Eu0yWzAihvFaWBM2iuCGKT6TmalF6qlcajtmXE7scZ0dX2bwEVA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:11:54,607 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': '6QaR3g8zS2LPLY9/guzrVQ==', 'Content-Type': 'application/json', 'Content-Length': '13956'}
+2023-09-02 20:11:54,607 ERROR   wandb-upload_0:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:11:54,883 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:11:54,883 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:11:54,883 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:11:54,991 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:11:57,352 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:11:57,352 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:11:57,352 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:11:57,352 INFO    wandb-upload_1:3776 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 711, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1007, in _prepare_proxy
+    conn.connect()
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1131)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2094, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2123, in upload_file
+    raise _e.with_traceback(sys.exc_info()[2])
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2094, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+wandb.sdk.lib.retry.TransientError: None
+2023-09-02 20:11:57,967 INFO    wandb-upload_0:3776 [upload_job.py:push():95] Uploaded file /root/.local/share/wandb/artifacts/staging/tmpqmbo_655
+2023-09-02 20:11:59,993 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:01,707 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:12:01,707 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:12:01,707 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:12:04,995 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:09,998 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:10,075 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:12:10,076 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:12:10,076 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:12:14,999 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:20,001 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:25,004 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:28,865 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:12:28,865 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:12:28,865 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:12:30,006 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:35,009 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:40,011 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:45,013 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:50,015 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:12:55,018 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:00,020 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:05,023 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:07,868 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:13:07,868 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:13:07,868 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:13:10,026 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:15,028 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:20,031 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:25,034 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:30,036 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:35,039 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:40,041 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:45,043 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:50,045 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:13:55,047 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:00,049 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:05,051 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:10,054 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:14,790 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:14:14,790 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:14:14,790 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:14:15,056 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:20,058 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:25,060 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:30,062 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:35,064 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:40,066 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:45,068 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:50,071 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:14:55,073 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:00,075 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:05,077 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:10,079 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:15,082 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:20,084 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:25,086 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:30,088 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:35,090 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:40,092 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:45,094 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:50,096 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:15:55,098 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:00,100 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:05,102 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:10,104 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:15,107 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:20,109 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:25,111 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:30,114 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:35,116 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:40,119 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:45,121 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:50,124 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:16:53,797 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:16:53,798 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:16:53,798 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:16:55,126 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:00,129 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:05,131 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:10,134 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:15,136 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:20,139 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:25,141 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:30,143 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:35,145 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:40,148 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:45,150 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:50,152 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:17:55,154 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:00,155 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:05,157 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:10,159 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:15,161 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:20,163 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:25,165 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:30,168 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:35,170 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:40,172 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:45,174 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:50,176 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:18:55,178 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:00,180 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:05,182 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:10,184 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:15,185 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:20,187 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:25,189 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:30,191 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:35,193 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:40,195 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:45,197 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:50,199 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:19:55,201 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:00,203 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:05,206 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:10,208 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:15,211 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:20,214 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:25,216 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:30,219 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:35,221 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:40,224 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:45,227 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:50,229 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:20:55,231 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:00,234 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:05,237 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:10,239 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:15,241 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:16,301 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:21:16,301 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:21:16,301 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:21:20,244 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:25,246 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:30,249 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:35,251 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:40,253 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:45,255 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:50,258 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:21:55,260 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:00,263 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:05,265 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:10,267 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:15,269 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:20,272 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:25,274 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:30,276 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:35,278 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:40,280 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:45,283 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:50,285 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:22:55,287 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:00,289 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:05,291 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:10,294 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:15,295 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:20,297 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:25,299 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:30,301 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:35,303 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:40,306 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:45,308 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:50,311 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:23:55,314 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:00,317 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:05,319 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:10,322 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:15,324 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:20,327 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:25,329 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:30,332 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:35,334 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:40,336 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:45,338 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:50,341 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:24:55,343 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:00,345 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:05,347 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:10,349 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:15,351 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:20,353 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:25,355 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:30,357 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:35,359 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:40,361 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:45,363 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:50,366 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:25:55,367 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:00,370 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:05,372 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:10,374 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:15,376 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:20,378 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:25,380 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:30,382 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:35,384 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:40,387 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:45,389 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:48,767 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:26:48,767 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:26:48,767 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:26:50,391 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:26:55,393 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:00,395 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:05,397 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:10,399 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:15,401 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:20,403 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:25,405 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:30,408 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:35,411 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:40,413 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:45,416 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:50,418 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:27:55,421 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:00,424 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:05,426 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:10,428 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:15,431 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:20,433 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:25,436 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:30,438 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:35,440 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:40,443 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:45,445 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:50,448 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:28:55,450 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:29:00,452 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:29:05,455 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:29:10,457 DEBUG   HandlerThread:3776 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-02 20:29:14,281 WARNING StreamThr :3776 [internal.py:is_dead():414] Internal process exiting, parent pid 3672 disappeared
+2023-09-02 20:29:14,282 ERROR   StreamThr :3776 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-09-02 20:29:14,459 INFO    HandlerThread:3776 [handler.py:finish():845] shutting down handler
+2023-09-02 20:29:14,973 INFO    WriterThread:3776 [datastore.py:close():298] close: /root/autodl-tmp/msc_ml/llm_thought/Evaluation/wandb/run-20230902_200815-4rqgqpx6/run-4rqgqpx6.wandb
+2023-09-02 20:32:30,086 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:32:30,086 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:32:30,086 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:38:40,046 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:38:40,046 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:38:40,046 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:44:06,416 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:44:06,416 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:44:06,416 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:49:34,584 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:49:34,584 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:49:34,584 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 20:54:56,366 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 20:54:56,366 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 20:54:56,366 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:01:09,316 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:01:09,316 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:01:09,316 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:06:47,378 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:06:47,378 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:06:47,378 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:12:55,277 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:12:55,277 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:12:55,278 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:18:24,934 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:18:24,934 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:18:24,934 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:24:39,089 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:24:39,089 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:24:39,089 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:30:13,519 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:30:13,519 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:30:13,519 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:36:22,570 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:36:22,570 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:36:22,570 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:41:37,086 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:41:37,086 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:41:37,086 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:47:10,817 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:47:10,817 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:47:10,817 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:52:16,340 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:52:16,340 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:52:16,340 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
+2023-09-02 21:57:57,740 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2099] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /wandb-artifacts-prod/wandb_artifacts/94466346/557605943/7cb72c6070c7b17c860e614316150974?Expires=1693743113&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=IHOw%2Fp%2BqkpSeHrKwH4xmrAL0jhjrA%2Fav1oWQ4VWQTmjNFedLalQZunAhCbBOIbB3JqsZ8ROk8s5Ed3A%2FE2ZNCJpOT2%2BCR0bOL28F3lVrczzmGFQI0s7tdDJDkdPHaGa4vb8%2BzN2nrZMbczVo4J1CIVgWcfADQCZ9TBhGzAUtE9hosTH7p1MpXXodeem8AaFMtGkd%2FJAN8C%2Bdu5VZRVorQhU%2FCU%2F0oRJZLpt56cZ%2FXCeSVrpF9eBPDRnUyg8DOp0Pl01GV8xus5AI%2FNAeg07bCNToUf%2FrUDCVI28WeXXw6Pdi0zsLVUYDxEKfZu9Kr%2BU75TrGDuyy%2FSA93%2BREtQf5JA%3D%3D (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')))
+2023-09-02 21:57:57,740 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2101] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'fLcsYHDHsXyGDmFDFhUJdA==', 'Content-Type': 'text/plain; charset=utf-8', 'Content-Length': '4296'}
+2023-09-02 21:57:57,740 ERROR   wandb-upload_1:3776 [internal_api.py:upload_file():2103] upload_file response body: 
