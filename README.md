@@ -5,10 +5,12 @@
 
 Change the directories at the begining of Train/question_answer/llama_2_qa_train.py
 
+``` shell
 dataset_name='SVAMP' # SVAMP or PIQA
 svamp_checkpoint_dir=<path for checkpoints trained with svamp> # path for checkpoints trained with svamp
 model_path=<path for Llama-2-7b-chat-hf> #path for llama2-7b pre trained weight
 batch_size=1
+```
 
 then use command:
 
