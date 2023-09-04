@@ -267,13 +267,15 @@ def _is_correct(completion, answer):
     print('\n%%%%%%%%%%','extracted answer: ',extracted_answer,' true answer:',answer)
     if extracted_answer=="[invalid]":
         return 0.0
-    else:
-        if float(extracted_answer) == float(answer):
-            return 1.0
-        else:
+    else:  
+        try:
+            if float(extracted_answer) == float(answer):
+                return 1.0
+            else:
+                return 0.0
+        except ValueError:
+            # Handle the case where extracted_answer cannot be converted to float
             return 0.0
-    
-
 def svamp_real_reward( prompts: List[str], outputs: List[str], **kwargs) -> List[float]:
     rewards = []
     for prompt, output in zip(prompts, outputs):
@@ -359,8 +361,8 @@ def llama_config():
         scheduler=SchedulerConfig(name="cosine_annealing", kwargs=dict(T_max=10000, eta_min=1.0e-5)),
         method=PPOConfig(
             name="PPOConfig",
-            num_rollouts=4,
-            chunk_size=4,
+            num_rollouts=128,
+            chunk_size=16,
             ppo_epochs=4,
             init_kl_coef=0.05,
             target=6,
@@ -411,7 +413,7 @@ def main(hparams={}):
             reward_fn=svamp_real_reward,
             metric_fn=svamp_metric_answer,
             prompts=prompt_all[:700],
-            eval_prompts=prompt_all[700:800][:4],
+            eval_prompts=prompt_all[700:800],
             config=config,
         )
     elif dataset_name=='PIQA':

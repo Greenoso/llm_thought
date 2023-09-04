@@ -267,13 +267,15 @@ def _is_correct(completion, answer):
     print('\n%%%%%%%%%%','extracted answer: ',extracted_answer,' true answer:',answer)
     if extracted_answer=="[invalid]":
         return 0.0
-    else:
-        if float(extracted_answer) == float(answer):
-            return 1.0
-        else:
+    else:  
+        try:
+            if float(extracted_answer) == float(answer):
+                return 1.0
+            else:
+                return 0.0
+        except ValueError:
+            # Handle the case where extracted_answer cannot be converted to float
             return 0.0
-    
-
 def svamp_real_reward( prompts: List[str], outputs: List[str], **kwargs) -> List[float]:
     rewards = []
     for prompt, output in zip(prompts, outputs):
