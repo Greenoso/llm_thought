@@ -1,0 +1,28 @@
+2023-09-29 23:28:01,072 INFO    MainThread:2997 [wandb_setup.py:_flush():76] Current SDK version is 0.15.8
+2023-09-29 23:28:01,072 INFO    MainThread:2997 [wandb_setup.py:_flush():76] Configure stats pid to 2997
+2023-09-29 23:28:01,072 INFO    MainThread:2997 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2023-09-29 23:28:01,072 INFO    MainThread:2997 [wandb_setup.py:_flush():76] Loading settings from /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/settings
+2023-09-29 23:28:01,072 INFO    MainThread:2997 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'mode': 'offline'}
+2023-09-29 23:28:01,072 INFO    MainThread:2997 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-09-29 23:28:01,072 INFO    MainThread:2997 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'Train/flan_t5/flan_t5_train.py', 'program': '/root/autodl-tmp/msc_ml/llm_thought/Train/flan_t5/flan_t5_train.py'}
+2023-09-29 23:28:01,073 INFO    MainThread:2997 [wandb_init.py:_log_setup():507] Logging user logs to /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/logs/debug.log
+2023-09-29 23:28:01,073 INFO    MainThread:2997 [wandb_init.py:_log_setup():508] Logging internal logs to /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/logs/debug-internal.log
+2023-09-29 23:28:01,073 INFO    MainThread:2997 [wandb_init.py:init():547] calling init triggers
+2023-09-29 23:28:01,073 INFO    MainThread:2997 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-09-29 23:28:01,073 INFO    MainThread:2997 [wandb_init.py:init():596] starting backend
+2023-09-29 23:28:01,073 INFO    MainThread:2997 [wandb_init.py:init():600] setting up manager
+2023-09-29 23:28:01,074 INFO    MainThread:2997 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-09-29 23:28:01,076 INFO    MainThread:2997 [wandb_init.py:init():606] backend started and connected
+2023-09-29 23:28:01,081 INFO    MainThread:2997 [wandb_init.py:init():697] updated telemetry
+2023-09-29 23:28:01,406 INFO    MainThread:2997 [wandb_init.py:init():730] communicating run to backend with 60.0 second timeout
+2023-09-29 23:28:02,191 INFO    MainThread:2997 [wandb_run.py:_on_init():2180] communicating current version
+2023-09-29 23:28:02,348 INFO    MainThread:2997 [wandb_run.py:_on_init():2189] got version response upgrade_message: "wandb version 0.15.11 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-09-29 23:28:02,348 INFO    MainThread:2997 [wandb_init.py:init():781] starting run threads in backend
+2023-09-29 23:28:06,432 INFO    MainThread:2997 [wandb_run.py:_console_start():2159] atexit reg
+2023-09-29 23:28:06,433 INFO    MainThread:2997 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2023-09-29 23:28:06,433 INFO    MainThread:2997 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2023-09-29 23:28:06,433 INFO    MainThread:2997 [wandb_run.py:_redirect():2104] Redirects installed.
+2023-09-29 23:28:06,434 INFO    MainThread:2997 [wandb_init.py:init():822] run started, returning control to user process
+2023-09-29 23:28:06,435 INFO    MainThread:2997 [wandb_run.py:_config_callback():1282] config_cb None None {'method': {'name': 'PPOConfig', 'ppo_epochs': 4, 'num_rollouts': 128, 'chunk_size': 32, 'init_kl_coef': 0.05, 'target': 6, 'horizon': 10000, 'gamma': 1, 'lam': 0.95, 'cliprange': 0.2, 'cliprange_value': 0.2, 'vf_coef': 1, 'scale_reward': None, 'ref_mean': None, 'ref_std': None, 'cliprange_reward': 10, 'gen_kwargs': {'max_new_tokens': 256}, 'gen_experience_kwargs': {'max_new_tokens': 256, 'do_sample': True, 'temperature': 1.0, 'top_k': 50, 'top_p': 0.95}}, 'model': {'model_path': '/root/autodl-tmp/flan-t5-large', 'model_arch_type': 'seq2seq', 'num_layers_unfrozen': -1, 'peft_config': {'peft_type': <PeftType.LORA: 'LORA'>, 'auto_mapping': None, 'base_model_name_or_path': '/root/autodl-tmp/flan-t5-large', 'revision': None, 'task_type': <TaskType.SEQ_2_SEQ_LM: 'SEQ_2_SEQ_LM'>, 'inference_mode': False, 'r': 64, 'target_modules': ['q', 'v'], 'lora_alpha': 16, 'lora_dropout': 0.1, 'fan_in_fan_out': False, 'bias': 'none', 'modules_to_save': None, 'init_lora_weights': True, 'layers_to_transform': None, 'layers_pattern': None}}, 'optimizer': {'name': 'adamw', 'kwargs': {'lr': 5e-05, 'betas': [0.9, 0.999], 'eps': 1e-08, 'weight_decay': 1e-06}}, 'scheduler': {'name': 'cosine_annealing', 'kwargs': {'T_max': 10000, 'eta_min': 1e-06}}, 'tokenizer': {'tokenizer_path': '/root/autodl-tmp/flan-t5-large', 'padding_side': 'left', 'truncation_side': 'right'}, 'train': {'total_steps': 100000, 'seq_length': 512, 'epochs': 100, 'batch_size': 16, 'checkpoint_interval': 1000, 'eval_interval': 50, 'pipeline': 'PromptPipeline', 'trainer': 'AcceleratePPOTrainer', 'trainer_kwargs': {}, 'project_name': 'trlx', 'entity_name': None, 'group_name': None, 'checkpoint_dir': '/root/autodl-tmp/msc_ml/t5_large_checkpoints/navigate/confidence_answer_modified', 'rollout_logging_dir': None, 'save_best': True, 'save_optimizer': True, 'tracker': 'wandb', 'logging_dir': '/root/autodl-tmp/msc_ml/llm_thought/Train/flan_t5/wandb/navigate', 'tags': [], 'seed': 1000, 'minibatch_size': None}, 'distributed': {'mixed_precision': 'no', 'num_gpus': 2, 'gradient_accumulation_steps': 2, 'gradient_clipping': 1.0, 'zero_stage': 2, 'offload_optimizer_device': 'none', 'offload_param_device': 'none'}}

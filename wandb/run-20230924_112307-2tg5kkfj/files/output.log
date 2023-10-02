@@ -1,0 +1,2685 @@
+[2023-09-24 11:23:50,121] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.10.1, git-hash=unknown, git-branch=unknown
+[2023-09-24 11:23:52,327] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2023-09-24 11:23:52,334] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the client Optimizer
+[2023-09-24 11:23:52,334] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2023-09-24 11:23:52,429] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2023-09-24 11:23:52,429] [INFO] [utils.py:54:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2023-09-24 11:23:52,429] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.float32 ZeRO stage 2 optimizer
+[2023-09-24 11:23:52,430] [INFO] [stage_1_and_2.py:146:__init__] Reduce bucket size 500,000,000
+[2023-09-24 11:23:52,430] [INFO] [stage_1_and_2.py:147:__init__] Allgather bucket size 500,000,000
+[2023-09-24 11:23:52,430] [INFO] [stage_1_and_2.py:148:__init__] CPU Offload: False
+[2023-09-24 11:23:52,430] [INFO] [stage_1_and_2.py:149:__init__] Round robin gradient partitioning: False
+Rank: 0 partition count [4] and sizes[(5243906, False)]
+[2023-09-24 11:23:54,426] [INFO] [utils.py:803:see_memory_usage] Before initializing optimizer states
+[2023-09-24 11:23:54,427] [INFO] [utils.py:804:see_memory_usage] MA 6.22 GB         Max_MA 6.22 GB         CA 6.22 GB         Max_CA 6 GB
+[2023-09-24 11:23:54,427] [INFO] [utils.py:811:see_memory_usage] CPU Virtual Memory:  used = 64.26 GB, percent = 10.2%
+[2023-09-24 11:23:54,578] [INFO] [utils.py:803:see_memory_usage] After initializing optimizer states
+[2023-09-24 11:23:54,579] [INFO] [utils.py:804:see_memory_usage] MA 6.25 GB         Max_MA 6.31 GB         CA 6.33 GB         Max_CA 6 GB
+[2023-09-24 11:23:54,579] [INFO] [utils.py:811:see_memory_usage] CPU Virtual Memory:  used = 64.26 GB, percent = 10.2%
+[2023-09-24 11:23:54,580] [INFO] [stage_1_and_2.py:520:__init__] optimizer state initialized
+[2023-09-24 11:23:54,718] [INFO] [utils.py:803:see_memory_usage] After initializing ZeRO optimizer
+[2023-09-24 11:23:54,719] [INFO] [utils.py:804:see_memory_usage] MA 6.25 GB         Max_MA 6.25 GB         CA 6.33 GB         Max_CA 6 GB
+[2023-09-24 11:23:54,719] [INFO] [utils.py:811:see_memory_usage] CPU Virtual Memory:  used = 64.27 GB, percent = 10.2%
+[2023-09-24 11:23:54,723] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = AdamW
+[2023-09-24 11:23:54,723] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2023-09-24 11:23:54,723] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2023-09-24 11:23:54,723] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[5e-05], mom=[[0.9, 0.999]]
+[2023-09-24 11:23:54,727] [INFO] [config.py:960:print] DeepSpeedEngine configuration:
+[2023-09-24 11:23:54,728] [INFO] [config.py:964:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2023-09-24 11:23:54,728] [INFO] [config.py:964:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2023-09-24 11:23:54,728] [INFO] [config.py:964:print]   amp_enabled .................. False
+[2023-09-24 11:23:54,728] [INFO] [config.py:964:print]   amp_params ................... False
+[2023-09-24 11:23:54,728] [INFO] [config.py:964:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2023-09-24 11:23:54,729] [INFO] [config.py:964:print]   bfloat16_enabled ............. False
+[2023-09-24 11:23:54,729] [INFO] [config.py:964:print]   checkpoint_parallel_write_pipeline  False
+[2023-09-24 11:23:54,729] [INFO] [config.py:964:print]   checkpoint_tag_validation_enabled  True
+[2023-09-24 11:23:54,729] [INFO] [config.py:964:print]   checkpoint_tag_validation_fail  False
+[2023-09-24 11:23:54,729] [INFO] [config.py:964:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7fd8b2c51760>
+[2023-09-24 11:23:54,729] [INFO] [config.py:964:print]   communication_data_type ...... None
+[2023-09-24 11:23:54,729] [INFO] [config.py:964:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2023-09-24 11:23:54,730] [INFO] [config.py:964:print]   curriculum_enabled_legacy .... False
+[2023-09-24 11:23:54,730] [INFO] [config.py:964:print]   curriculum_params_legacy ..... False
+[2023-09-24 11:23:54,730] [INFO] [config.py:964:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2023-09-24 11:23:54,730] [INFO] [config.py:964:print]   data_efficiency_enabled ...... False
+[2023-09-24 11:23:54,730] [INFO] [config.py:964:print]   dataloader_drop_last ......... False
+[2023-09-24 11:23:54,730] [INFO] [config.py:964:print]   disable_allgather ............ False
+[2023-09-24 11:23:54,730] [INFO] [config.py:964:print]   dump_state ................... False
+[2023-09-24 11:23:54,730] [INFO] [config.py:964:print]   dynamic_loss_scale_args ...... None
+[2023-09-24 11:23:54,731] [INFO] [config.py:964:print]   eigenvalue_enabled ........... False
+[2023-09-24 11:23:54,731] [INFO] [config.py:964:print]   eigenvalue_gas_boundary_resolution  1
+[2023-09-24 11:23:54,731] [INFO] [config.py:964:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2023-09-24 11:23:54,731] [INFO] [config.py:964:print]   eigenvalue_layer_num ......... 0
+[2023-09-24 11:23:54,731] [INFO] [config.py:964:print]   eigenvalue_max_iter .......... 100
+[2023-09-24 11:23:54,731] [INFO] [config.py:964:print]   eigenvalue_stability ......... 1e-06
+[2023-09-24 11:23:54,731] [INFO] [config.py:964:print]   eigenvalue_tol ............... 0.01
+[2023-09-24 11:23:54,731] [INFO] [config.py:964:print]   eigenvalue_verbose ........... False
+[2023-09-24 11:23:54,732] [INFO] [config.py:964:print]   elasticity_enabled ........... False
+[2023-09-24 11:23:54,732] [INFO] [config.py:964:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "recompute_fwd_factor": 0.0,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2023-09-24 11:23:54,732] [INFO] [config.py:964:print]   fp16_auto_cast ............... None
+[2023-09-24 11:23:54,732] [INFO] [config.py:964:print]   fp16_enabled ................. False
+[2023-09-24 11:23:54,732] [INFO] [config.py:964:print]   fp16_master_weights_and_gradients  False
+[2023-09-24 11:23:54,732] [INFO] [config.py:964:print]   global_rank .................. 0
+[2023-09-24 11:23:54,732] [INFO] [config.py:964:print]   grad_accum_dtype ............. None
+[2023-09-24 11:23:54,733] [INFO] [config.py:964:print]   gradient_accumulation_steps .. 4
+[2023-09-24 11:23:54,733] [INFO] [config.py:964:print]   gradient_clipping ............ 1.0
+[2023-09-24 11:23:54,733] [INFO] [config.py:964:print]   gradient_predivide_factor .... 1.0
+[2023-09-24 11:23:54,733] [INFO] [config.py:964:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2023-09-24 11:23:54,733] [INFO] [config.py:964:print]   initial_dynamic_scale ........ 65536
+[2023-09-24 11:23:54,733] [INFO] [config.py:964:print]   load_universal_checkpoint .... False
+[2023-09-24 11:23:54,733] [INFO] [config.py:964:print]   loss_scale ................... 0
+[2023-09-24 11:23:54,734] [INFO] [config.py:964:print]   memory_breakdown ............. False
+[2023-09-24 11:23:54,734] [INFO] [config.py:964:print]   mics_hierarchial_params_gather  False
+[2023-09-24 11:23:54,734] [INFO] [config.py:964:print]   mics_shard_size .............. -1
+[2023-09-24 11:23:54,734] [INFO] [config.py:964:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2023-09-24 11:23:54,734] [INFO] [config.py:964:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2023-09-24 11:23:54,734] [INFO] [config.py:964:print]   optimizer_legacy_fusion ...... False
+[2023-09-24 11:23:54,734] [INFO] [config.py:964:print]   optimizer_name ............... None
+[2023-09-24 11:23:54,734] [INFO] [config.py:964:print]   optimizer_params ............. None
+[2023-09-24 11:23:54,735] [INFO] [config.py:964:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2023-09-24 11:23:54,735] [INFO] [config.py:964:print]   pld_enabled .................. False
+[2023-09-24 11:23:54,735] [INFO] [config.py:964:print]   pld_params ................... False
+[2023-09-24 11:23:54,735] [INFO] [config.py:964:print]   prescale_gradients ........... False
+[2023-09-24 11:23:54,735] [INFO] [config.py:964:print]   scheduler_name ............... None
+[2023-09-24 11:23:54,735] [INFO] [config.py:964:print]   scheduler_params ............. None
+[2023-09-24 11:23:54,735] [INFO] [config.py:964:print]   sparse_attention ............. None
+[2023-09-24 11:23:54,735] [INFO] [config.py:964:print]   sparse_gradients_enabled ..... False
+[2023-09-24 11:23:54,736] [INFO] [config.py:964:print]   steps_per_print .............. inf
+[2023-09-24 11:23:54,736] [INFO] [config.py:964:print]   train_batch_size ............. 192
+[2023-09-24 11:23:54,736] [INFO] [config.py:964:print]   train_micro_batch_size_per_gpu  12
+[2023-09-24 11:23:54,736] [INFO] [config.py:964:print]   use_node_local_storage ....... False
+[2023-09-24 11:23:54,736] [INFO] [config.py:964:print]   wall_clock_breakdown ......... False
+[2023-09-24 11:23:54,736] [INFO] [config.py:964:print]   world_size ................... 4
+[2023-09-24 11:23:54,736] [INFO] [config.py:964:print]   zero_allow_untested_optimizer  True
+[2023-09-24 11:23:54,736] [INFO] [config.py:964:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=False load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2023-09-24 11:23:54,737] [INFO] [config.py:964:print]   zero_enabled ................. True
+[2023-09-24 11:23:54,737] [INFO] [config.py:964:print]   zero_force_ds_cpu_optimizer .. True
+[2023-09-24 11:23:54,737] [INFO] [config.py:964:print]   zero_optimization_stage ...... 2
+[2023-09-24 11:23:54,737] [INFO] [config.py:950:print_user_config]   json = {
+    "train_batch_size": 192,
+    "train_micro_batch_size_per_gpu": 12,
+    "gradient_accumulation_steps": 4,
+    "zero_optimization": {
+        "stage": 2,
+        "offload_optimizer": {
+            "device": "none",
+            "nvme_path": null
+        },
+        "offload_param": {
+            "device": "none",
+            "nvme_path": null
+        },
+        "stage3_gather_16bit_weights_on_model_save": false
+    },
+    "gradient_clipping": 1.0,
+    "steps_per_print": inf,
+    "fp16": {
+        "enabled": false,
+        "auto_cast": false
+    },
+    "bf16": {
+        "enabled": false
+    },
+    "zero_allow_untested_optimizer": true
+}
+The qa pair is: True
+&&&&&&&&: A person taking 5 steps is a person taking 6 steps. You cannot return to the starting point when you take 4 steps. So, the answer is
+Total Probability for 'Yes': 0.14264334738254547
+Total Probability for 'No': 0.8573566675186157
+The qa pair is: True
+&&&&&&&&: In order to return, the step needs to be repeated. The first step is to take 1 step. So, the answer is
+Total Probability for 'Yes': 0.4298177659511566
+Total Probability for 'No': 0.570182204246521
+The qa pair is: False
+&&&&&&&&: You always face forward when you take a step. This requires facing up and facing forward. So, the answer is
+Total Probability for 'Yes': 0.5030031204223633
+Total Probability for 'No': 0.4969968795776367
+The qa pair is: False
+&&&&&&&&: Turn around and turn around take 7 steps and take 8 steps. So, the answer is
+Total Probability for 'Yes': 0.5713174939155579
+Total Probability for 'No': 0.4286825358867645
+The qa pair is: True
+&&&&&&&&: Take one step right. Take 3 steps left. Take 2 steps right. When you follow these instructions you always face forward. So, the answer is
+Total Probability for 'Yes': 0.4856901168823242
+Total Probability for 'No': 0.5143099427223206
+The qa pair is: False
+&&&&&&&&: Take 9 steps left. Immediately after that, take 2 steps left. Take 2 steps right. Immediately after that, take 6 steps forward. Immediately after that, take 10 steps backward. So, the answer is
+Total Probability for 'Yes': 0.4295201301574707
+Total Probability for 'No': 0.5704798698425293
+The qa pair is: False
+&&&&&&&&: Turn right after you take 8 steps.</s>
+Total Probability for 'Yes': 0.311069130897522
+Total Probability for 'No': 0.6889308094978333
+The qa pair is: False
+&&&&&&&&: It takes 2 steps to turn right. So, the answer is
+Total Probability for 'Yes': 0.5526716709136963
+Total Probability for 'No': 0.4473283886909485
+The qa pair is: True
+&&&&&&&&: A person cannot take 9 steps right and take 8 steps left. Thus, the answer is
+Total Probability for 'Yes': 0.21304655075073242
+Total Probability for 'No': 0.7869533896446228
+The qa pair is: False
+&&&&&&&&: You can always turn your body in any direction. If you want to take 8 steps backward, take 2 steps backward. The total number of steps is 2 steps + 8 steps backward and 2 steps + 10 steps forward. So, the answer is
+Total Probability for 'Yes': 0.47551754117012024
+Total Probability for 'No': 0.5244824886322021
+The qa pair is: True
+&&&&&&&&: To return to the starting point you need to take 6 steps. If you're coming back from a direction other than right, you'd have to take another 4 steps. To come back, you would have to take 4 steps. So, the answer is
+Total Probability for 'Yes': 0.4311443567276001
+Total Probability for 'No': 0.5688556432723999
+The qa pair is: True
+&&&&&&&&: The starting point is always facing forward. The two different directions return you to the beginning. So, the answer is
+Total Probability for 'Yes': 0.6582697033882141
+Total Probability for 'No': 0.3417303264141083
+The qa pair is: False
+&&&&&&&&: The starting point is always face forward. The first step backward would be taking 10 steps backward. So, the answer is
+Total Probability for 'Yes': 0.4406411945819855
+Total Probability for 'No': 0.5593587756156921
+The qa pair is: False
+&&&&&&&&: Turn right after 5 steps at intersection on the way back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8239172697067261
+Total Probability for 'No': 0.17608265578746796
+The qa pair is: True
+&&&&&&&&: Facing forward is what you should always do. As the opposite is, it is how you come back. The starting point would be facing forward. So, the answer is
+Total Probability for 'Yes': 0.45709139108657837
+Total Probability for 'No': 0.5429086089134216
+The qa pair is: True
+&&&&&&&&: If you take 9 steps and take a first right turn, you would have to take 9 steps to make it back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7818042635917664
+Total Probability for 'No': 0.21819578111171722
+The qa pair is: False
+&&&&&&&&: Turn around, take 3 steps and turn left. You can turn around and take 3 steps to go back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.9703049659729004
+Total Probability for 'No': 0.029695026576519012
+The qa pair is: False
+&&&&&&&&: To return to the starting point, you can take 4 steps. Thus, the answer is
+Total Probability for 'Yes': 0.22506414353847504
+Total Probability for 'No': 0.7749359011650085
+The qa pair is: False
+&&&&&&&&: If you take 5 steps right, you are back at the start, 1 step forward. If you take 2 steps backward, you are back at the start, 2 steps backward. So, the answer is
+Total Probability for 'Yes': 0.5909760594367981
+Total Probability for 'No': 0.4090240001678467
+The qa pair is: True
+&&&&&&&&: Counting your steps gives you the number of steps necessary to return to the starting point. Each step has a number and that number has to be taken to get you back to the beginning point. 1 foot is equal to one step. 7 steps is equal to 4 steps. So, the answer is
+Total Probability for 'Yes': 0.4187738001346588
+Total Probability for 'No': 0.581226110458374
+The qa pair is: True
+&&&&&&&&: After taking 6 steps left, you are facing forward. If you repeat this process, you are facing 3 steps backward, so you should take 3 steps left as well. So, the answer is
+Total Probability for 'Yes': 0.53605055809021
+Total Probability for 'No': 0.4639494717121124
+The qa pair is: False
+&&&&&&&&: Take 8 steps to go up 8 steps to go down. Take a moment to think of how many different steps you need to take before getting back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.5715300440788269
+Total Probability for 'No': 0.4284699857234955
+The qa pair is: False
+&&&&&&&&: You always face forward and go one step right. You always go four steps right and go five steps left. So, the answer is
+Total Probability for 'Yes': 0.4377056360244751
+Total Probability for 'No': 0.5622944235801697
+The qa pair is: True
+&&&&&&&&: If you follow the directions correctly and take the same number of steps each time, you will return to the starting point and thus return to the original destination. So, the answer is
+Total Probability for 'Yes': 0.7537974715232849
+Total Probability for 'No': 0.24620242416858673
+The qa pair is: True
+&&&&&&&&: The start is always facing forward. If you ever get lost, you always face forward. The starting point is always in the middle of the circle. In the middle of the circle, is the starting point. So, the answer is
+Total Probability for 'Yes': 0.7293086051940918
+Total Probability for 'No': 0.27069130539894104
+The qa pair is: True
+&&&&&&&&: Turn around and take 6 steps, then take 8 steps. Take 8 steps and return to starting point. So, the answer is
+Total Probability for 'Yes': 0.4223902225494385
+Total Probability for 'No': 0.5776097178459167
+The qa pair is: True
+&&&&&&&&: There are a total of 7 steps and 5 steps to take to turn right. There are a total of 10 steps and 9 steps to take to take to turn left. So, the answer is
+Total Probability for 'Yes': 0.2271842658519745
+Total Probability for 'No': 0.7728157043457031
+The qa pair is: True
+&&&&&&&&: Turn right. Turn left. Take 5 steps. Take 10 steps. Take 7 steps. Turn left. Thus, the answer is
+Total Probability for 'Yes': 0.5882000923156738
+Total Probability for 'No': 0.411799818277359
+The qa pair is: False
+&&&&&&&&: Turn left - take 4 steps. Turn left - take 5 steps. Turn left - take 3 steps. So, the answer is
+Total Probability for 'Yes': 0.30134066939353943
+Total Probability for 'No': 0.6986592411994934
+The qa pair is: False
+&&&&&&&&: You can take 8 or 5 steps to get back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.672238826751709
+Total Probability for 'No': 0.32776114344596863
+The qa pair is: True
+&&&&&&&&: If you take 3 steps to return to the starting point, you take 2 steps to get back. If you take 4 steps to get back to the starting point, you take 4 steps. If you take 2 steps to get back to the starting point, you take 2 steps. If you take 6 steps to get back to the starting point, you take 6 steps. So, the answer is
+Total Probability for 'Yes': 0.62291020154953
+Total Probability for 'No': 0.37708979845046997
+The qa pair is: True
+&&&&&&&&: If you follow this path, you will be taken back to the start. If you follow this path, you will be taken back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.9380772709846497
+Total Probability for 'No': 0.061922840774059296
+The qa pair is: False
+&&&&&&&&: Place your feet in the proper direction in the correct direction. For example, from east to west, you would place your feet on the front steps. When you make a right turn, you have to always face forward. Thus, the answer is
+Total Probability for 'Yes': 0.4331163167953491
+Total Probability for 'No': 0.5668836832046509
+The qa pair is: False
+&&&&&&&&: Take 2 steps forward and 9 steps backward. To take 2 steps forward means you move forward 3 steps forward. So, the answer is
+Total Probability for 'Yes': 0.2446206510066986
+Total Probability for 'No': 0.755379319190979
+The qa pair is: True
+&&&&&&&&: If you take 4 steps right you return to the starting point. If you have taken 1 step forward the first time you always look up right. So, the answer is
+Total Probability for 'Yes': 0.4151943027973175
+Total Probability for 'No': 0.5848057270050049
+The qa pair is: True
+&&&&&&&&: If you follow the instructions, you will always face forward. Take 6 steps right. If you follow the instructions, you will always face right. So, the answer is
+Total Probability for 'Yes': 0.5290732979774475
+Total Probability for 'No': 0.4709267318248749
+The qa pair is: True
+&&&&&&&&: When you go backwards, you must face forward. If you are facing forward, you cannot go backwards. So, the answer is
+Total Probability for 'Yes': 0.1906503587961197
+Total Probability for 'No': 0.8093495965003967
+The qa pair is: False
+&&&&&&&&: A person who always faces forward can never fall backwards. A person who always faces left cannot return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.21883609890937805
+Total Probability for 'No': 0.7811639904975891
+The qa pair is: False
+&&&&&&&&: If you follow the instructions correctly, you will return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7785463333129883
+Total Probability for 'No': 0.22145357728004456
+The qa pair is: True
+&&&&&&&&: If you turn right and take 2 steps, you are back to the beginning. If you take 8 steps and turn right, you are returning to the starting point. So, the answer is
+Total Probability for 'Yes': 0.49487176537513733
+Total Probability for 'No': 0.5051283240318298
+The qa pair is: True
+&&&&&&&&: Right turns around and turns around. Just as you left turn right is a turn where if you left turn right and turn around. So, the answer is
+Total Probability for 'Yes': 0.5288232564926147
+Total Probability for 'No': 0.47117677330970764
+The qa pair is: False
+&&&&&&&&: If you follow these steps, you always face forward and should always take 10 steps right. So, the answer is
+Total Probability for 'Yes': 0.5369251370429993
+Total Probability for 'No': 0.46307483315467834
+The qa pair is: False
+&&&&&&&&: Turn around and take 8 steps for 8 steps returned.</s>
+Total Probability for 'Yes': 0.16849611699581146
+Total Probability for 'No': 0.8315038084983826
+The qa pair is: True
+&&&&&&&&: Turn right takes 5 steps. You should take 6 steps to turn right. So, the answer is
+Total Probability for 'Yes': 0.432902991771698
+Total Probability for 'No': 0.567097008228302
+The qa pair is: False
+&&&&&&&&: If you always face forward, there are always two directions you face - left or right. So, the answer is
+Total Probability for 'Yes': 0.48187315464019775
+Total Probability for 'No': 0.518126904964447
+The qa pair is: True
+&&&&&&&&: You start by facing forward. When you take 7 steps left, you go back to the beginning. When you take 8 steps left, you go forward again. You go to the beginning then you take 5 steps forward. When you take 1 step left, you go back to the beginning. So, the answer is
+Total Probability for 'Yes': 0.7445082068443298
+Total Probability for 'No': 0.25549179315567017
+The qa pair is: False
+&&&&&&&&: Your starting point should always face forward. You always begin with someone facing forward. To complete the instructions correctly, you would first need to return to your starting point. So, the answer is
+Total Probability for 'Yes': 0.8890454173088074
+Total Probability for 'No': 0.11095458269119263
+The qa pair is: True
+&&&&&&&&: Turn around and take 4 steps back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7438541054725647
+Total Probability for 'No': 0.2561459541320801
+The qa pair is: True
+&&&&&&&&: If you start where you were, you must always be facing forward. In the first five steps you are facing forward. In the first seven steps you are facing backward. In the first five steps you are facing right. In the second six steps you are facing left. In the second seven steps you are facing right. In the first two steps you are facing left. So, the answer is
+Total Probability for 'Yes': 0.35027754306793213
+Total Probability for 'No': 0.6497224569320679
+The qa pair is: True
+&&&&&&&&: This would return you to the starting point by taking 9 steps right. Take 6 steps right. After taking 9 steps right, take 6 steps right. Take 9 steps left. Then take 9 steps left. Thus, the answer is
+Total Probability for 'Yes': 0.5682162642478943
+Total Probability for 'No': 0.4317837357521057
+The qa pair is: False
+&&&&&&&&: In order to return to the starting point, the first 6 steps must be taken to get back to the first place. So, the answer is
+Total Probability for 'Yes': 0.7166386246681213
+Total Probability for 'No': 0.28336143493652344
+The qa pair is: True
+&&&&&&&&: The first step to reverse is 1 of the first 3 steps to backward. So, the answer is
+Total Probability for 'Yes': 0.4965709149837494
+Total Probability for 'No': 0.503429114818573
+The qa pair is: False
+&&&&&&&&: Before facing forward you should always have eyes facing forward, facing straight ahead and always facing forward. The final answer: No.</s>
+Total Probability for 'Yes': 0.15515975654125214
+Total Probability for 'No': 0.8448402881622314
+The qa pair is: False
+&&&&&&&&: To return to the starting point, always face forward. All four directions take four steps right and take four steps right. So, the answer is
+Total Probability for 'Yes': 0.4987856447696686
+Total Probability for 'No': 0.501214325428009
+The qa pair is: False
+&&&&&&&&: The first step is always forward. The second step is always backward. So, the answer is
+Total Probability for 'Yes': 0.28319400548934937
+Total Probability for 'No': 0.7168059945106506
+The qa pair is: True
+&&&&&&&&: Turning left and taking 7 steps equals 7 steps in total. Turning left and taking 9 steps equals 9 steps in total. Turning left and taking 2 steps equals 2 steps in total. So, the answer is
+Total Probability for 'Yes': 0.5403537750244141
+Total Probability for 'No': 0.4596462547779083
+The qa pair is: True
+&&&&&&&&: You take 4 steps in the first set of instructions and 6 steps in the second set. After taking 4 steps, you go back to the original location and take 1 step. The second sets of instructions are designed to take you back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7042959332466125
+Total Probability for 'No': 0.29570403695106506
+The qa pair is: True
+&&&&&&&&: Take 2 steps. Turn around. Take 2 steps. Turn around. Turn around. So, the answer is
+Total Probability for 'Yes': 0.39856722950935364
+Total Probability for 'No': 0.6014328002929688
+The qa pair is: False
+&&&&&&&&: Do the following instructions with the feet facing forward. Take 2 steps forward. Take 10 steps backward. Take 9 steps left. So, the answer is
+Total Probability for 'Yes': 0.5171583890914917
+Total Probability for 'No': 0.4828416109085083
+The qa pair is: False
+&&&&&&&&: A turn around is a set of steps. You take 10 steps to turn around. Take 4 steps to turn around. Take 2 steps to turn around. Take 7 steps. So, the answer is
+Total Probability for 'Yes': 0.2540772557258606
+Total Probability for 'No': 0.7459226846694946
+The qa pair is: True
+&&&&&&&&: Backward means that you are already facing forward. Forward is also facing upward. So, the answer is
+Total Probability for 'Yes': 0.34000450372695923
+Total Probability for 'No': 0.6599955558776855
+The qa pair is: False
+&&&&&&&&: Turn right. Take 3 steps. Take 5 steps. Take 8 steps. Turn right. Take 5 steps. Turn around. Take 2 steps. Take 4 steps. So, the answer is
+Total Probability for 'Yes': 0.4902915954589844
+Total Probability for 'No': 0.5097084641456604
+The qa pair is: False
+&&&&&&&&: A person does not return to the starting point by turning around and taking 9 steps. So, the answer is
+Total Probability for 'Yes': 0.14687232673168182
+Total Probability for 'No': 0.8531277179718018
+The qa pair is: False
+&&&&&&&&: It takes a total of 10 steps to turn around, but you only need to take 5 steps in total. So, the answer is
+Total Probability for 'Yes': 0.28714099526405334
+Total Probability for 'No': 0.7128589749336243
+The qa pair is: False
+&&&&&&&&: This is the same as taking a right and a left direction, but the two directions are opposite. So, the answer is
+Total Probability for 'Yes': 0.39612457156181335
+Total Probability for 'No': 0.6038753986358643
+The qa pair is: False
+&&&&&&&&: Take 1 step and turn around. Turn around after taking 9 steps. So, the answer is
+Total Probability for 'Yes': 0.38636526465415955
+Total Probability for 'No': 0.6136347651481628
+The qa pair is: False
+&&&&&&&&: Take 8 steps. Take 8 steps. Take 8 steps. So, the answer is
+Total Probability for 'Yes': 0.29388102889060974
+Total Probability for 'No': 0.7061189413070679
+The qa pair is: False
+&&&&&&&&: If you take 8 steps back, you turn around. If you turn right, you turn around and take 9 steps back. If you turn left, you take 9 steps back. So, the answer is
+Total Probability for 'Yes': 0.32405489683151245
+Total Probability for 'No': 0.6759451031684875
+The qa pair is: True
+&&&&&&&&: Let’s say you always face forward and one step forward is taken. When you take 8 steps forward, you take 8 steps forward. Therefore, the answer is
+Total Probability for 'Yes': 0.47726112604141235
+Total Probability for 'No': 0.5227388739585876
+The qa pair is: True
+&&&&&&&&: Forward is the first step in the directions. Forward is the second step in the directions. Forward is the first step forward. Right is the first step backward. So, the answer is
+Total Probability for 'Yes': 0.37118491530418396
+Total Probability for 'No': 0.6288151144981384
+The qa pair is: False
+&&&&&&&&: Turn around takes 7 steps and back up takes 10. Turn around takes 2 steps and back up takes 15. Turning around takes 2 steps and back up takes 15. Turning left takes 5 steps and back up takes 15. So, the answer is
+Total Probability for 'Yes': 0.3203832507133484
+Total Probability for 'No': 0.6796166896820068
+The qa pair is: True
+&&&&&&&&: If you always face forward you would never face any direction backwards. The starting point is always facing forward so the directions are always backward. So, the answer is
+Total Probability for 'Yes': 0.26814693212509155
+Total Probability for 'No': 0.7318530678749084
+The qa pair is: True
+&&&&&&&&: A person with a blindfold on must always always face forward. To take 8 steps right, you must always face forward, while to take 8 steps left, you must always face left. So, the answer is
+Total Probability for 'Yes': 0.49769338965415955
+Total Probability for 'No': 0.5023065209388733
+The qa pair is: False
+&&&&&&&&: Take 3 steps, and you will get to where you started. Take 6 steps and you will get to where you started. Take 9 steps and you will get to where you started. So, the answer is
+Total Probability for 'Yes': 0.7652132511138916
+Total Probability for 'No': 0.2347867786884308
+The qa pair is: False
+&&&&&&&&: If you turn around, it’s no longer a turn. It’s a turn in the opposite direction from where you were. So, the answer is
+Total Probability for 'Yes': 0.5498130917549133
+Total Probability for 'No': 0.45018690824508667
+The qa pair is: True
+&&&&&&&&: You can only take 4 steps forward and 2 steps forward at a time. So, the answer is
+Total Probability for 'Yes': 0.3794810175895691
+Total Probability for 'No': 0.6205189824104309
+The qa pair is: True
+&&&&&&&&: If you take 9 steps, you will return to the starting point. If you take 4 steps, you will return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.4754261076450348
+Total Probability for 'No': 0.5245739221572876
+The qa pair is: True
+&&&&&&&&: It's not right to take one step backward after taking 7 steps. So, the answer is
+Total Probability for 'Yes': 0.23158666491508484
+Total Probability for 'No': 0.7684134244918823
+The qa pair is: True
+&&&&&&&&: Always face forward. If you take 5 steps left, you are going right. If you take 5 steps left and TURN RIGHT you are going left. So, the answer is
+Total Probability for 'Yes': 0.23730313777923584
+Total Probability for 'No': 0.7626968026161194
+The qa pair is: False
+&&&&&&&&: The instructions say you always face forward and never make the same mistake twice. You only have two different ways of facing forward or backward. One is take 6 steps right and one is take 4 steps right. So, the answer is
+Total Probability for 'Yes': 0.3269312381744385
+Total Probability for 'No': 0.6730688214302063
+The qa pair is: True
+&&&&&&&&: You are never going backwards if you always face forward. So, the answer is
+Total Probability for 'Yes': 0.18227334320545197
+Total Probability for 'No': 0.8177265524864197
+The qa pair is: True
+&&&&&&&&: It takes 10 steps from the beginning to the destination of the previous step. So, the answer is
+Total Probability for 'Yes': 0.6995992064476013
+Total Probability for 'No': 0.3004007041454315
+The qa pair is: True
+&&&&&&&&: Turning left is the first action you will take on your right. You can only do 1 step of the next. Since you are now on the right hand side, you cannot take 8 steps. This is because one step is half the number of steps you were taking. Whenever you change directions, you must repeat them exactly. So, the answer is
+Total Probability for 'Yes': 0.36798182129859924
+Total Probability for 'No': 0.6320181488990784
+The qa pair is: True
+&&&&&&&&: If you always face forward, you will always take 5 steps right. If you always face backward, you will always take 2 steps right. If you always face forward, you will always take 2 steps backward. If you always face right, you will always take 5 steps right. If you always face left, you will always take 5 steps right. If you always face left, you will always take 5 steps right. If you always face right, you will always take 9 steps right. So, the answer is
+Total Probability for 'Yes': 0.2961081564426422
+Total Probability for 'No': 0.7038918137550354
+The qa pair is: False
+&&&&&&&&: The first instruction is that you take 6 steps and return to the starting point. The answer: Yes.</s>
+Total Probability for 'Yes': 0.23769640922546387
+Total Probability for 'No': 0.7623035907745361
+The qa pair is: True
+&&&&&&&&: You would take at least 5 steps to get to where you were starting. This would return you to your starting point. So, the answer is
+Total Probability for 'Yes': 0.6707910895347595
+Total Probability for 'No': 0.3292087912559509
+The qa pair is: False
+&&&&&&&&: If you are always facing forward, you would always be facing forward. If you are facing right, you would always be facing backward. If you are facing left, you would always be facing right. If you are facing up, you would always be facing left. If you are facing left, you would always be facing right. So, the answer is
+Total Probability for 'Yes': 0.3007422089576721
+Total Probability for 'No': 0.6992577314376831
+The qa pair is: True
+&&&&&&&&: Turn left. Take 3 steps. Take 1 step. Turn around. Take 2 steps. Take 3 steps. Take 5 steps. So, the answer is
+Total Probability for 'Yes': 0.32736819982528687
+Total Probability for 'No': 0.6726318597793579
+The qa pair is: False
+&&&&&&&&: If you turn around and take 3 steps back, you are now in the starting point. If you take 3 steps back, you are now in the starting point. So, the answer is
+Total Probability for 'Yes': 0.8492095470428467
+Total Probability for 'No': 0.15079054236412048
+The qa pair is: True
+&&&&&&&&: A compass always points up, and a person that always keeps their head up will always be facing forward. So, the answer is
+Total Probability for 'Yes': 0.39746522903442383
+Total Probability for 'No': 0.602534830570221
+The qa pair is: True
+&&&&&&&&: If you follow the instructions, you will return to the starting point, unless you change your answer. If you change your answer, you would have to take either 3 steps or 6 steps. The answer: No.</s>
+Total Probability for 'Yes': 0.1588001847267151
+Total Probability for 'No': 0.8411998748779297
+The qa pair is: False
+&&&&&&&&: Turn around takes 5 steps. Turn around, takes 10 steps. Take 10 steps. The starting point is at the beginning. So, the answer is
+Total Probability for 'Yes': 0.3056083619594574
+Total Probability for 'No': 0.6943916082382202
+The qa pair is: True
+&&&&&&&&: If you take 4 steps, you should be back at the starting point. If you take 6 steps, you should be back at the starting point. So, the answer is
+Total Probability for 'Yes': 0.6359766721725464
+Total Probability for 'No': 0.364023357629776
+The qa pair is: False
+&&&&&&&&: Turn around right. Turn left. Take 1 step. Take 2 steps. Turn around right. Turn around. Take 3 steps. So, the answer is
+Total Probability for 'Yes': 0.26281291246414185
+Total Probability for 'No': 0.7371870279312134
+The qa pair is: True
+&&&&&&&&: When facing forward, you always face forward. You can not take 8 steps backward, 5 steps backward, 5 steps left and 5 steps forward. So, the answer is
+Total Probability for 'Yes': 0.1460452377796173
+Total Probability for 'No': 0.8539547324180603
+The qa pair is: True
+&&&&&&&&: All steps should be taken facing forward. The starting point is always facing forward. So, the answer is
+Total Probability for 'Yes': 0.7440173625946045
+Total Probability for 'No': 0.2559826672077179
+The qa pair is: True
+&&&&&&&&: Take 4 steps right, then take 4 steps left to come to the starting point. So, the answer is
+Total Probability for 'Yes': 0.4834723174571991
+Total Probability for 'No': 0.5165276527404785
+The qa pair is: True
+&&&&&&&&: There are 5 steps left, 3 steps right, 1 step forward, 4 steps forward, 3 steps forward and 2 steps left. So, the answer is
+Total Probability for 'Yes': 0.27126798033714294
+Total Probability for 'No': 0.7287319898605347
+The qa pair is: True
+&&&&&&&&: One of the steps is always left. The other steps is always right. The final answer: No.</s>
+Total Probability for 'Yes': 0.19928967952728271
+Total Probability for 'No': 0.8007103204727173
+The qa pair is: True
+&&&&&&&&: For the first 7 steps take 7,, then turn around and take 5. For the next 6 steps take 6, then take 5, then take 3, then take 4, then take 6. So, the answer is
+Total Probability for 'Yes': 0.4209974408149719
+Total Probability for 'No': 0.5790026187896729
+The qa pair is: False
+&&&&&&&&: The first 9 steps backward have nothing to do with taking 9 steps forward. So, the answer is
+Total Probability for 'Yes': 0.19892525672912598
+Total Probability for 'No': 0.8010746836662292
+The qa pair is: False
+&&&&&&&&: Turn left. Take 9 steps. To return to your starting point, you can do it this way. So, the answer is
+Total Probability for 'Yes': 0.9686592817306519
+Total Probability for 'No': 0.031340666115283966
+The qa pair is: True
+&&&&&&&&: Take the first step backward. Once you have taken 8 steps backward, you should always turn right side up. The second step forward is the same as the first step forward. In order to continue forward, you should take 6 steps forward. The third step forward is the same as the first step forward. The fourth step forward is the same as the first step forward. In order to continue forward, you should take 4 steps forward. The final step forward is the same as the first step forward. So, the answer is
+Total Probability for 'Yes': 0.3642555773258209
+Total Probability for 'No': 0.6357443928718567
+The qa pair is: False
+&&&&&&&&: If you turn around, you take 2 steps. If you turn around, you take 6 steps. If you turn around, you take 2 steps. You take 10 steps. So, the answer is
+Total Probability for 'Yes': 0.3956766426563263
+Total Probability for 'No': 0.6043232679367065
+The qa pair is: False
+&&&&&&&&: Turn around:, so take a step. Take 6 steps:, so take a step. Turn around:, so take a step. Take 1 step:, so take 6 steps. Turn around:, so take a step. Take 7 steps:, so take a step. Take 1 step:, so take 6 steps. Turn around:, so take a step. Take a step:, so take 6 steps. Turn around:, so take 1 step. Take 6 steps:, so take a step. Turn around:, so take 1 step. Take 6 steps:, so take 6 steps. Turn around:, so take 1 step.</s>
+Total Probability for 'Yes': 0.3893994688987732
+Total Probability for 'No': 0.610600471496582
+The qa pair is: True
+&&&&&&&&: The starting point can be found on your left, the one with the 7 steps right. Since you are always facing forward, you can go straight in either direction. Thus, the answer is
+Total Probability for 'Yes': 0.4222358465194702
+Total Probability for 'No': 0.577764093875885
+The qa pair is: True
+&&&&&&&&: You do not have to take 10 steps to return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.21741823852062225
+Total Probability for 'No': 0.7825817465782166
+The qa pair is: True
+&&&&&&&&: Every step can be taken backwards. The starting point is facing forward. So, the answer is
+Total Probability for 'Yes': 0.45894676446914673
+Total Probability for 'No': 0.541053295135498
+The qa pair is: False
+&&&&&&&&: 8 steps means a number of steps. 8 steps is 6 times the original number. So, the answer is
+Total Probability for 'Yes': 0.35925137996673584
+Total Probability for 'No': 0.6407485008239746
+The qa pair is: True
+&&&&&&&&: Backward steps are steps that you would take in a straight line. The starting point is always facing forward. So, the answer is
+Total Probability for 'Yes': 0.3836325407028198
+Total Probability for 'No': 0.616367518901825
+The qa pair is: False
+&&&&&&&&: The original instructions said you take 1 step back. The original instructions said you take 3 steps. The original instructions were to take 1 step back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8132221102714539
+Total Probability for 'No': 0.18677787482738495
+The qa pair is: True
+&&&&&&&&: If you always face forward, you are still standing. If you take 2 steps backward, you are still standing. If you take 8 steps backward, you are still standing. So, the answer is
+Total Probability for 'Yes': 0.588661789894104
+Total Probability for 'No': 0.4113381803035736
+The qa pair is: True
+&&&&&&&&: If you face forward, you can go up on the staircase. If you face backward, you can go backward. You cannot go backward. So, the answer is
+Total Probability for 'Yes': 0.034470707178115845
+Total Probability for 'No': 0.9655293226242065
+The qa pair is: True
+&&&&&&&&: Face forward for 3 steps to keep your eyes forward. Take 3 steps backward for 3 steps to keep you backwards. So, the answer is
+Total Probability for 'Yes': 0.28117406368255615
+Total Probability for 'No': 0.7188258171081543
+The qa pair is: False
+&&&&&&&&: You can take 4 steps to return to the starting point. You can't take 2 steps in one direction if you are turning around. So, the answer is
+Total Probability for 'Yes': 0.3120841085910797
+Total Probability for 'No': 0.6879159212112427
+The qa pair is: False
+&&&&&&&&: If you always face forward, you are more likely to return to the starting point. The only negative outcome is if you take 4 steps right. Taking 6 steps left is opposite of taking 2 steps right. So, the answer is
+Total Probability for 'Yes': 0.5613458156585693
+Total Probability for 'No': 0.43865424394607544
+The qa pair is: False
+&&&&&&&&: Turn left 1 step then turn left. 8 steps + 1 step = 10 steps. So, the answer is
+Total Probability for 'Yes': 0.5005367994308472
+Total Probability for 'No': 0.4994632303714752
+The qa pair is: False
+&&&&&&&&: In order to return to the starting point, you must return to the starting point. The answer: No.</s>
+Total Probability for 'Yes': 0.19710670411586761
+Total Probability for 'No': 0.802893340587616
+The qa pair is: False
+&&&&&&&&: You take 7 steps and 1 step to return to the starting point. You take 8 steps and 1 step to return to the starting point. So, the answer is
+[RANK 0] Starting training
+[RANK 0] Collecting rollouts
+[rollout 0 / 128]:   0%|                                                                                                                                                                       | 0/128 [00:00<?, ?it/s]You're using a T5TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+[rollout 24 / 128]:  19%|█████████████████████████████▍                                                                                                                               | 24/128 [00:13<00:56,  1.84it/s]
+Total Probability for 'Yes': 0.28643518686294556
+Total Probability for 'No': 0.7135648131370544
+The qa pair is: False
+&&&&&&&&: Take 1 step backward. If you continue on the instructions, you always face forward. Therefore, the answer is
+Total Probability for 'Yes': 0.22296343743801117
+Total Probability for 'No': 0.7770364880561829
+The qa pair is: False
+&&&&&&&&: You could always return to the starting point by pointing directly toward the person in the beginning. You cannot always be facing forward and always face forward at the same time. So, the answer is
+Total Probability for 'Yes': 0.12607456743717194
+Total Probability for 'No': 0.873925507068634
+The qa pair is: True
+&&&&&&&&: Turn around, take 7 steps, turn around. It makes 8 turns to turn left. Thus, the answer is
+Total Probability for 'Yes': 0.3641344904899597
+Total Probability for 'No': 0.6358655691146851
+The qa pair is: False
+&&&&&&&&: They ask you to always face forward and to take 9 steps forward. Then the instructions also ask you to take 7 steps left. Then the instructions ask you to take 5 steps backward. If you take 3 steps right, then you take 4 steps right and 3 steps right, so 4 steps right. The final answer: No.</s>
+Total Probability for 'Yes': 0.36388450860977173
+Total Probability for 'No': 0.6361154913902283
+The qa pair is: False
+&&&&&&&&: Turn left and take 3 steps then turn around and turn around again. Take 3 steps then take 6 steps then take 2 steps. Yes, the instructions say to turn left. So, the answer is
+Total Probability for 'Yes': 0.723349928855896
+Total Probability for 'No': 0.27665016055107117
+The qa pair is: False
+&&&&&&&&: There are no backward or forward steps. If you are facing forward, there are only forward steps. So, the answer is
+Total Probability for 'Yes': 0.13306720554828644
+Total Probability for 'No': 0.8669328093528748
+The qa pair is: False
+&&&&&&&&: If you always face forward, your right limb is facing forward. It is not possible to take 3 steps right if you always face forward. It is not possible to take 4 steps forward if you always face forward. All of these steps return to the beginning point. Thus, the answer is
+Total Probability for 'Yes': 0.5495557188987732
+Total Probability for 'No': 0.45044437050819397
+The qa pair is: False
+&&&&&&&&: You can take multiple steps to go back to the starting point. There are 3 steps in this explanation. So, the answer is
+Total Probability for 'Yes': 0.7975403070449829
+Total Probability for 'No': 0.20245978236198425
+The qa pair is: False
+&&&&&&&&: If you take 7 steps to get to the starting point, you are done and have just turned around. So, the answer is
+Total Probability for 'Yes': 0.3632528781890869
+Total Probability for 'No': 0.6367471218109131
+The qa pair is: True
+&&&&&&&&: Take 9 steps. Take 5 steps. Take 2 steps. Take 10 steps. Turn right. Take 10 steps. Take 8 steps. So, the answer is
+Total Probability for 'Yes': 0.6342954635620117
+Total Probability for 'No': 0.36570441722869873
+The qa pair is: True
+&&&&&&&&: In the following instructions, you need to take 4 steps to get back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.5155792832374573
+Total Probability for 'No': 0.4844207763671875
+The qa pair is: True
+&&&&&&&&: If you always face forward you can take 4 steps backward. If you always face forward then take 4 steps forward. Thus, the answer is
+Total Probability for 'Yes': 0.24296587705612183
+Total Probability for 'No': 0.7570341229438782
+The qa pair is: True
+&&&&&&&&: A person can not go backward in a circle. You can not go forward. If you go left, you are going to the starting point. So, the answer is
+Total Probability for 'Yes': 0.35155022144317627
+Total Probability for 'No': 0.6484497785568237
+The qa pair is: True
+&&&&&&&&: To face forward, take 7 steps forward. To take 3 steps backward, take 3 steps backward. So, the answer is
+Total Probability for 'Yes': 0.29857075214385986
+Total Probability for 'No': 0.7014292478561401
+The qa pair is: True
+&&&&&&&&: If you're facing forward, you always take the first step forward. Therefore, the answer is
+Total Probability for 'Yes': 0.40180981159210205
+Total Probability for 'No': 0.5981902480125427
+The qa pair is: False
+&&&&&&&&: The first sequence should only take you 2 steps and 10 steps. The second sequence would only take you 6 steps and 6 steps. The first sequence would only take you 2 steps and 10 steps. So, the answer is
+Total Probability for 'Yes': 0.609590470790863
+Total Probability for 'No': 0.39040958881378174
+The qa pair is: True
+&&&&&&&&: Take 4 steps and you are back to start point. Take 5 steps and you are back to start point. Take 9 steps and you are back to start point. Take 3 steps and you are back to start point. Turn right. So, the answer is
+Total Probability for 'Yes': 0.805700421333313
+Total Probability for 'No': 0.19429948925971985
+The qa pair is: True
+&&&&&&&&: Take 9 steps, taking 2 steps, taking 5 steps. Take 5 steps, taking 2 steps, taking 5 steps. Turn right. Take 5 steps, taking 2 steps, taking 5 steps. Take 10 steps. Take 1 step. So, the answer is
+Total Probability for 'Yes': 0.49758094549179077
+Total Probability for 'No': 0.5024190545082092
+The qa pair is: False
+&&&&&&&&: If you constantly face forward, you are automatically moving forward. So, the answer is
+Total Probability for 'Yes': 0.33595407009124756
+Total Probability for 'No': 0.6640459299087524
+The qa pair is: False
+&&&&&&&&: Take 9 steps and 2 steps. Take 6 steps and 6 steps. Take 2 steps. Take 6 steps. Take 6 steps. Turn around and take 8 steps. So, the answer is
+Total Probability for 'Yes': 0.33310815691947937
+Total Probability for 'No': 0.6668918132781982
+The qa pair is: True
+&&&&&&&&: You always want to face forward. You can't take 6 steps backward and take 6 steps forward simultaneously. So, the answer is
+Total Probability for 'Yes': 0.21243000030517578
+Total Probability for 'No': 0.7875699400901794
+The qa pair is: False
+&&&&&&&&: When you take 10 steps backwards, you're reverting back to the original position. So, the answer is
+Total Probability for 'Yes': 0.26559171080589294
+Total Probability for 'No': 0.7344081997871399
+The qa pair is: True
+&&&&&&&&: If you turn around left then turn around to go left. If you return to the starting point then return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.4770472049713135
+Total Probability for 'No': 0.5229527950286865
+The qa pair is: False
+&&&&&&&&: Turn left. Turn right. Take 2 steps. Take 4 steps. So, the answer is
+Total Probability for 'Yes': 0.2558022439479828
+Total Probability for 'No': 0.7441977858543396
+The qa pair is: True
+&&&&&&&&: If you always face forward, you can keep going forward. If you face backward, you can revert backward. So, the answer is
+Total Probability for 'Yes': 0.23819856345653534
+Total Probability for 'No': 0.7618014812469482
+The qa pair is: True
+&&&&&&&&: Twice the first step is 8. Twice the second step is 6. So we have 8 steps from the starting point. So the answer is
+Total Probability for 'Yes': 0.5056671500205994
+Total Probability for 'No': 0.49433284997940063
+The qa pair is: False
+&&&&&&&&: Turning right will return you to the starting point. It is 7 steps to turn around. So, the answer is
+Total Probability for 'Yes': 0.6581303477287292
+Total Probability for 'No': 0.34186968207359314
+The qa pair is: False
+&&&&&&&&: The starting point is the same as the point you turn right. So, the answer is
+Total Probability for 'Yes': 0.5311581492424011
+Total Probability for 'No': 0.4688418507575989
+The qa pair is: False
+&&&&&&&&: Turn around is the same as turning right. Turn around is less direct and involves more steps than doing what you said you were doing. So, the answer is
+Total Probability for 'Yes': 0.3066553473472595
+Total Probability for 'No': 0.6933445930480957
+The qa pair is: True
+&&&&&&&&: Face forward is always good to the direction you're facing. There are only two way directions to face forward, they are opposites. So, the answer is
+Total Probability for 'Yes': 0.22102473676204681
+Total Probability for 'No': 0.7789753079414368
+The qa pair is: False
+&&&&&&&&: If you always face forward, you can go in one direction only. If you always face backwards, you can go in two different directions. So, the answer is
+Total Probability for 'Yes': 0.38786208629608154
+Total Probability for 'No': 0.6121379137039185
+The qa pair is: True
+&&&&&&&&: If you always face forward, and if you take steps backward, take 10 steps backward. If you take steps right, take 3 steps right. If you take steps left, take 9 steps right. If you take 10 steps right, take 3 steps right. If you take 3 steps forward, take 3 steps forward. If you take 9 steps right, take 10 steps right. So, the answer is
+Total Probability for 'Yes': 0.3758794963359833
+Total Probability for 'No': 0.6241204738616943
+The qa pair is: True
+&&&&&&&&: If you turn around, you return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7757517099380493
+Total Probability for 'No': 0.22424829006195068
+The qa pair is: False
+&&&&&&&&: You turn around at the end of the 7 step process. When you return to the starting point, you have 7 more steps to take. So, the answer is
+Total Probability for 'Yes': 0.32743197679519653
+Total Probability for 'No': 0.6725679636001587
+The qa pair is: True
+&&&&&&&&: The one step forward is always facing forward. The two steps right are to the right, and the right half starts with 4 steps. The one step forward is to the right, and the two steps right start with 6 steps. So, the answer is
+Total Probability for 'Yes': 0.25648626685142517
+Total Probability for 'No': 0.743513822555542
+The qa pair is: True
+&&&&&&&&: If you take 10 steps, you have 10 steps remaining until you return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.6071996092796326
+Total Probability for 'No': 0.39280039072036743
+The qa pair is: False
+&&&&&&&&: You always start with the face forward in this sequence. If you follow the directions for the left and right directions, you always face left, and then in the next sequence, you have to turn around and take the opposite direction. In the first sequence, you have to turn around and take 8 steps left, and then in the next sequence, you have to take 8 steps right, and in the previous sequence, you have to turn around and take 3 steps right. So, the answer is
+Total Probability for 'Yes': 0.4970129430294037
+Total Probability for 'No': 0.5029870271682739
+The qa pair is: True
+&&&&&&&&: A person facing forward cannot take the steps 3 steps right, Take 5 steps right. If one takes 3 steps right one would take 4 steps. If one takes 5 steps right one would take 5 steps. If one takes 2 steps backward one would take 1 step. So, the answer is
+Total Probability for 'Yes': 0.2121327519416809
+Total Probability for 'No': 0.7878673076629639
+The qa pair is: False
+&&&&&&&&: Turn around means to turn 180 degrees. Take 6 steps means to turn around from the beginning. Turn around means to turn around from the beginning. So, the answer is
+Total Probability for 'Yes': 0.32550308108329773
+Total Probability for 'No': 0.6744968891143799
+The qa pair is: True
+&&&&&&&&: If you face forward with your body, you will always start the next direction. Taking 10 steps left is considered taking five steps, but in this situation, you would be taking ten steps right. The last step is always the same, you would only be taking five steps backward. So, the answer is
+Total Probability for 'Yes': 0.3459737002849579
+Total Probability for 'No': 0.6540262699127197
+The qa pair is: False
+&&&&&&&&: The instructions are followed to turn around. The directions are repeated until the instructions are completed. So, the answer is
+Total Probability for 'Yes': 0.5946056842803955
+Total Probability for 'No': 0.40539443492889404
+The qa pair is: True
+&&&&&&&&: In every way, we face forward when we take a step. Every time you take a step backward, always face forward. So, the answer is
+Total Probability for 'Yes': 0.43296438455581665
+Total Probability for 'No': 0.5670356154441833
+The qa pair is: False
+&&&&&&&&: A person can take 8 steps from left to right. If they always face forward, they can return to the starting point by facing the right way. So, the answer is
+Total Probability for 'Yes': 0.849432110786438
+Total Probability for 'No': 0.15056784451007843
+The qa pair is: True
+&&&&&&&&: Turning around requires 1 set of steps. The setting point is never the starting point. Take 5 steps. So, the answer is
+Total Probability for 'Yes': 0.2880045175552368
+Total Probability for 'No': 0.7119954228401184
+The qa pair is: True
+&&&&&&&&: Turning right is the same as turning around. The order is: Take 10 steps, Take 1 step, Take 10 steps. The order is: Take 1 step, Take 4 steps, Take 10 steps, Take 1 step, Take 10 steps. So, the answer is
+Total Probability for 'Yes': 0.2737352252006531
+Total Probability for 'No': 0.7262647747993469
+The qa pair is: False
+&&&&&&&&: Turn around means you return to the starting point and return the same way that you came. So, the answer is
+Total Probability for 'Yes': 0.6335484385490417
+Total Probability for 'No': 0.36645153164863586
+The qa pair is: False
+&&&&&&&&: Always facing forward, you will take 1 step forward, then have to take 7 steps right. The starting point is the place you are starting from. To take 1 step forward and then have to take 3 steps left, you have to take 3 steps left and then have to take 3 steps left. So, the answer is
+Total Probability for 'Yes': 0.27551382780075073
+Total Probability for 'No': 0.7244861125946045
+The qa pair is: False
+&&&&&&&&: You always face forward from the start. So, the answer is
+Total Probability for 'Yes': 0.31761494278907776
+Total Probability for 'No': 0.6823850870132446
+The qa pair is: False
+&&&&&&&&: Take 6 steps forward. Take 6 steps backward. Take 7 steps backward. Take 8 steps forward. So, the answer is
+Total Probability for 'Yes': 0.3372616171836853
+Total Probability for 'No': 0.6627383828163147
+The qa pair is: True
+&&&&&&&&: You should always always face forward. There are 7 steps backward, 10 steps forward, and 4 steps forward. So, the answer is
+Total Probability for 'Yes': 0.4431679844856262
+Total Probability for 'No': 0.5568320751190186
+The qa pair is: False
+&&&&&&&&: To turn right, one takes one step. To take 5 steps, one takes ten steps. So, the answer is
+Total Probability for 'Yes': 0.08232526481151581
+Total Probability for 'No': 0.917674720287323
+The qa pair is: False
+&&&&&&&&: No you can not go back the same way you came. The starting point cant be different than you left it. So, the answer is
+Total Probability for 'Yes': 0.3781681954860687
+Total Probability for 'No': 0.6218318939208984
+The qa pair is: False
+&&&&&&&&: One step backward makes you go forward. One step forward makes you go backward. One step forward makes you go forward. One step right makes you go right. So, the answer is
+Total Probability for 'Yes': 0.15051278471946716
+Total Probability for 'No': 0.8494871854782104
+The qa pair is: False
+&&&&&&&&: You must take 8 steps forward to go back to the starting point. You can not go backward. So, the answer is
+Total Probability for 'Yes': 0.2635936141014099
+Total Probability for 'No': 0.7364063262939453
+The qa pair is: True
+&&&&&&&&: You turn left, take 4 steps, turn around, take 4 steps to return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8894263505935669
+Total Probability for 'No': 0.1105736717581749
+The qa pair is: False
+&&&&&&&&: Once you have turned right 100 times, take 10 steps right. The starting point is back to right 100 times. So, the answer is
+Total Probability for 'Yes': 0.6472053527832031
+Total Probability for 'No': 0.35279470682144165
+The qa pair is: True
+
+[rollout 48 / 128]:  38%|██████████████████████████████████████████████████████████▉                                                                                                  | 48/128 [00:27<00:45,  1.75it/s]
+Total Probability for 'Yes': 0.46130454540252686
+Total Probability for 'No': 0.5386955142021179
+The qa pair is: True
+&&&&&&&&: When you are facing forward you take one step forward, to the right. When you are facing left you take 10 steps left, to the right. When you are facing forward you take 4 steps forward. So, the answer is
+Total Probability for 'Yes': 0.2522470951080322
+Total Probability for 'No': 0.7477529644966125
+The qa pair is: True
+&&&&&&&&: Take 6 steps right and take 4 steps left. When you go 4 steps right, you go back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7145370244979858
+Total Probability for 'No': 0.28546300530433655
+The qa pair is: True
+&&&&&&&&: There are three ways to get back to the starting point. There are 6 ways to get back to the starting point. Thus, the answer is
+Total Probability for 'Yes': 0.07157538831233978
+Total Probability for 'No': 0.928424596786499
+The qa pair is: False
+&&&&&&&&: Turning left means staying in the same direction as you started from. So, the answer is
+Total Probability for 'Yes': 0.6294309496879578
+Total Probability for 'No': 0.3705690801143646
+The qa pair is: False
+&&&&&&&&: If you turn around to take a 6 step return, you would return with 1 step. So, the answer is
+Total Probability for 'Yes': 0.18518586456775665
+Total Probability for 'No': 0.8148140907287598
+The qa pair is: False
+&&&&&&&&: If you follow instructions 1 through 6, you are still at the starting point. So, the answer is
+Total Probability for 'Yes': 0.5375449657440186
+Total Probability for 'No': 0.46245503425598145
+The qa pair is: False
+&&&&&&&&: Turning around is the opposite of taking 10 steps. So, the answer is
+Total Probability for 'Yes': 0.3004947006702423
+Total Probability for 'No': 0.6995053291320801
+The qa pair is: True
+&&&&&&&&: You can take a total of 8 steps + 2 steps = 12 steps. The final answer: Yes.</s>
+Total Probability for 'Yes': 0.5909192562103271
+Total Probability for 'No': 0.4090808033943176
+The qa pair is: False
+&&&&&&&&: If you follow these instructions, you always face forward. If you face to the right you cannot go backwards. If you face to the left you can go backwards. So, the answer is
+Total Probability for 'Yes': 0.4574708342552185
+Total Probability for 'No': 0.5425292253494263
+The qa pair is: False
+&&&&&&&&: You take 2 steps and turn around. The starting point is turned around. So, the answer is
+Total Probability for 'Yes': 0.6240501999855042
+Total Probability for 'No': 0.37594980001449585
+The qa pair is: True
+&&&&&&&&: All directions are to be taken backwards. The starting point is always facing forward. So, the answer is
+Total Probability for 'Yes': 0.12348434329032898
+Total Probability for 'No': 0.8765156865119934
+The qa pair is: True
+&&&&&&&&: Turn around and face left. Take 7 steps left. Turn around and face left. Take 2 steps left. Thus, the answer is
+Total Probability for 'Yes': 0.46030697226524353
+Total Probability for 'No': 0.5396929979324341
+The qa pair is: True
+&&&&&&&&: You cannot walk backwards. You cannot walk forward. You cannot step left. You can not take backwards. It doesn’ t make sense to change direction. So, the answer is
+Total Probability for 'Yes': 0.2045358270406723
+Total Probability for 'No': 0.7954641580581665
+The qa pair is: False
+&&&&&&&&: You take 10 steps to get to the starting point. If you took 2 steps, you take 10 steps. If you took 3 steps, you take 3 steps. If you took 4 steps, you take 4 steps. Thus, the answer is
+Total Probability for 'Yes': 0.5072530508041382
+Total Probability for 'No': 0.49274691939353943
+The qa pair is: True
+&&&&&&&&: When you face forward, you always take one step forward and 5 steps left. After you take 1 step forward, there are 6 steps left and 5 steps left. After you take 10 steps right, there are 6 steps left and 7 steps backward. So, the answer is
+Total Probability for 'Yes': 0.3159434497356415
+Total Probability for 'No': 0.6840565204620361
+The qa pair is: True
+&&&&&&&&: You can never go back to where you started. You cannot take 2 steps, 1 step and 8 steps at the same time. You cannot take 4 steps and 2 steps at the same time. So, the answer is
+Total Probability for 'Yes': 0.11826042830944061
+Total Probability for 'No': 0.8817395567893982
+The qa pair is: True
+&&&&&&&&: If you always face forward you will go to the starting point. If you always face right then you will go to the starting point and take 10 steps backwards. When you first started you will be in the starting point. So, the answer is
+Total Probability for 'Yes': 0.5461313724517822
+Total Probability for 'No': 0.45386868715286255
+The qa pair is: True
+&&&&&&&&: It took you 2 steps to go right and 6 steps to go right but the last two were also 7 steps. It’s impossible to take 10 steps back to start. So, the answer is
+Total Probability for 'Yes': 0.16661709547042847
+Total Probability for 'No': 0.8333829641342163
+The qa pair is: True
+&&&&&&&&: If you ever face forward, you cannot lose your face and get backwards. One must always keep their face forward. Thus, the answer is
+Total Probability for 'Yes': 0.5638518333435059
+Total Probability for 'No': 0.43614813685417175
+The qa pair is: True
+&&&&&&&&: Turn around. Turn around and return to start point. So, the answer is
+Total Probability for 'Yes': 0.7321438193321228
+Total Probability for 'No': 0.2678562104701996
+The qa pair is: True
+&&&&&&&&: Taking 3 steps backward takes you backwards 3 steps. The final answer: No.</s>
+Total Probability for 'Yes': 0.23665504157543182
+Total Probability for 'No': 0.7633450627326965
+The qa pair is: True
+&&&&&&&&: Turn right. Take 8 steps. Take 2 steps. Take 2 steps. Turn left. Take 5 steps. Take 8 steps. Turn around. So, the answer is
+Total Probability for 'Yes': 0.1052074059844017
+Total Probability for 'No': 0.8947924971580505
+The qa pair is: False
+&&&&&&&&: Turn around: -> -> -> Take 9 steps: -> -> -> Take 8 steps: -> -> Turn right: -> -> -> Take 9 steps: -> -> Take 8 steps: -> Turn around: -> -> Take 8 steps: -> Turn right: -> -> -> Take 8 steps: -> Turn around: -> Take 8 steps: -> Turn right: -> -> Turn around: -> Take 8 steps: -> Turn right: -> -> -> Take 8 steps: -> Turn left: -> -> -> Take 9 steps: -> -> Turn around: -> -> Take 10 steps: -> -> Take 10 steps: -> Turn left: -> -> Take 8 steps: -> Turn right: -> -> Turn around: -> Take 8 steps: -> Turn right: -> -> Take 8 steps: -> Turn around: -> Take 8 steps: -> Turn around: -> Take 10 steps: -> Take 10 steps: -> Take 10 steps:</s>
+Total Probability for 'Yes': 0.3759385943412781
+Total Probability for 'No': 0.6240613460540771
+The qa pair is: False
+&&&&&&&&: Take 1 step and return to start point. Turn around and take 4 steps. No one can take 3 steps back to start point. So, the answer is
+Total Probability for 'Yes': 0.2756249010562897
+Total Probability for 'No': 0.7243750691413879
+The qa pair is: True
+&&&&&&&&: You can't return to the starting point while the starting point is around away. So, the answer is
+Total Probability for 'Yes': 0.22723494470119476
+Total Probability for 'No': 0.7727651000022888
+The qa pair is: False
+&&&&&&&&: Take 1 step. If there are 7 steps to take, we can return to the starting point by taking one step. So, the answer is
+Total Probability for 'Yes': 0.8061898350715637
+Total Probability for 'No': 0.19381026923656464
+The qa pair is: False
+&&&&&&&&: Take 4 steps forward. You go 4 steps in the direction you want to be. Take 5 steps right. You go 5 steps in the direction you want to be. Take 7 steps left. You take 7 steps in the direction you want to be. So, the answer is
+Total Probability for 'Yes': 0.7541924118995667
+Total Probability for 'No': 0.24580760300159454
+The qa pair is: False
+&&&&&&&&: Turn around and turn around and turn left. Take 4 steps to return to your starting point. So, the answer is
+Total Probability for 'Yes': 0.2546810805797577
+Total Probability for 'No': 0.7453188896179199
+The qa pair is: False
+&&&&&&&&: You cannot take 2 steps right unless you are walking right. If you take 3 steps left, you take 2 steps left. So, the answer is
+Total Probability for 'Yes': 0.2808562219142914
+Total Probability for 'No': 0.719143807888031
+The qa pair is: True
+&&&&&&&&: If you always face forward, you can return to the starting point. If you take 9 steps left, you will take 5 steps right. If you take 2 steps left, you will take 2 steps right. Taking 6 steps forward is the same as taking 6 steps backwards. So, the answer is
+Total Probability for 'Yes': 0.3979170620441437
+Total Probability for 'No': 0.6020829677581787
+The qa pair is: False
+&&&&&&&&: 8 steps are 2 equal steps. 8 steps are a total of 8 steps. If you take 1 step and take 8 steps, you return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8354047536849976
+Total Probability for 'No': 0.16459520161151886
+The qa pair is: False
+&&&&&&&&: You turn right and take a step. You do the same with taking 2 steps and turning right. So, the answer is
+Total Probability for 'Yes': 0.5124273896217346
+Total Probability for 'No': 0.48757264018058777
+The qa pair is: False
+&&&&&&&&: The instructions are for facing forward. To take 8 steps left, you need to turn your body to the left. To take 9 steps right, you need to turn your body to the right. So, the answer is
+Total Probability for 'Yes': 0.49388599395751953
+Total Probability for 'No': 0.5061140656471252
+The qa pair is: False
+&&&&&&&&: A person facing forward always takes the first step forward. The starting point does not exist if you are facing backward. So, the answer is
+Total Probability for 'Yes': 0.16198989748954773
+Total Probability for 'No': 0.8380101323127747
+The qa pair is: True
+&&&&&&&&: The instructions are the same but there are 4 steps taken when you turn right. So, the answer is
+Total Probability for 'Yes': 0.3717976212501526
+Total Probability for 'No': 0.6282023787498474
+The qa pair is: True
+&&&&&&&&: Usually, one takes 8 steps forward and 8 steps backward. In order to take 8 steps forward, one must start out facing forward. Take 8 steps backward. In order to take 8 steps backward, one must start out facing right. In order to take 8 steps right, one must start out facing left. In order to take 8 steps forward, one must start out facing left. Thus, the answer is
+Total Probability for 'Yes': 0.13822202384471893
+Total Probability for 'No': 0.8617779612541199
+The qa pair is: False
+&&&&&&&&: The first step in the process is always forward facing forward. The next step is 4 steps backward. The third step is 1 step backward. So, the answer is
+Total Probability for 'Yes': 0.31425321102142334
+Total Probability for 'No': 0.6857468485832214
+The qa pair is: False
+&&&&&&&&: It is necessary to turn around and turn right to make it back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.9209495782852173
+Total Probability for 'No': 0.07905030250549316
+The qa pair is: True
+&&&&&&&&: If you always face forward, you can return to your starting point. Thus, the answer is
+Total Probability for 'Yes': 0.6556842923164368
+Total Probability for 'No': 0.34431570768356323
+The qa pair is: True
+&&&&&&&&: You start by turning in from the right. You move left again to get to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7122164964675903
+Total Probability for 'No': 0.2877833843231201
+The qa pair is: True
+&&&&&&&&: Turn right, take 3 steps, turn right, turn around, take 3 steps. Turn left. So, the answer is
+Total Probability for 'Yes': 0.5904225707054138
+Total Probability for 'No': 0.4095773994922638
+The qa pair is: False
+&&&&&&&&: If you take the 6 steps, you can return to the starting point in only 6 steps. So, the answer is
+Total Probability for 'Yes': 0.6457790732383728
+Total Probability for 'No': 0.3542209267616272
+The qa pair is: False
+&&&&&&&&: You cannot repeat the direction of the forward and backward steps. The instructions also require you to always face forward. So, the answer is
+Total Probability for 'Yes': 0.33500057458877563
+Total Probability for 'No': 0.6649994254112244
+The qa pair is: True
+&&&&&&&&: Take 1 step backwards. A 1 step backwards trip requires 4 steps to get there. 2 steps backwards trip takes 2. So, the answer is
+Total Probability for 'Yes': 0.23157529532909393
+Total Probability for 'No': 0.7684246897697449
+The qa pair is: False
+&&&&&&&&: Take 3 steps backward and you return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7313439846038818
+Total Probability for 'No': 0.2686559557914734
+The qa pair is: False
+&&&&&&&&: Take 8 steps back to start.</s>
+Total Probability for 'Yes': 0.2759725749492645
+Total Probability for 'No': 0.7240273356437683
+The qa pair is: True
+&&&&&&&&: This is the same set of instructions that you could use to bring someone forward. So, the answer is
+Total Probability for 'Yes': 0.2912934124469757
+Total Probability for 'No': 0.7087066173553467
+The qa pair is: True
+&&&&&&&&: If you turn around from the starting point and take 7 steps, you return to the starting point. If you take 8 steps, you return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.5388727188110352
+Total Probability for 'No': 0.46112731099128723
+The qa pair is: True
+&&&&&&&&: You start facing forward and take 7 steps right. You then take 7 steps left. You then take 7 steps left. You then take 7 steps right. You then take 8 steps forward. So, the answer is
+Total Probability for 'Yes': 0.31220191717147827
+Total Probability for 'No': 0.687798023223877
+The qa pair is: False
+&&&&&&&&: The direction of travel and the number of steps required to get to the starting point are identical. The 6 steps are the return back to starting point, the 8 steps are the direction of travel and the 7 steps are the return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.5812820196151733
+Total Probability for 'No': 0.41871803998947144
+The qa pair is: False
+&&&&&&&&: In order to return to the starting point, you need to take at least 9 steps. Taking at least 7 steps will require you to take 1 step. So, the answer is
+Total Probability for 'Yes': 0.261067271232605
+Total Probability for 'No': 0.738932728767395
+The qa pair is: True
+&&&&&&&&: The first 3 steps are the starting point and the next 4 steps is the return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.6841448545455933
+Total Probability for 'No': 0.31585514545440674
+The qa pair is: True
+&&&&&&&&: Taking 4 steps makes you back at the starting point. Turning left makes you turn around. Taking 5 steps makes you back at the starting point. So, the answer is
+Total Probability for 'Yes': 0.5418441295623779
+Total Probability for 'No': 0.45815595984458923
+The qa pair is: True
+&&&&&&&&: Take 10 steps and return to the starting point. Take 5 steps takes you back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.22857534885406494
+Total Probability for 'No': 0.7714247107505798
+The qa pair is: False
+&&&&&&&&: You take 4 steps to take 2 steps. Turn around 2 steps. Take 4 steps to take 4 steps. So, the answer is
+Total Probability for 'Yes': 0.0724591314792633
+Total Probability for 'No': 0.9275407791137695
+The qa pair is: True
+&&&&&&&&: To walk back to the starting point you must turn back around and take 3 steps. To walk back to the starting point you must take 4 steps. So, the answer is
+Total Probability for 'Yes': 0.17929930984973907
+Total Probability for 'No': 0.8207006454467773
+The qa pair is: False
+&&&&&&&&: To go backward, you take the same sequence of steps to the start that you would take to return to the start point. If you take 4 steps right, you will go 4 steps down, and take 5 steps right. To go left, you take 9 steps left, and take 5 steps right. Thus, the answer is
+Total Probability for 'Yes': 0.4619729518890381
+Total Probability for 'No': 0.5380271077156067
+The qa pair is: True
+&&&&&&&&: First point if facing forward always. So the answer is
+Total Probability for 'Yes': 0.1498180478811264
+Total Probability for 'No': 0.8501819968223572
+The qa pair is: False
+&&&&&&&&: The sentence is based on the fact that every one of the steps should be taken right. So, the answer is
+Total Probability for 'Yes': 0.5355538129806519
+Total Probability for 'No': 0.46444615721702576
+The qa pair is: False
+&&&&&&&&: If you follow the instructions, you always face forward. If you take 6 steps right and 5 steps right, you are facing forward. If you take 7 steps left and 3 steps left, you are facing left. If you take 7 steps left and 3 steps left, you are facing right. So, the answer is
+Total Probability for 'Yes': 0.3635234236717224
+Total Probability for 'No': 0.6364765167236328
+The qa pair is: True
+&&&&&&&&: You always face forward when you walk. To walk backward, take 2 steps forward, take 6 steps right, take 2 steps forward, and take 9 steps backward. So, the answer is
+Total Probability for 'Yes': 0.4048498272895813
+Total Probability for 'No': 0.5951501727104187
+The qa pair is: True
+&&&&&&&&: If you always face forward, this will result in you taking 2 steps right and taking 4 steps left. So, the answer is
+Total Probability for 'Yes': 0.6729304194450378
+Total Probability for 'No': 0.3270696699619293
+The qa pair is: True
+&&&&&&&&: If you take three steps, the next three should be in the direction of the starting point. So, the answer is
+Total Probability for 'Yes': 0.7421281933784485
+Total Probability for 'No': 0.2578718662261963
+The qa pair is: True
+&&&&&&&&: If you follow the directions correctly, you can return to the starting point in about 6 steps. So, the answer is
+Total Probability for 'Yes': 0.7200689315795898
+Total Probability for 'No': 0.27993103861808777
+The qa pair is: False
+&&&&&&&&: Turning around the starting point requires 4 steps of movement. Walking backwards turns around the starting point and back forwards turns around the starting point. So, the answer is
+Total Probability for 'Yes': 0.4391104280948639
+Total Probability for 'No': 0.5608896017074585
+The qa pair is: True
+&&&&&&&&: If you face right, you will always take 2 steps right. If you face left, you will always take 10 steps right. So, the answer is
+Total Probability for 'Yes': 0.15380607545375824
+Total Probability for 'No': 0.8461939096450806
+The qa pair is: False
+&&&&&&&&: If you turn around from the beginning, you are on the same path as you were at the beginning. If you take 8 steps to go back to the starting point, you are back on the same path as you were at the beginning. If you take 5 steps to go right, you are back on the same path as you were at the starting point. If you take 3 steps to go left, you are back on the same path as you were at the beginning. If you turn right, you are back on the same path as you were at the beginning. If you take 5 steps to go right, you are back on the same path as you were at the beginning. Thus, the answer is
+Total Probability for 'Yes': 0.7374275326728821
+Total Probability for 'No': 0.2625724971294403
+The qa pair is: True
+&&&&&&&&: Make a right turn by taking 6 steps. Follow the above instructions. You can’t change your direction unless you change the directions. So, the answer is
+Total Probability for 'Yes': 0.36412787437438965
+Total Probability for 'No': 0.6358721256256104
+The qa pair is: False
+&&&&&&&&: Let's say that you want to make a circle with 10 steps forward for each of the 3 directions above. In the first 2 directions you were facing forward to the left, to take 10 steps forward. If you are now facing backwards to the starting point, you would take 7 steps forward, to take 7 steps forward. If you followed the first 2 directions you would take 10 steps forward, to take 7 steps forward. In the first 3 directions you were facing forward to the left, to take 10 steps forward. If you followed the first 2 directions you would take 10 steps forward, to take 10 steps forward. Thus, the answer is
+Total Probability for 'Yes': 0.47635000944137573
+Total Probability for 'No': 0.5236499309539795
+The qa pair is: True
+&&&&&&&&: You may have to go 2 steps left to the starting point. Take 7 steps left. Take 8 steps left. Take 1 step left. Take 9 steps left. Take 5 steps forward. So, the answer is
+Total Probability for 'Yes': 0.48461219668388367
+Total Probability for 'No': 0.515387773513794
+The qa pair is: True
+&&&&&&&&: If you always face forward, you go straight forward. If you always face left, you go in the opposite direction. If you always face right, you go to the opposite direction. If you always face forward, you go to the same direction as the beginning. So, the answer is
+Total Probability for 'Yes': 0.6242082715034485
+Total Probability for 'No': 0.37579166889190674
+The qa pair is: True
+&&&&&&&&: If you turn right, take 9 steps, turn right 9 steps, turn left 10 steps, turn around 4 steps, turn around right 10 steps and turn around left. If you start on the left side of the road, take 9 steps, turn right 10 steps, turn left 10 steps, take 10 steps and return to the starting point. Thus, the answer is
+Total Probability for 'Yes': 0.486687034368515
+Total Probability for 'No': 0.5133129954338074
+The qa pair is: True
+&&&&&&&&: This will always face you forward. If you take 10 steps backward, you begin to go backwards, and you will immediately be looking forward. The following instructions will always point you in the direction of your starting point. If you take 7 steps backward, you will start to head in one direction and return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8198785781860352
+Total Probability for 'No': 0.1801213026046753
+The qa pair is: True
+&&&&&&&&: If you face forward, you can always return to the starting point. If you face backward, you cannot. So, the answer is
+Total Probability for 'Yes': 0.5449440479278564
+Total Probability for 'No': 0.45505598187446594
+The qa pair is: False
+&&&&&&&&: The directions were taken from the starting point and repeated until you reached the starting point. It would take 7 steps to turn left and then 6 steps to turn right. So, the answer is
+Total Probability for 'Yes': 0.4656094014644623
+Total Probability for 'No': 0.5343906879425049
+The qa pair is: True
+&&&&&&&&: Take two steps backwards to do the following: Take 2 steps backwards to do the following: Take 7 steps backwards to do the following: Take 3 steps forward. In the same pattern, take 2 steps backwards to do the following: Take 2 steps backwards to do the following: Take 7 steps backwards to do the following: Take 3 steps forward. Thus, the answer is
+Total Probability for 'Yes': 0.34651654958724976
+Total Probability for 'No': 0.6534834504127502
+The qa pair is: False
+&&&&&&&&: The first step backwards is to facing down. If you follow the second step backwards you are facing up. The final step forward is to facing backwards. So, the answer is
+Total Probability for 'Yes': 0.1828940063714981
+Total Probability for 'No': 0.8171060085296631
+The qa pair is: False
+&&&&&&&&: If you follow these instructions you can go back to the starting point, or you can reverse the sequence. If you are facing forward, and facing the direction in which you started, you are facing forward. So, the answer is
+Total Probability for 'Yes': 0.6891186833381653
+Total Probability for 'No': 0.31088125705718994
+The qa pair is: True
+&&&&&&&&: The first step is always forward. The second step is the backward step. The final step is always forward. So, the answer is
+Total Probability for 'Yes': 0.38566720485687256
+Total Probability for 'No': 0.6143328547477722
+The qa pair is: True
+&&&&&&&&: Turn left and turn to the right. Taking 2 steps you get back to the starting point. Taking 4 steps you get back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.4125591814517975
+Total Probability for 'No': 0.5874407887458801
+The qa pair is: True
+&&&&&&&&: Doing 6 steps left takes you a total of 6 steps in 1 direction. Doing 6 steps left also takes you a total of 6 steps in 2 directions. Turn left takes you a total of 6 steps in 1 direction. So, the answer is
+Total Probability for 'Yes': 0.39510995149612427
+Total Probability for 'No': 0.604889988899231
+The qa pair is: False
+&&&&&&&&: You would turn around and back to the starting point if you followed the first two instructions. So, the answer is
+Total Probability for 'Yes': 0.922025740146637
+Total Probability for 'No': 0.07797427475452423
+The qa pair is: False
+&&&&&&&&: You can always face forward. You can take 8 steps forward. Take 2 steps forward. You can take 9 steps right. You can take 9 steps left. So, the answer is
+Total Probability for 'Yes': 0.4499797821044922
+Total Probability for 'No': 0.5500202178955078
+The qa pair is: False
+&&&&&&&&: Take 10 steps. Turn around. Take 2 steps. Take 4 steps.</s>
+Total Probability for 'Yes': 0.14538611471652985
+Total Probability for 'No': 0.8546138405799866
+The qa pair is: True
+&&&&&&&&: You start out facing forward, but after the previous 9 steps, you take 6 steps forward. You continue forward, but after 4 steps forward, you take 2 steps backward. In the above example, you return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.651222288608551
+Total Probability for 'No': 0.34877780079841614
+The qa pair is: True
+&&&&&&&&: Once you turn around from the right side, the instructions says to take 2 steps then take 4 steps. The first 4 steps are 4 steps. So, the answer is
+Total Probability for 'Yes': 0.38803455233573914
+Total Probability for 'No': 0.6119654774665833
+The qa pair is: False
+&&&&&&&&: Turn around after 9 steps to make the turn back right. So, the answer is
+Total Probability for 'Yes': 0.49904221296310425
+Total Probability for 'No': 0.5009577870368958
+The qa pair is: False
+&&&&&&&&: Take 5 steps and turn around. Take 10 steps and take a quarter turn. So, the answer is
+Total Probability for 'Yes': 0.3027803897857666
+Total Probability for 'No': 0.697219729423523
+The qa pair is: False
+&&&&&&&&: There are three ways to get back to the starting point. If you have two left feet, and three right feet, they are facing in the same direction. When walking to the starting point always follow the directions. So, the answer is
+Total Probability for 'Yes': 0.6306320428848267
+Total Probability for 'No': 0.36936792731285095
+The qa pair is: True
+&&&&&&&&: The sentence is a variation on a common one that involves taking 10 steps to turn around. So, the answer is
+Total Probability for 'Yes': 0.2862373888492584
+Total Probability for 'No': 0.713762640953064
+The qa pair is: False
+&&&&&&&&: The starting point is the point you stand. If you turn around and take 8 steps to come back to the starting point, you are on your way back. Thus, the answer is
+Total Probability for 'Yes': 0.9109183549880981
+Total Probability for 'No': 0.08908168226480484
+The qa pair is: False
+&&&&&&&&: Turn left after you’ve taken 8 steps. You will have taken 9 steps before returning to the starting point. So, the answer is
+Total Probability for 'Yes': 0.5717257261276245
+Total Probability for 'No': 0.4282742440700531
+The qa pair is: False
+&&&&&&&&: A step forward must always be taken. A step backward must always be taken. So, the answer is
+Total Probability for 'Yes': 0.08587051182985306
+Total Probability for 'No': 0.914129376411438
+The qa pair is: True
+&&&&&&&&: Take 4 steps forward. Take 4 steps right. Take 5 steps forward. All of these directions are directions when facing forward. So, the answer is
+Total Probability for 'Yes': 0.5380553603172302
+Total Probability for 'No': 0.4619445502758026
+The qa pair is: True
+&&&&&&&&: Turn around takes 7 steps. Take 7 steps. Take 7 steps. Take 10 steps. Take 2 steps. Take 2 steps. Turn around takes 5 steps. Take 5 steps. Turn left. So, the answer is
+Total Probability for 'Yes': 0.47374412417411804
+Total Probability for 'No': 0.5262558460235596
+The qa pair is: False
+&&&&&&&&: It’s impossible to take 6 steps forward if you take 6 steps backward. So, the answer is
+Total Probability for 'Yes': 0.2093353569507599
+Total Probability for 'No': 0.7906646728515625
+The qa pair is: False
+&&&&&&&&: You would have to return by 8 steps if you were always facing forward. So, the answer is
+Total Probability for 'Yes': 0.5831678509712219
+Total Probability for 'No': 0.4168321192264557
+The qa pair is: True
+&&&&&&&&: You can take 3 steps back to the original starting point. If you take 6 steps back to the original starting point, you would take 9 steps back. So, the answer is
+Total Probability for 'Yes': 0.3401184678077698
+Total Probability for 'No': 0.6598815321922302
+The qa pair is: False
+&&&&&&&&: If you start at your starting point and turn right, you have 5 steps to go. If you start at your starting point and turn left, you have 3 steps to go. So, the answer is
+Total Probability for 'Yes': 0.2585926651954651
+Total Probability for 'No': 0.7414073348045349
+The qa pair is: False
+&&&&&&&&: You cannot always take back what you started. If you take 2 steps forward, it will be back to the start point. The instructions state that one always faces forward. So, the answer is
+Total Probability for 'Yes': 0.40379947423934937
+Total Probability for 'No': 0.5962005257606506
+The qa pair is: True
+&&&&&&&&: You would return to the starting point on the 9th step. The answer: Yes.</s>
+Total Probability for 'Yes': 0.3307596445083618
+Total Probability for 'No': 0.6692402958869934
+The qa pair is: False
+&&&&&&&&: Take 7 steps and 1 step turns you to the right. Take 7 steps and 7 steps turns you to the left. So, the answer is
+Total Probability for 'Yes': 0.15680533647537231
+Total Probability for 'No': 0.8431947827339172
+The qa pair is: False
+&&&&&&&&: If one goes back 5 steps to the left, it does not return you to the starting point. So, the answer is
+Total Probability for 'Yes': 0.3204905092716217
+Total Probability for 'No': 0.6795095205307007
+The qa pair is: False
+&&&&&&&&: If you always face forward, you always take 6 steps right. If you always face forward, you always take 1 step forward. If you always face right, you always take 8 steps forward. If you always take 8 steps forward, you always take 9 steps backward. So, the answer is
+Total Probability for 'Yes': 0.25715741515159607
+Total Probability for 'No': 0.7428426742553711
+The qa pair is: True
+&&&&&&&&: You can only take one step backward, one step forward. So, the answer is
+Total Probability for 'Yes': 0.25015559792518616
+Total Probability for 'No': 0.7498444318771362
+The qa pair is: True
+&&&&&&&&: Turn left at the stop sign and then turn left. You are now at the starting point. So, the answer is
+Total Probability for 'Yes': 0.5343312621116638
+Total Probability for 'No': 0.4656687080860138
+The qa pair is: False
+&&&&&&&&: Turn left and turn right. Take 8 steps and take 4 steps. Turn right and take 10 steps and take 1 step. So, the answer is
+Total Probability for 'Yes': 0.4028720557689667
+Total Probability for 'No': 0.5971279740333557
+The qa pair is: True
+&&&&&&&&: You can return to the starting point when facing forward. If you take 5 steps backward, you will go back 5 steps in front of you. Then you are back where you were at the beginning. The answer: No.</s>
+Total Probability for 'Yes': 0.20752418041229248
+Total Probability for 'No': 0.7924758195877075
+The qa pair is: True
+&&&&&&&&: Take 2 steps. To take 2 steps, you would first need to take 6 steps. So, the answer is
+Total Probability for 'Yes': 0.27818095684051514
+Total Probability for 'No': 0.7218189835548401
+The qa pair is: False
+&&&&&&&&: Take 5 steps to complete the turn around. So, the answer is
+Total Probability for 'Yes': 0.38570767641067505
+Total Probability for 'No': 0.6142922639846802
+The qa pair is: True
+
+[rollout 72 / 128]:  56%|████████████████████████████████████████████████████████████████████████████████████████▎                                                                    | 72/128 [00:44<00:35,  1.56it/s]
+Total Probability for 'Yes': 0.2512257993221283
+Total Probability for 'No': 0.7487742304801941
+The qa pair is: True
+&&&&&&&&: Turn to the left, then right. Take 3 steps. Turn left, then left again. Take 1 step. Take 3 steps. Take 5 steps. Thus, the answer is
+Total Probability for 'Yes': 0.2732583284378052
+Total Probability for 'No': 0.7267417311668396
+The qa pair is: False
+&&&&&&&&: The instruction requires you to always face forward when taking the steps. The instructions state that you only take 10 steps backward. The only way to return to the starting point is with 6 steps forward. So, the answer is
+Total Probability for 'Yes': 0.37807008624076843
+Total Probability for 'No': 0.6219298839569092
+The qa pair is: True
+&&&&&&&&: Take 9 steps from the starting point. If you are going back to the starting point, take 9 steps. So, the answer is
+Total Probability for 'Yes': 0.9073609709739685
+Total Probability for 'No': 0.09263907372951508
+The qa pair is: False
+&&&&&&&&: If you ever find yourself facing backward, you will always make the same move. In this instance, the starting point is facing forward. So, the answer is
+Total Probability for 'Yes': 0.5729507803916931
+Total Probability for 'No': 0.4270491600036621
+The qa pair is: False
+&&&&&&&&: In order to get back to the starting point, take 6 steps backward. To go back to the starting point, always face forward. In order to go forward, take 7 steps forward. In order to go right, take 3 steps right. In order to go left, take 9 steps right. To go right, take 6 steps backward. So, the answer is
+Total Probability for 'Yes': 0.4252500534057617
+Total Probability for 'No': 0.5747498869895935
+The qa pair is: True
+&&&&&&&&: You can start from anywhere in the starting point. Take 4 steps forward, 4 steps left, 6 steps forward, 6 steps forward, 6 steps forward. You can start from any one of the starting points in the starting place. So, the answer is
+Total Probability for 'Yes': 0.4684850573539734
+Total Probability for 'No': 0.5315149426460266
+The qa pair is: True
+&&&&&&&&: The starting point is facing in the direction of travel. To return to the starting point, you should always face the same direction. So, the answer is
+Total Probability for 'Yes': 0.7320234775543213
+Total Probability for 'No': 0.2679766118526459
+The qa pair is: True
+&&&&&&&&: Forward is always facing forward. To go right, take 5 steps. To go left, take 7 steps. So, the answer is
+Total Probability for 'Yes': 0.4074629843235016
+Total Probability for 'No': 0.5925370454788208
+The qa pair is: False
+&&&&&&&&: You always face forward and if you follow the instructions correctly, you always go forward. If you take 10 steps left and then 7 steps right, you will always go right and get back to your starting point. So, the answer is
+Total Probability for 'Yes': 0.7194359302520752
+Total Probability for 'No': 0.2805640697479248
+The qa pair is: True
+&&&&&&&&: To return to the starting point, always face forward. To keep the head straight, always take 5 steps right. The starting point is on the right side of the street. So, the answer is
+Total Probability for 'Yes': 0.5553216934204102
+Total Probability for 'No': 0.4446783661842346
+The qa pair is: False
+&&&&&&&&: If we continue facing forward, we always face forward. We can change the direction if we start forward. If we take 10 steps backward, it’s possible to go backward. The answer is
+Total Probability for 'Yes': 0.6620917916297913
+Total Probability for 'No': 0.3379082977771759
+The qa pair is: True
+&&&&&&&&: The starting point can only be reached if you return to the starting point. The starting point can only be reached if you take steps forward. So, the answer is
+Total Probability for 'Yes': 0.22471211850643158
+Total Probability for 'No': 0.775287926197052
+The qa pair is: True
+&&&&&&&&: If you take 2 steps, you must return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.534817099571228
+Total Probability for 'No': 0.46518293023109436
+The qa pair is: False
+&&&&&&&&: No you always start facing forward. You can’ t always take a single step left. So, the answer is
+Total Probability for 'Yes': 0.3034570813179016
+Total Probability for 'No': 0.6965429186820984
+The qa pair is: False
+&&&&&&&&: You can change the number of steps to take. In each case, the number is expressed as the number of steps and not as a number. Therefore, the answer is
+Total Probability for 'Yes': 0.37283334136009216
+Total Probability for 'No': 0.6271666884422302
+The qa pair is: False
+&&&&&&&&: The first step is the first part of the direction that you are facing. For the first 4 steps, you are facing left. You are taking 5 steps forward, so if you face forward again, you are always facing forward. So, the answer is
+Total Probability for 'Yes': 0.3433978855609894
+Total Probability for 'No': 0.6566020846366882
+The qa pair is: True
+&&&&&&&&: The starting point was facing forward. The first 6 steps led to 8 steps. The final answer: No.</s>
+Total Probability for 'Yes': 0.24827569723129272
+Total Probability for 'No': 0.7517243027687073
+The qa pair is: True
+&&&&&&&&: Facing forward makes you stronger and will provide more momentum to keep you moving forward. As you move forward you become stronger and can get to your starting point without taking too many steps backward. So, the answer is
+Total Probability for 'Yes': 0.222539022564888
+Total Probability for 'No': 0.7774609923362732
+The qa pair is: True
+&&&&&&&&: Turn left. Turn right. Turn left. Turn around. Take 9 steps. So, the answer is
+Total Probability for 'Yes': 0.38390132784843445
+Total Probability for 'No': 0.6160987019538879
+The qa pair is: False
+&&&&&&&&: If you take three steps right and turn around, you return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.820726752281189
+Total Probability for 'No': 0.17927323281764984
+The qa pair is: True
+&&&&&&&&: If the instructions say take 1 step left, take 4 steps left. If they say take 1 step right, take 7 steps right. If they say take 1 step left, take 4 steps left. If they say take 6 steps left, take 6 steps left. So, the answer is
+Total Probability for 'Yes': 0.3951563835144043
+Total Probability for 'No': 0.6048436164855957
+The qa pair is: False
+&&&&&&&&: Take 7 steps backward. Take 3 steps left. Do the same thing as Step 1, Step 2, Step 3. Then take 2 steps backwards. To return to the starting point, take 3 steps backwards. So, the answer is
+Total Probability for 'Yes': 0.4471859633922577
+Total Probability for 'No': 0.5528140068054199
+The qa pair is: False
+&&&&&&&&: When you face forward with your whole body, your brain sends out a positive energy which will make you backwards. As you move forward with your whole body forward, all of the same muscle movement will send out a positive energy which will make you backwards. So, the answer is
+Total Probability for 'Yes': 0.0846136286854744
+Total Probability for 'No': 0.9153863787651062
+The qa pair is: True
+&&&&&&&&: To return to the starting point, you cannot take 2 steps before continuing. Therefore, the answer is
+Total Probability for 'Yes': 0.2283366471529007
+Total Probability for 'No': 0.7716633081436157
+The qa pair is: False
+&&&&&&&&: To turn left, you need to take 3 steps. To turn around, you need to take 6 steps. So, the answer is
+Total Probability for 'Yes': 0.2165292501449585
+Total Probability for 'No': 0.7834706902503967
+The qa pair is: True
+&&&&&&&&: You always face forward. The first 6 steps are always left. The last step backward is done backward. The first 5 steps are always forward. So, the answer is
+Total Probability for 'Yes': 0.41448479890823364
+Total Probability for 'No': 0.5855152010917664
+The qa pair is: False
+&&&&&&&&: If you take 2 steps you are back to the starting point and take 6 steps. So, the answer is
+Total Probability for 'Yes': 0.563118577003479
+Total Probability for 'No': 0.4368813931941986
+The qa pair is: False
+&&&&&&&&: You can only take 10 steps forward, not 3 steps backward. So, the answer is
+Total Probability for 'Yes': 0.28427010774612427
+Total Probability for 'No': 0.7157297730445862
+The qa pair is: True
+&&&&&&&&: The starting point is a sign. You would either take 7 steps and turn right, or take 6 steps and turn right. So, the answer is
+Total Probability for 'Yes': 0.542142391204834
+Total Probability for 'No': 0.4578576385974884
+The qa pair is: False
+&&&&&&&&: The first 8 steps represent direction, while the second 8 steps represent direction. The first 8 steps represent the direction of the directional arrows. So, the answer is
+Total Probability for 'Yes': 0.5505826473236084
+Total Probability for 'No': 0.44941744208335876
+The qa pair is: False
+&&&&&&&&: Turn around and turn around. The turn will return you to your starting point. So, the answer is
+Total Probability for 'Yes': 0.7830156087875366
+Total Probability for 'No': 0.216984361410141
+The qa pair is: False
+&&&&&&&&: If you make 7 steps, you will return to the starting point. If you make 4 steps, you will return to the starting point. If you make 3 steps, you will return to the starting point. If you make 10 steps, you will return to the starting point. Thus, the answer is
+Total Probability for 'Yes': 0.7808647155761719
+Total Probability for 'No': 0.2191353440284729
+The qa pair is: False
+&&&&&&&&: First, you have to always face forward. If you take 9 steps right, you are taking 10 more steps. So, the answer is
+Total Probability for 'Yes': 0.502031147480011
+Total Probability for 'No': 0.4979688227176666
+The qa pair is: False
+&&&&&&&&: There are several things you can do when you face forward. One thing you can do to face backward is to take 9 steps backward. So, the answer is
+Total Probability for 'Yes': 0.20951960980892181
+Total Probability for 'No': 0.7904804348945618
+The qa pair is: False
+&&&&&&&&: Once you finish taking your 9 steps, you will turn right again. The answer is
+Total Probability for 'Yes': 0.25294530391693115
+Total Probability for 'No': 0.7470546960830688
+The qa pair is: False
+&&&&&&&&: Whenever you start out facing forward, you always face forward. If you start looking backward, you always look backward. Take 8 steps forward, and you are facing forward, not backward. So, the answer is
+Total Probability for 'Yes': 0.4023638367652893
+Total Probability for 'No': 0.5976361036300659
+The qa pair is: True
+&&&&&&&&: For the first step, you took 7 steps left. In one of the steps, you were taken a step forward. For the second step, you took 8 steps left. In the third step, you were taken a step left. For the fourth step, you were taken a step forward. The instructions said that in each of the second steps, you were taken a step back. In the fifth step, you were taken a step forward. If you have taken 5 steps forward, you were taken 5 steps forward. Thus, the answer is
+Total Probability for 'Yes': 0.42562609910964966
+Total Probability for 'No': 0.5743739008903503
+The qa pair is: False
+&&&&&&&&: The first line is always facing forward. The second line is always facing right. The third line is always facing left. Therefore, the answer is
+Total Probability for 'Yes': 0.4682178795337677
+Total Probability for 'No': 0.5317821502685547
+The qa pair is: True
+&&&&&&&&: Turning around can turn you back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.892442524433136
+Total Probability for 'No': 0.1075574979186058
+The qa pair is: False
+&&&&&&&&: Turning left is a more direct path than turning right. Turning right is a slower route than turning left. So, the answer is
+Total Probability for 'Yes': 0.641037106513977
+Total Probability for 'No': 0.35896289348602295
+The qa pair is: False
+&&&&&&&&: You cannot take 6 steps and take 4 steps in 6 steps to get back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.2838195264339447
+Total Probability for 'No': 0.7161805033683777
+The qa pair is: True
+&&&&&&&&: You go to the same starting point in all three directions. The first set of directions is repeated on the second set of steps. So, the answer is
+Total Probability for 'Yes': 0.5688832998275757
+Total Probability for 'No': 0.43111667037010193
+The qa pair is: False
+&&&&&&&&: You are on the opposite side of the road from the starting point. So you will turn around and take 10 steps. So, the answer is
+Total Probability for 'Yes': 0.6424404978752136
+Total Probability for 'No': 0.3575594425201416
+The qa pair is: True
+&&&&&&&&: First, start facing forward. Next, take 3 steps left. Then, take 2 steps right. Thus, the answer is
+Total Probability for 'Yes': 0.589684009552002
+Total Probability for 'No': 0.4103160500526428
+The qa pair is: True
+&&&&&&&&: At the beginning, you face forward and take 2 steps left. At the ending, you take 4 steps backward, and at the beginning, take 7 steps right. So, the answer is
+Total Probability for 'Yes': 0.4317314624786377
+Total Probability for 'No': 0.5682685375213623
+The qa pair is: True
+&&&&&&&&: If you take two steps, you go 2 steps away from the starting point. If you take 8 steps, you go 2 steps away from the starting point. Take 10 steps and you come back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7372985482215881
+Total Probability for 'No': 0.26270145177841187
+The qa pair is: False
+&&&&&&&&: Take 5 steps for 10 steps and return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.33992305397987366
+Total Probability for 'No': 0.6600769758224487
+The qa pair is: True
+&&&&&&&&: You can only take one step backward. If you take 10 steps backward, you cannot return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.2631528079509735
+Total Probability for 'No': 0.7368472814559937
+The qa pair is: False
+&&&&&&&&: Taking 1 step forward and 10 steps left is 4 steps forward and 4 steps left. Thus, the answer is
+Total Probability for 'Yes': 0.13774889707565308
+Total Probability for 'No': 0.8622511625289917
+The qa pair is: True
+&&&&&&&&: If you always face forward, if you always take 5 steps right, you take 8 steps backward. You can take 8 steps backward or you can take 1 step right and 7 steps backward. So, the answer is
+Total Probability for 'Yes': 0.5476583242416382
+Total Probability for 'No': 0.4523417055606842
+The qa pair is: False
+&&&&&&&&: Turn around is an exaggeration to say it’s a phrase that would make perfect sense to the average person. So, the answer is
+Total Probability for 'Yes': 0.28344014286994934
+Total Probability for 'No': 0.7165598273277283
+The qa pair is: False
+&&&&&&&&: Turning right is a way of returning to the starting point. Turning around is a way to return back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8907251358032227
+Total Probability for 'No': 0.10927475988864899
+The qa pair is: True
+&&&&&&&&: Turning around and turning left is not the same thing. The starting point is not on the same ground. So, the answer is
+Total Probability for 'Yes': 0.2696821689605713
+Total Probability for 'No': 0.7303178906440735
+The qa pair is: False
+&&&&&&&&: On the incline you start to turn around left, take 5 steps and turn right. So, the answer is
+Total Probability for 'Yes': 0.6483719944953918
+Total Probability for 'No': 0.351627916097641
+The qa pair is: True
+&&&&&&&&: If the person is facing forward they take 10 steps left. If the person is facing left they take 10 steps right. So, the answer is
+Total Probability for 'Yes': 0.1411752551794052
+Total Probability for 'No': 0.8588247299194336
+The qa pair is: False
+&&&&&&&&: Take 1 step to the first item on the list. Take 7 steps to the first item on the list. So, the answer is
+Total Probability for 'Yes': 0.14159932732582092
+Total Probability for 'No': 0.8584006428718567
+The qa pair is: True
+&&&&&&&&: You can not return to the starting point if you are facing upwards. The starting point is in the front left corner of your mind. Forward step, right step, left step and backward step are all directions. So, the answer is
+Total Probability for 'Yes': 0.3618195950984955
+Total Probability for 'No': 0.6381803750991821
+The qa pair is: False
+&&&&&&&&: Facing forward always involves facing the same direction at all times. If you don’t always face forward, you can never reach the starting point. So, the answer is
+Total Probability for 'Yes': 0.6508489847183228
+Total Probability for 'No': 0.34915098547935486
+The qa pair is: True
+&&&&&&&&: The first step is to take one step. After 5 steps you are returned to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7431706190109253
+Total Probability for 'No': 0.25682947039604187
+The qa pair is: True
+&&&&&&&&: The first statement has no beginning. Take 2 steps. Turn around. Take 9 steps. Take 7 steps. Take 6 steps. Turn left. Take 2 steps. Thus, the answer is
+Total Probability for 'Yes': 0.3170512914657593
+Total Probability for 'No': 0.6829487085342407
+The qa pair is: False
+&&&&&&&&: Let’ s say we start in the forward position and we step forward one step. Once we reach the starting point, we take 5 steps forward. We take 7 steps backward and retrace our steps. This is a left-hand side flip. So, the answer is
+Total Probability for 'Yes': 0.6160292625427246
+Total Probability for 'No': 0.3839707374572754
+The qa pair is: True
+&&&&&&&&: If you take 5 steps you must take 5 steps first. If you take 2 steps and turn around you must take 2 steps first. So, the answer is
+Total Probability for 'Yes': 0.5321614146232605
+Total Probability for 'No': 0.4678386449813843
+The qa pair is: False
+&&&&&&&&: You always start by facing forward. Take 5 steps backward and 1 step forward.</s>
+Total Probability for 'Yes': 0.18430502712726593
+Total Probability for 'No': 0.8156949877738953
+The qa pair is: False
+&&&&&&&&: For each of the 4 steps left you take, you should always face forward. So, the answer is
+Total Probability for 'Yes': 0.44460687041282654
+Total Probability for 'No': 0.5553932189941406
+The qa pair is: False
+&&&&&&&&: If you face forward, and always face forward, and take 10 steps right, you can return to the starting point. If you face backwards, and always face left, and take 3 steps forward, you can return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.21491995453834534
+Total Probability for 'No': 0.785080075263977
+The qa pair is: False
+&&&&&&&&: There is a difference between "turning left and turning right" and "turning right and turning left.". So, the answer is
+Total Probability for 'Yes': 0.16651326417922974
+Total Probability for 'No': 0.833486795425415
+The qa pair is: False
+&&&&&&&&: Turn around right. Go right, take 9 steps. Take 10 steps. Turn right. Go left. Take 10 steps. Turn around right. Go right. Take 4 steps. So, the answer is
+Total Probability for 'Yes': 0.37648236751556396
+Total Probability for 'No': 0.6235176920890808
+The qa pair is: False
+&&&&&&&&: Take 2 steps. The number of steps taken will be the same. Take 8 steps. The number of steps taken will be the same. So, the answer is
+Total Probability for 'Yes': 0.35283440351486206
+Total Probability for 'No': 0.6471655964851379
+The qa pair is: False
+&&&&&&&&: Turn around is to turn around and return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7656266093254089
+Total Probability for 'No': 0.23437325656414032
+The qa pair is: False
+&&&&&&&&: Take 2 steps to get back to the starting point. Take 1 step and turn right to get back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.14778830111026764
+Total Probability for 'No': 0.8522116541862488
+The qa pair is: True
+&&&&&&&&: The instruction said take 8 steps left. The first 2 steps right are not listed in the instructions. Hence, you can not take 8 steps left and 2 steps right at the same time. So, the answer is
+Total Probability for 'Yes': 0.3659265339374542
+Total Probability for 'No': 0.6340734362602234
+The qa pair is: True
+&&&&&&&&: The instructions say to Take 7 steps. The answer: No.</s>
+Total Probability for 'Yes': 0.15560322999954224
+Total Probability for 'No': 0.8443967700004578
+The qa pair is: True
+&&&&&&&&: The beginning point will always be facing forward. You always face forward. You take 1 step backward. You always face forward. So, the answer is
+Total Probability for 'Yes': 0.4152357876300812
+Total Probability for 'No': 0.5847642421722412
+The qa pair is: False
+&&&&&&&&: Turn right. Turn around. Take 3 steps. To the starting point. So, the answer is
+Total Probability for 'Yes': 0.2696613669395447
+Total Probability for 'No': 0.7303385734558105
+The qa pair is: True
+&&&&&&&&: If you take 6 steps, you turn and take the same number of steps as if you took 3 steps and 6 steps. If you take 3 steps, you would take 3 steps and 3 steps and 6 steps. This would complete the first set of steps until you reached the starting point. The other sets are the same and they make no sense at all. So, the answer is
+Total Probability for 'Yes': 0.45428603887557983
+Total Probability for 'No': 0.5457139015197754
+The qa pair is: False
+&&&&&&&&: You do not need to always face forward to return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.14334151148796082
+Total Probability for 'No': 0.856658399105072
+The qa pair is: False
+&&&&&&&&: You took 2 steps to turn left. The total number of steps taken is 2. This should be a total of 2 + 6 = 9 steps. There are 8 steps in total for these instructions. So, the answer is
+Total Probability for 'Yes': 0.5516241192817688
+Total Probability for 'No': 0.4483758807182312
+The qa pair is: False
+&&&&&&&&: You cannot take 4 steps after taking 5 steps, you only return back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.4826332926750183
+Total Probability for 'No': 0.5173667073249817
+The qa pair is: False
+
+[rollout 96 / 128]:  75%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                       | 96/128 [00:57<00:19,  1.67it/s]
+Total Probability for 'Yes': 0.3468169867992401
+Total Probability for 'No': 0.6531829833984375
+The qa pair is: True
+&&&&&&&&: If you return to the starting point, you have to take 4 steps right. If you make this mistake twice, you take 4 steps left and take 2 steps right. So, the answer is
+Total Probability for 'Yes': 0.33218079805374146
+Total Probability for 'No': 0.6678192019462585
+The qa pair is: True
+&&&&&&&&: You turn around and back to the starting point in the same sequence. The answer: Yes.</s>
+Total Probability for 'Yes': 0.37419429421424866
+Total Probability for 'No': 0.625805675983429
+The qa pair is: False
+&&&&&&&&: Take 1 step at a time. In the first situation, you take 4 steps, but in the second situation you take 8 steps. In the third situation, you take 10 steps, but in the fourth situation you take only 1 step. So, the answer is
+Total Probability for 'Yes': 0.3639509379863739
+Total Probability for 'No': 0.6360490918159485
+The qa pair is: True
+&&&&&&&&: Turning left, taking 8 steps, you are going back to the starting point. This means taking 2 steps at the starting point and 6 steps to return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.6084913611412048
+Total Probability for 'No': 0.3915086090564728
+The qa pair is: False
+&&&&&&&&: Turn around is a phrase used to refer to going back. Take 4 steps is a phrase used to refer to walking back. So, the answer is
+Total Probability for 'Yes': 0.7315365672111511
+Total Probability for 'No': 0.2684633731842041
+The qa pair is: False
+&&&&&&&&: You can either take 7 steps or take 10 steps. So, the answer is
+Total Probability for 'Yes': 0.3174106478691101
+Total Probability for 'No': 0.6825894117355347
+The qa pair is: True
+&&&&&&&&: Take 7 steps back to the starting point. Take 10 steps back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.282166987657547
+Total Probability for 'No': 0.7178329825401306
+The qa pair is: True
+&&&&&&&&: In the first set of instructions, you are facing forward, with your front foot pointed forward. In the second set of instructions, you are facing backward, with your rear foot pointed forward. In the third set of instructions, you are facing forward, with your back foot pointed backward. In the fourth set of instructions, you are facing backward, with your feet pointed backward. In the fifth set of instructions, you are facing backward, with your arms outstretched out in front of you. So, the answer is
+Total Probability for 'Yes': 0.3551805019378662
+Total Probability for 'No': 0.6448194980621338
+The qa pair is: False
+&&&&&&&&: If you follow the instructions exactly, you can take the same number of steps multiple times. So, the answer is
+Total Probability for 'Yes': 0.3466162383556366
+Total Probability for 'No': 0.653383731842041
+The qa pair is: False
+&&&&&&&&: Once you have completed your instructions, you are faced forward and begin to take all 4 steps. If you look to the right, you are on the 4th step. The first step is the first move to return to your starting point. The next is the last step to continue to the previous location. So, the answer is
+Total Probability for 'Yes': 0.8388873338699341
+Total Probability for 'No': 0.16111281514167786
+The qa pair is: False
+&&&&&&&&: Then take 10 steps to turn around. Take 10 steps back. So, the answer is
+Total Probability for 'Yes': 0.4707126319408417
+Total Probability for 'No': 0.5292872786521912
+The qa pair is: False
+&&&&&&&&: At the starting point you would only need 2 steps to return to the starting point. There are only 6 steps to begin with and only 2 steps to turn around. So, the answer is
+Total Probability for 'Yes': 0.5737629532814026
+Total Probability for 'No': 0.42623698711395264
+The qa pair is: False
+&&&&&&&&: You take 1 step for 2 steps. 8 steps is 8 * 8 = 56 steps. 4 steps is 4 * 4 = 64 steps. 32 steps is 32 * 64 = 280 steps. You have 280 - 280 = 160 steps to turn around. So, the answer is
+Total Probability for 'Yes': 0.35581690073013306
+Total Probability for 'No': 0.6441830992698669
+The qa pair is: True
+&&&&&&&&: Take 1 step. Take a different number of steps to return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.39300641417503357
+Total Probability for 'No': 0.606993556022644
+The qa pair is: False
+&&&&&&&&: To return to the starting point you would take 5 steps. So, the answer is
+Total Probability for 'Yes': 0.45397812128067017
+Total Probability for 'No': 0.5460218191146851
+The qa pair is: False
+&&&&&&&&: For every 12 steps to take backwards, you must take the same number of steps to face forward. So, the answer is
+Total Probability for 'Yes': 0.3674793243408203
+Total Probability for 'No': 0.6325207352638245
+The qa pair is: True
+&&&&&&&&: You can return to the starting point by taking 4 steps. Taking 3 steps does not return back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.5088358521461487
+Total Probability for 'No': 0.4911642074584961
+The qa pair is: True
+&&&&&&&&: To get to the starting point, you would go back to the left of the original starting point. The answer: yes.</s>
+Total Probability for 'Yes': 0.2887943983078003
+Total Probability for 'No': 0.7112056612968445
+The qa pair is: False
+&&&&&&&&: You can't take 10 steps backward and 7 steps forward at the same time. So, the answer is
+Total Probability for 'Yes': 0.2355237752199173
+Total Probability for 'No': 0.7644762396812439
+The qa pair is: False
+&&&&&&&&: If you look at the starting point, you will always face forward. If you take 5 steps left, you return to the beginning point. If you take 7 steps left, you return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8118669986724854
+Total Probability for 'No': 0.18813298642635345
+The qa pair is: False
+&&&&&&&&: The first instruction was done with 7 steps. If you take 2 steps you go to the next instruction. If you take 5 steps then you go to the previous instruction. If you take 2 steps then you go to the previous instruction. So, the answer is
+Total Probability for 'Yes': 0.5106991529464722
+Total Probability for 'No': 0.48930084705352783
+The qa pair is: True
+&&&&&&&&: If you have 10 steps backward, you would take 9 steps forward. If you have 3 steps forward, you would take 3 steps forward. So, the answer is
+Total Probability for 'Yes': 0.09565398097038269
+Total Probability for 'No': 0.9043460488319397
+The qa pair is: True
+&&&&&&&&: Take 2 steps backward. The first step is to always face forward and the second step is to take 8 steps backward. Take 2 steps backward. The second step is to always face forward and the third step is to take 8 steps backward. So, the answer is
+Total Probability for 'Yes': 0.3215012848377228
+Total Probability for 'No': 0.6784987449645996
+The qa pair is: True
+&&&&&&&&: The starting point is forward. When you take 4 steps right, you are taking 3 steps right. When you take 4 steps backward, you are taking 5 steps backward. There are 5 steps forward and 5 steps backward. So, the answer is
+Total Probability for 'Yes': 0.4691121578216553
+Total Probability for 'No': 0.5308878421783447
+The qa pair is: False
+&&&&&&&&: If the starting point is 7 steps from the starting point, the next 7 steps will go to the starting point. The starting point is 7 steps away from where the first step is taken. So, the answer is
+Total Probability for 'Yes': 0.7040718197822571
+Total Probability for 'No': 0.2959282696247101
+The qa pair is: False
+&&&&&&&&: Take 1 step to turn left. Take 1 step to turn left. Take 9 steps to return to starting point. Thus, the answer is
+Total Probability for 'Yes': 0.5718540549278259
+Total Probability for 'No': 0.42814600467681885
+The qa pair is: False
+&&&&&&&&: Take 2 steps forward and take 4 steps forward. The starting point is face forward. So, the answer is
+Total Probability for 'Yes': 0.5535666346549988
+Total Probability for 'No': 0.44643330574035645
+The qa pair is: False
+&&&&&&&&: You always face forward when you start moving. The one thing you can't do is just take 3 steps backward. The other thing you can do is always face forward. So, the answer is
+Total Probability for 'Yes': 0.26756468415260315
+Total Probability for 'No': 0.7324352860450745
+The qa pair is: True
+&&&&&&&&: It is one of the few sentences in these three sentences that return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.6578615307807922
+Total Probability for 'No': 0.34213852882385254
+The qa pair is: False
+&&&&&&&&: Turn around left takes you one way back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.5658388137817383
+Total Probability for 'No': 0.4341612160205841
+The qa pair is: True
+&&&&&&&&: To return to the starting point, there are 3 steps forward, 4 steps backward, and 6 steps forward. There is a total of 10 steps forward + 4 steps backward + 6 steps forward. So, the answer is
+Total Probability for 'Yes': 0.7839135527610779
+Total Probability for 'No': 0.21608641743659973
+The qa pair is: True
+&&&&&&&&: After a turn, you should always return to the starting point. There is one way and one way. So, the answer is
+Total Probability for 'Yes': 0.6959798336029053
+Total Probability for 'No': 0.30402010679244995
+The qa pair is: False
+&&&&&&&&: You always face forward. Take 2 steps forward. Take 2 steps backward. To reverse the direction you were facing. So, the answer is
+Total Probability for 'Yes': 0.5826306939125061
+Total Probability for 'No': 0.4173693358898163
+The qa pair is: True
+&&&&&&&&: A woman takes a 8 step backward and a man takes a 8 step forward. To return to the starting point, one needs to take 8 steps forward and 8 steps backward. So, the answer is
+Total Probability for 'Yes': 0.5438763499259949
+Total Probability for 'No': 0.45612362027168274
+The qa pair is: True
+&&&&&&&&: To turn around you turn left, take 6 steps then turn around. Take 6 steps and 7 steps then turn around, take 1 step then 7 steps then turn around. So, the answer is
+Total Probability for 'Yes': 0.26785287261009216
+Total Probability for 'No': 0.7321470975875854
+The qa pair is: False
+&&&&&&&&: Turn around the direction you are going. Turn around the direction you are going. Repeat the whole process for 4 steps. So, the answer is
+Total Probability for 'Yes': 0.4967644512653351
+Total Probability for 'No': 0.5032355189323425
+The qa pair is: False
+&&&&&&&&: You can only take 7 steps backwards and 9 steps right at once. So, the answer is
+Total Probability for 'Yes': 0.28344663977622986
+Total Probability for 'No': 0.7165533304214478
+The qa pair is: True
+&&&&&&&&: If you are facing forward and 1 step forward, then in one step you will be faced backward with your body in front of you. If you are facing forward and 1 step forward, then in one step you will be facing forward with your body in front of you. So, the answer is
+Total Probability for 'Yes': 0.024932295083999634
+Total Probability for 'No': 0.9750676155090332
+The qa pair is: False
+&&&&&&&&: A woman turns left at the starting point. If you take 8 steps, you go 8 feet. A man turns right at the starting point. Turn right and take 2 steps. If you take 2 steps, you are back at the starting point. So, the answer is
+Total Probability for 'Yes': 0.2566910684108734
+Total Probability for 'No': 0.7433089017868042
+The qa pair is: True
+&&&&&&&&: Turn left. Whenever you turn left, you take a step back. To return to the starting point, you take a step back. So, the answer is
+Total Probability for 'Yes': 0.7550813555717468
+Total Probability for 'No': 0.24491865932941437
+The qa pair is: False
+&&&&&&&&: You would take a 4 step right and a 6 step forward backward. Thus, you would take a 4 step right and a 6 step right backward. You would take a 4 step forward and a 6 step backward. Thus, you would take a 4 step forward and a 6 step left backward. Thus, you would take a 4 step right and a 6 step right backward. So, the answer is
+Total Probability for 'Yes': 0.30582937598228455
+Total Probability for 'No': 0.6941707134246826
+The qa pair is: True
+&&&&&&&&: The opposite directions return to the same starting point. The same direction means the same thing. So, the answer is
+Total Probability for 'Yes': 0.19573956727981567
+Total Probability for 'No': 0.8042604327201843
+The qa pair is: True
+&&&&&&&&: In each of the steps, you are facing forward. The second and fourth step is towards the right. In the last step, you are facing the left. In the fifth step, you are facing forward. In the sixth step, you are facing the left. The final answer: No.</s>
+Total Probability for 'Yes': 0.2475084662437439
+Total Probability for 'No': 0.7524914741516113
+The qa pair is: True
+&&&&&&&&: The first instruction was to always face forward, take 9 steps backwards. So, the answer is
+Total Probability for 'Yes': 0.09324995428323746
+Total Probability for 'No': 0.9067500829696655
+The qa pair is: False
+&&&&&&&&: You can only take 5 steps to turn left. The starting point is the one you started at. So, the answer is
+Total Probability for 'Yes': 0.5466897487640381
+Total Probability for 'No': 0.45331037044525146
+The qa pair is: False
+&&&&&&&&: Turn around and take 5 steps. Turn around and take 4 steps. Turn left and take 3 steps. So, the answer is
+Total Probability for 'Yes': 0.2783275544643402
+Total Probability for 'No': 0.7216724157333374
+The qa pair is: True
+&&&&&&&&: The directions are to always be facing forward. Taking 10 steps backward is to be backwards. So, the answer is
+Total Probability for 'Yes': 0.4163244068622589
+Total Probability for 'No': 0.5836756229400635
+The qa pair is: True
+&&&&&&&&: In one of the three steps, you take 2 steps to get back to the starting point. In the other one, you take 4 steps to get back to the starting point. Therefore, the answer is
+Total Probability for 'Yes': 0.7144598960876465
+Total Probability for 'No': 0.28554004430770874
+The qa pair is: False
+&&&&&&&&: The instructions refer to a starting point, a specific sequence of steps forward, with backward motion, followed by taking steps backward in reverse order. So, the answer is
+Total Probability for 'Yes': 0.41559478640556335
+Total Probability for 'No': 0.5844051837921143
+The qa pair is: True
+&&&&&&&&: Let's say you can turn around and start back where you started with 8 steps forward. If you turn around and start back towards the start point, you can reverse this sequence to reverse it to the start point. So, the answer is
+Total Probability for 'Yes': 0.7422943711280823
+Total Probability for 'No': 0.25770559906959534
+The qa pair is: True
+&&&&&&&&: Take 6 steps. It is impossible to get to the beginning again without taking 6 steps. So, the answer is
+Total Probability for 'Yes': 0.6386894583702087
+Total Probability for 'No': 0.3613104820251465
+The qa pair is: False
+&&&&&&&&: If you follow the correct sequence correctly, it means that you will get back to the starting point. If you follow a different sequence, you will go back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.2687664330005646
+Total Probability for 'No': 0.7312335968017578
+The qa pair is: True
+&&&&&&&&: Turn your body 180o. If you begin with 10 steps left, you will take 10 steps. If you start with 7 steps right, you will take 7 steps. If you start with 1 step left, you will take 1 step. Thus, the answer is
+Total Probability for 'Yes': 0.4425143301486969
+Total Probability for 'No': 0.5574856996536255
+The qa pair is: True
+&&&&&&&&: Let's say you took 6 steps. Then take 5 steps to get to the starting point. That would return you to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7509274482727051
+Total Probability for 'No': 0.24907256662845612
+The qa pair is: False
+&&&&&&&&: This is how you move in general. If you always face forward, you are always in the middle of the circle. So, the answer is
+Total Probability for 'Yes': 0.3875633180141449
+Total Probability for 'No': 0.6124366521835327
+The qa pair is: True
+&&&&&&&&: For every 3 steps turn, you will make another turn to the left, which will make your way back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8474132418632507
+Total Probability for 'No': 0.15258680284023285
+The qa pair is: True
+&&&&&&&&: Whenever you are facing forward, always face forward. When you are facing backward, always take 2 steps backward, always face forward. Taking 5 steps backward is always right, always face backward. When you are taking 9 steps right, always face right, always face forward. When you are facing forward, always take 2 steps backward, always face right. When you are facing right, always take 5 steps right, always face right. So, the answer is
+Total Probability for 'Yes': 0.1926863044500351
+Total Probability for 'No': 0.8073137402534485
+The qa pair is: False
+&&&&&&&&: In this situation, the right is the forward arrow. If we are looking at the horizon from the start, the right arrow would look towards the beginning. The prevailing direction of travel in this scenario is the straight path. So, the answer is
+Total Probability for 'Yes': 0.39585795998573303
+Total Probability for 'No': 0.6041419506072998
+The qa pair is: False
+&&&&&&&&: In the first statement, you are already back at the starting point. In the second statement, you are still at the starting point. So, the answer is
+Total Probability for 'Yes': 0.27055081725120544
+Total Probability for 'No': 0.7294490933418274
+The qa pair is: False
+&&&&&&&&: Each step backward is 4 steps backwards. The first instruction on the correct sequence is to always face forward. So, the answer is
+Total Probability for 'Yes': 0.40972715616226196
+Total Probability for 'No': 0.590272843837738
+The qa pair is: False
+&&&&&&&&: This passage was written in 1983. So, the answer is
+Total Probability for 'Yes': 0.16063135862350464
+Total Probability for 'No': 0.8393685817718506
+The qa pair is: False
+&&&&&&&&: After 6 steps, you are back at the beginning. So, the answer is
+Total Probability for 'Yes': 0.5778061747550964
+Total Probability for 'No': 0.42219382524490356
+The qa pair is: False
+&&&&&&&&: If you are always facing forward, you don’t necessarily need to face backward. You can either take 2 steps left or take 3 steps left. There are multiple ways to take steps backward. So, the answer is
+Total Probability for 'Yes': 0.4675007164478302
+Total Probability for 'No': 0.5324992537498474
+The qa pair is: True
+&&&&&&&&: The instructions call for an always facing forward direction. If you always face forward, then you always do the left and right alternating directions. So, the answer is
+Total Probability for 'Yes': 0.47071778774261475
+Total Probability for 'No': 0.5292822122573853
+The qa pair is: False
+&&&&&&&&: If you follow these instructions, always face forward, you won’t return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.06749945878982544
+Total Probability for 'No': 0.9325006008148193
+The qa pair is: False
+&&&&&&&&: Turn around takes you back to the beginning. If you take 2 steps and turn around, you turn around to the right. The starting point is at the beginning. So, the answer is
+Total Probability for 'Yes': 0.7157341241836548
+Total Probability for 'No': 0.2842658460140228
+The qa pair is: True
+&&&&&&&&: You take 1 step forward. When you take a step forward, you are taken forward. You may or may not make it backward. When you take a step backward, you are taken backward. Therefore, the answer is
+Total Probability for 'Yes': 0.33966144919395447
+Total Probability for 'No': 0.6603385806083679
+The qa pair is: False
+&&&&&&&&: You take 4 steps backward while facing forward. You take 4 steps backward while facing forward. You take 10 steps backward while facing backward. So, the answer is
+Total Probability for 'Yes': 0.17498593032360077
+Total Probability for 'No': 0.8250141143798828
+The qa pair is: False
+&&&&&&&&: It is the same back step the direction the first step went in. So, the answer is
+Total Probability for 'Yes': 0.5585938692092896
+Total Probability for 'No': 0.44140610098838806
+The qa pair is: True
+&&&&&&&&: Turn around starts by turning right. The first 5 steps are to go to the starting point. So, the answer is
+Total Probability for 'Yes': 0.5785068869590759
+Total Probability for 'No': 0.4214931130409241
+The qa pair is: False
+&&&&&&&&: Take 4 steps is the same thing as take 1 step. So, the answer is
+Total Probability for 'Yes': 0.2744460701942444
+Total Probability for 'No': 0.7255538702011108
+The qa pair is: False
+&&&&&&&&: You cannot always go back to the starting point. If you face forward always walk to the right. If you turn right always walk to the left. If you face left always walk to the left. So, the answer is
+Total Probability for 'Yes': 0.1241719201207161
+Total Probability for 'No': 0.8758280873298645
+The qa pair is: False
+&&&&&&&&: The first step left is the same as taking 5 steps left. The last step right is 10 steps right. So, the answer is
+Total Probability for 'Yes': 0.5363856554031372
+Total Probability for 'No': 0.463614284992218
+The qa pair is: False
+&&&&&&&&: Take 2 steps. Take 2 steps. Take 10 steps. Turn around. Take 6 steps. Turn left. Turn right. Take 6 steps. Thus, the answer is
+Total Probability for 'Yes': 0.5583522915840149
+Total Probability for 'No': 0.4416477680206299
+The qa pair is: False
+&&&&&&&&: Take 1 step to bring you back to the starting point. The sentence is ambiguous since it states that you take 1 step. It could mean taking 8 steps in total. So, the answer is
+Total Probability for 'Yes': 0.48384928703308105
+Total Probability for 'No': 0.5161507725715637
+The qa pair is: False
+&&&&&&&&: Take 1 step back to the starting point. Take 2 steps back to the starting point. Take 3 steps back to the starting point. Take 4 steps back to the starting point. Take 1 step back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.4645046293735504
+Total Probability for 'No': 0.5354953408241272
+The qa pair is: True
+&&&&&&&&: The sentence is written in a different order based on the first step. If you repeat all of the steps correctly, you take 10 steps backwards. The sentence is written in a different order based on the second step. If you repeat all of the steps correctly, you take 6 steps backwards. The sentence is written in a different order based on the first step. If you repeat all of the steps correctly, you take 10 steps right. The sentence is written in a different order based on the second step. The sentence is written in a different order based on the first step. The sentence is written in a different order based on the second step. So, the answer is
+Total Probability for 'Yes': 0.38439857959747314
+Total Probability for 'No': 0.6156014204025269
+The qa pair is: True
+&&&&&&&&: The starting point is the 3rd step on the left. There are 8 steps in total. There is 5 steps in total. So, the answer is
+Total Probability for 'Yes': 0.15612253546714783
+Total Probability for 'No': 0.8438774943351746
+The qa pair is: True
+&&&&&&&&: Turn around / take 10 steps and start all over. So, the answer is
+Total Probability for 'Yes': 0.5503145456314087
+Total Probability for 'No': 0.44968539476394653
+The qa pair is: False
+&&&&&&&&: Turn around to the right, turn around to the left and take 7 steps, and then turn left. So, the answer is
+Total Probability for 'Yes': 0.27737703919410706
+Total Probability for 'No': 0.7226229310035706
+The qa pair is: True
+&&&&&&&&: Turn around means you can go back the direction you started. The final answer: Yes.</s>
+Total Probability for 'Yes': 0.5752210021018982
+Total Probability for 'No': 0.4247789978981018
+The qa pair is: False
+&&&&&&&&: If you follow the original instructions, you must turn right and return to the starting point. The final answer: yes.</s>
+Total Probability for 'Yes': 0.3882658779621124
+Total Probability for 'No': 0.6117340922355652
+The qa pair is: False
+&&&&&&&&: Turn left. Take 9 steps. Turn around. Take 1 step. Take 10 steps. So, the answer is
+Total Probability for 'Yes': 0.38860318064689636
+Total Probability for 'No': 0.611396849155426
+The qa pair is: False
+&&&&&&&&: Take 1 step forward. Take 9 steps left. Take 9 steps right. Take 1 step backward. Take 3 steps right. Take 6 steps backward. So, the answer is
+Total Probability for 'Yes': 0.5184871554374695
+Total Probability for 'No': 0.48151281476020813
+The qa pair is: True
+&&&&&&&&: Take 10 steps right. Take 8 steps backward. Take 1 step backward. Take 8 steps backward. Take 8 steps forward. So, the answer is
+Total Probability for 'Yes': 0.5494586825370789
+Total Probability for 'No': 0.45054131746292114
+The qa pair is: False
+&&&&&&&&: All steps from the starting point go forward. If you go backwards, you have to take 3 steps backwards. So, the answer is
+Total Probability for 'Yes': 0.5658058524131775
+Total Probability for 'No': 0.4341941475868225
+The qa pair is: False
+&&&&&&&&: Take 6 steps forward, and take 2 steps backward.</s>
+Total Probability for 'Yes': 0.12801089882850647
+Total Probability for 'No': 0.8719890713691711
+The qa pair is: True
+&&&&&&&&: The instructions repeat on the first set of steps and the first set is 9 steps. So, the answer is
+Total Probability for 'Yes': 0.6475765705108643
+Total Probability for 'No': 0.35242342948913574
+The qa pair is: False
+&&&&&&&&: If you are always facing forward then you can always take 6 steps right. So, the answer is
+Total Probability for 'Yes': 0.4176223874092102
+Total Probability for 'No': 0.582377552986145
+The qa pair is: True
+&&&&&&&&: Forward takes two steps forward. Left takes four steps forward. Right takes two steps forward. So, the answer is
+Total Probability for 'Yes': 0.25574082136154175
+Total Probability for 'No': 0.744259238243103
+The qa pair is: True
+&&&&&&&&: The diagram has an 8-step forward and 8-step left. The starting point is always facing forward. So, the answer is
+Total Probability for 'Yes': 0.6706709265708923
+Total Probability for 'No': 0.32932910323143005
+The qa pair is: False
+&&&&&&&&: Turn left 3 times and take 10 steps to get back to your starting point. So, the answer is
+Total Probability for 'Yes': 0.45661771297454834
+Total Probability for 'No': 0.5433822870254517
+The qa pair is: True
+&&&&&&&&: You return to the starting point by turning left. You turn left. You turn left again. So, the answer is
+Total Probability for 'Yes': 0.7803208231925964
+Total Probability for 'No': 0.2196791172027588
+The qa pair is: True
+&&&&&&&&: Turn right is the only option where you can return to the starting point. The total steps required for this is 3 + 5 = 11 steps. So, the answer is
+Total Probability for 'Yes': 0.6497788429260254
+Total Probability for 'No': 0.3502212464809418
+The qa pair is: False
+&&&&&&&&: Turn right. If you want to get to the starting point, you must take the beginning back to where you started. So, the answer is
+Total Probability for 'Yes': 0.6741510629653931
+Total Probability for 'No': 0.32584893703460693
+The qa pair is: False
+&&&&&&&&: You can always face forward to return to the starting point. You can always take 6 steps right. So, the answer is
+Total Probability for 'Yes': 0.793063223361969
+Total Probability for 'No': 0.20693665742874146
+The qa pair is: True
+&&&&&&&&: Turning left is the same as taking 1 step and taking 5 steps. So, the answer is
+Total Probability for 'Yes': 0.4412674009799957
+Total Probability for 'No': 0.5587326884269714
+The qa pair is: False
+&&&&&&&&: First, face forward. Then, go back one step forward. So, the answer is
+Total Probability for 'Yes': 0.440156489610672
+Total Probability for 'No': 0.5598434805870056
+The qa pair is: False
+&&&&&&&&: The first set of instructions refers to take 2 steps, taking 2 steps. The second set of instructions refers to take 2 steps, take 2 steps. The third set of instructions refers to take 4 steps, take 4 steps, turn right. So, the answer is
+Total Probability for 'Yes': 0.3081530034542084
+Total Probability for 'No': 0.6918469667434692
+The qa pair is: False
+
+[rollout 120 / 128]:  94%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎         | 120/128 [01:11<00:04,  1.69it/s]
+Total Probability for 'Yes': 0.7742033004760742
+Total Probability for 'No': 0.22579672932624817
+The qa pair is: False
+&&&&&&&&: You can return to the starting point by turning at the end of the first step. You can turn around by taking 4 steps. So, the answer is
+Total Probability for 'Yes': 0.41307899355888367
+Total Probability for 'No': 0.586920976638794
+The qa pair is: False
+&&&&&&&&: Turning around is the same as taking 5 steps. Take 2 steps is the same as take 7 steps. So, the answer is
+Total Probability for 'Yes': 0.25559815764427185
+Total Probability for 'No': 0.744401752948761
+The qa pair is: False
+&&&&&&&&: If you continue facing forward from the starting point, you cannot return to the starting point. Thus, the answer is
+Total Probability for 'Yes': 0.17047728598117828
+Total Probability for 'No': 0.8295225501060486
+The qa pair is: True
+&&&&&&&&: If you follow the instructions in the beginning, you take 10 steps. If you follow the instructions in the middle, you take 4 steps. If you follow the instructions in the end, you take 7 steps. If you follow the instructions in the middle, you take 1 step. If you follow the instructions in the end, you take 2 steps. So, the answer is
+Total Probability for 'Yes': 0.3762267529964447
+Total Probability for 'No': 0.6237732172012329
+The qa pair is: False
+&&&&&&&&: Take 1 step and you are back at the starting point. So, the answer is
+Total Probability for 'Yes': 0.47006091475486755
+Total Probability for 'No': 0.5299391150474548
+The qa pair is: False
+&&&&&&&&: One can always face forward in all directions. A person always begins any action facing forward. One step forward is one step. After taking 4 steps left, one takes 6 steps left. After taking 10 steps right, one takes 7 steps backward, and after taking 5 steps left, one steps forward. So, the answer is
+Total Probability for 'Yes': 0.4405660927295685
+Total Probability for 'No': 0.5594339370727539
+The qa pair is: True
+&&&&&&&&: The instructions were written in order to always face forward. The first step is to always face forward. The second step is to always face backward. The third step is to always face forward and face backward. To return to the starting point is to always face forward and face backward. So, the answer is
+Total Probability for 'Yes': 0.6612352132797241
+Total Probability for 'No': 0.3387647271156311
+The qa pair is: True
+&&&&&&&&: If you always face forward, you can safely return to where you started with the instructions. Take 5 steps left, and 5 steps back. Then take 8 steps forward and 4 steps back. Then take 2 steps forward and 5 steps left. Then take 5 steps forward and 4 steps back. Then take 2 steps forward and 4 steps left. Then take 5 steps forward and 4 steps back. So, the answer is
+Total Probability for 'Yes': 0.7128145098686218
+Total Probability for 'No': 0.2871854901313782
+The qa pair is: True
+&&&&&&&&: To take backwards, you take 2 steps backwards. To take forward, you take 6 steps forward. So, the answer is
+Total Probability for 'Yes': 0.25383812189102173
+Total Probability for 'No': 0.7461618781089783
+The qa pair is: False
+&&&&&&&&: The starting point is always the same no matter how you get there. So, the answer is
+Total Probability for 'Yes': 0.37219053506851196
+Total Probability for 'No': 0.6278095245361328
+The qa pair is: True
+&&&&&&&&: If you take 4 steps you could go back to the starting point. If you take a lot of steps you would be back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7090744376182556
+Total Probability for 'No': 0.2909255921840668
+The qa pair is: False
+&&&&&&&&: You should always always face forward. You can not return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.07741408050060272
+Total Probability for 'No': 0.9225859045982361
+The qa pair is: False
+&&&&&&&&: Doing all of the instructions for the left, right, and up and down motions of the body means you always face forward. So, the answer is
+Total Probability for 'Yes': 0.5046350359916687
+Total Probability for 'No': 0.4953649938106537
+The qa pair is: True
+&&&&&&&&: If we do 1 step, and 1 step = 5 steps, then we take 5 steps and we then take 1 step. If we do 1 step, and 1 step = 5 steps, and we then take 1 step. If we do 1 step, and 1 step = 9 steps, and we then take 9 steps. So, the answer is
+Total Probability for 'Yes': 0.4203990697860718
+Total Probability for 'No': 0.5796009302139282
+The qa pair is: False
+&&&&&&&&: Take 2 steps forward and continue to face forward. Take 2 steps backward, and continue to face forward. Take 7 steps right. Repeat steps 4 + 2 + 4 + 4 + 7 = 25. So, the answer is
+Total Probability for 'Yes': 0.5186748504638672
+Total Probability for 'No': 0.4813251495361328
+The qa pair is: True
+&&&&&&&&: You cannot take 2 steps to get to the starting point. You cannot take 6 steps to get to the starting point. So, the answer is
+Total Probability for 'Yes': 0.39315828680992126
+Total Probability for 'No': 0.6068417429924011
+The qa pair is: True
+&&&&&&&&: If you follow these instructions, you always face forward. You must always begin from a straight line. You cannot start a line where you are facing down. So, the answer is
+Total Probability for 'Yes': 0.5154127478599548
+Total Probability for 'No': 0.48458728194236755
+The qa pair is: False
+&&&&&&&&: Turn around means leave and turn around means to go in the direction you are now. So, the answer is
+Total Probability for 'Yes': 0.3019946217536926
+Total Probability for 'No': 0.6980053782463074
+The qa pair is: False
+&&&&&&&&: If you are walking back to the starting point you take 10 steps. So, the answer is
+Total Probability for 'Yes': 0.7588237524032593
+Total Probability for 'No': 0.24117626249790192
+The qa pair is: True
+&&&&&&&&: Take 5 steps. Take 2 steps. Turn right. Take 8 steps. Turn left. Take 6 steps. Take 6 steps. So, the answer is
+Total Probability for 'Yes': 0.43237465620040894
+Total Probability for 'No': 0.5676253437995911
+The qa pair is: False
+&&&&&&&&: Take 9 steps in sequence if you turn left. The starting point is at the first step. So, the answer is
+Total Probability for 'Yes': 0.5610271096229553
+Total Probability for 'No': 0.43897292017936707
+The qa pair is: True
+&&&&&&&&: For every right turn, it is possible to go 2 steps backward. The first right turn is always taken backward. So, the answer is
+Total Probability for 'Yes': 0.45456790924072266
+Total Probability for 'No': 0.5454321503639221
+The qa pair is: False
+&&&&&&&&: Take 8 steps forward. Take 9 steps right. Take 10 steps left. Take 10 steps backward. Take 3 steps backward. Take 5 steps backward. Take 8 steps forward. So, the answer is
+Total Probability for 'Yes': 0.47904202342033386
+Total Probability for 'No': 0.5209579467773438
+The qa pair is: True
+&&&&&&&&: If you are doing 3 steps backwards, you are returning to the starting point. If you are doing 6 steps backwards, you are returning to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7793304920196533
+Total Probability for 'No': 0.22066952288150787
+The qa pair is: False
+&&&&&&&&: One can always take 4 steps forward while facing forward for any given task. If one takes 4 steps forward, one goes 4 steps forward. However, one cannot take 7 steps backward while facing forward for any given task. So, the answer is
+Total Probability for 'Yes': 0.3893201947212219
+Total Probability for 'No': 0.6106798648834229
+The qa pair is: False
+&&&&&&&&: It can be inferred from the instructions that the beginning is when we are facing forward. A number starting with 0 would not start with 1. Therefore, the answer is
+Total Probability for 'Yes': 0.2627701163291931
+Total Probability for 'No': 0.7372298836708069
+The qa pair is: True
+&&&&&&&&: After taking 8 steps backward, you can't take any more steps forward. The same thing cannot be done while facing forward. A person can't walk forward by facing left and backward by facing forward. So, the answer is
+Total Probability for 'Yes': 0.2506398856639862
+Total Probability for 'No': 0.7493600845336914
+The qa pair is: True
+&&&&&&&&: Take 8 steps left. Take 6 steps forward. Take 1 step forward. Take 4 steps forward. Thus, the answer is
+Total Probability for 'Yes': 0.21866317093372345
+Total Probability for 'No': 0.7813368439674377
+The qa pair is: True
+&&&&&&&&: If you face forward, you will always take 4 steps forward. If you always face right, you will take 5 steps right. If you always face left, you will take 7 steps left. So, the answer is
+Total Probability for 'Yes': 0.4918583333492279
+Total Probability for 'No': 0.5081417560577393
+The qa pair is: False
+&&&&&&&&: Forward-facing face forward. Face forward. Backwards-facing face right. Forward-facing face backward. So, the answer is
+Total Probability for 'Yes': 0.15205100178718567
+Total Probability for 'No': 0.8479490876197815
+The qa pair is: True
+&&&&&&&&: The starting point is the point you started from, or the point you are currently at. So, the answer is
+Total Probability for 'Yes': 0.39771902561187744
+Total Probability for 'No': 0.6022809743881226
+The qa pair is: False
+&&&&&&&&: If you always face forward, and take 4 steps backward, you will always face forward. If you always face forward, and take 8 steps forward, you will always face forward. Using a 3 - 4 is 3 - 4 = 2 steps forward. Using a 10 is 10 - 4 = 4 steps backward. Using a 4 is 4 - 4 = 4 steps forward. Taking a 4 is 4 - 4 = 2 steps forward. Using a 2 is 2 = 1 step forward. Using a 4 is 4 - 4 = 2 steps forward. So, the answer is
+Total Probability for 'Yes': 0.2035268247127533
+Total Probability for 'No': 0.7964731454849243
+The qa pair is: True
+&&&&&&&&: There are different ways to return to the starting point. Each of these directions returns you back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7998983860015869
+Total Probability for 'No': 0.2001015692949295
+The qa pair is: True
+&&&&&&&&: You can return to the starting point by taking 7 steps. There are 4 steps, 2 steps and 7 steps. So, the answer is
+Total Probability for 'Yes': 0.8498212099075317
+Total Probability for 'No': 0.15017877519130707
+The qa pair is: False
+&&&&&&&&: The starting point is always facing forward. The starting point is the same as the starting point. If you take 2 steps left, you are taking 2 steps left. If you take 5 steps left, you are taking 5 steps left. If you take 1 step left, you are taking 1 step left. So, the answer is
+Total Probability for 'Yes': 0.6237066388130188
+Total Probability for 'No': 0.3762933313846588
+The qa pair is: True
+&&&&&&&&: You can take one step before you can take two steps. So, the answer is
+Total Probability for 'Yes': 0.373879075050354
+Total Probability for 'No': 0.626120924949646
+The qa pair is: True
+&&&&&&&&: To return to the starting point, you can only take 4 steps backward. The answer: No.</s>
+Total Probability for 'Yes': 0.1430109292268753
+Total Probability for 'No': 0.8569891452789307
+The qa pair is: False
+&&&&&&&&: Take 8 steps right. If you return to the starting point, you are taken to the starting point. So, the answer is
+Total Probability for 'Yes': 0.4597001075744629
+Total Probability for 'No': 0.5402998328208923
+The qa pair is: True
+&&&&&&&&: It’ s hard to always face forward if you are trying to return to the starting point. The first one says to always face forward then takes 5 steps backward. So, the answer is
+Total Probability for 'Yes': 0.4547351002693176
+Total Probability for 'No': 0.5452648997306824
+The qa pair is: False
+&&&&&&&&: You have to take 4 steps to start at the starting point, but you are on the ground. There are 9 steps to go, so you can’t return to the beginning. So, the answer is
+Total Probability for 'Yes': 0.2247852236032486
+Total Probability for 'No': 0.7752148509025574
+The qa pair is: False
+&&&&&&&&: Turn right and then back around. You can't turn right and then turn right at the same time. So, the answer is
+Total Probability for 'Yes': 0.2332925647497177
+Total Probability for 'No': 0.7667074799537659
+The qa pair is: False
+&&&&&&&&: To go back one step you always do 1 step in the right direction. To go right you always do 7 steps. To go left is always done in a straight line. So, the answer is
+Total Probability for 'Yes': 0.3333202600479126
+Total Probability for 'No': 0.6666796803474426
+The qa pair is: True
+&&&&&&&&: There are 4 sets of instructions: Front, Back, Left, and Right. There are 4 sets of instructions: Front, back, left, and right. If you are taking 10 steps backward, it means you always begin from the front. If you are taking 7 steps backward, it means you always begin from the back. If you are taking 8 steps right, it means you always begin from the right. If you are taking 6 steps right, it means you always begin from the right. If you are taking 3 steps left, it means you always begin from the left. If you are taking 10 steps forward, it means you always start from the back. Thus, the answer is
+Total Probability for 'Yes': 0.2955223023891449
+Total Probability for 'No': 0.7044776678085327
+The qa pair is: False
+&&&&&&&&: If you keep facing forward, you can take any number of steps up to back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7463642954826355
+Total Probability for 'No': 0.2536356747150421
+The qa pair is: True
+&&&&&&&&: The last step is the last one that you take. The first step backs up to the previous step, and the last step backs up to the previous step. So, the answer is
+Total Probability for 'Yes': 0.6400906443595886
+Total Probability for 'No': 0.35990938544273376
+The qa pair is: True
+&&&&&&&&: Turn around. Turn around and take one step. Turn around. Turn around. Take two steps. Turn around. Take one step. Turn around. Take one step. Take three steps. So, the answer is
+Total Probability for 'Yes': 0.35743361711502075
+Total Probability for 'No': 0.642566442489624
+The qa pair is: False
+&&&&&&&&: Forward is how you go in and out of the line of steps. Taking 3 steps backwards is how you return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7060744166374207
+Total Probability for 'No': 0.29392561316490173
+The qa pair is: True
+&&&&&&&&: Take two steps when you're describing 6 steps. Take 2 steps when you're describing 2 steps. So, the answer is
+Total Probability for 'Yes': 0.1356777548789978
+Total Probability for 'No': 0.864322304725647
+The qa pair is: True
+&&&&&&&&: If you are facing forward and take 10 steps forward, you will eventually get to the starting point. If you are facing backward and take 3 steps backward, you will never get to the starting point. Thus, the answer is
+Total Probability for 'Yes': 0.33247196674346924
+Total Probability for 'No': 0.6675280928611755
+The qa pair is: False
+&&&&&&&&: A 6 step return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.2844928801059723
+Total Probability for 'No': 0.7155072093009949
+The qa pair is: False
+&&&&&&&&: The first 4 are the opposite directions of direction you are facing. The next 4 are in order from left to right. In order to get to the starting point, you have to start facing forward and take 8 steps left then 8 steps right. So, the answer is
+Total Probability for 'Yes': 0.8149729371070862
+Total Probability for 'No': 0.18502704799175262
+The qa pair is: True
+&&&&&&&&: Take 7 steps from right to left. There are 7 directions and each one has its own set of instructions. So, the answer is
+Total Probability for 'Yes': 0.40028393268585205
+Total Probability for 'No': 0.599716067314148
+The qa pair is: False
+&&&&&&&&: Turn left and take 4 steps, take 3 steps and take 10 steps. Turn left, take 4 steps, take 3 steps and take 10 steps. Turn around, take 7 steps, take 3 steps, take 3 steps and take 10 steps. So, the answer is
+Total Probability for 'Yes': 0.2782228887081146
+Total Probability for 'No': 0.7217772006988525
+The qa pair is: False
+&&&&&&&&: If you only faced right, you would not take 9 steps right. If you always faced forward, you would. So, the answer is
+Total Probability for 'Yes': 0.5108628273010254
+Total Probability for 'No': 0.48913708329200745
+The qa pair is: True
+&&&&&&&&: If someone always tries to face forward you will always take 2 steps forward. The opposite of facing forward is taking 9 steps backward. So, the answer is
+Total Probability for 'Yes': 0.24367718398571014
+Total Probability for 'No': 0.7563228011131287
+The qa pair is: False
+&&&&&&&&: Turn right is the first step to the starting point. Turn right turns around right turns left turns left turns right. So, the answer is
+Total Probability for 'Yes': 0.3594861626625061
+Total Probability for 'No': 0.6405138373374939
+The qa pair is: False
+&&&&&&&&: Once you have taken 8 steps forward, you can not take 6 steps backward. So, the answer is
+Total Probability for 'Yes': 0.21672028303146362
+Total Probability for 'No': 0.7832797169685364
+The qa pair is: True
+&&&&&&&&: Follow the instructions and you can only go forward. It takes 1 step to go forward. So, the answer is
+Total Probability for 'Yes': 0.19480933248996735
+Total Probability for 'No': 0.8051907420158386
+The qa pair is: True
+&&&&&&&&: All of the instructions return you to the starting point. If you go in reverse you would take 2 steps right, take 2 steps right and take 4 steps left. So, the answer is
+Total Probability for 'Yes': 0.6355458498001099
+Total Probability for 'No': 0.36445412039756775
+The qa pair is: True
+&&&&&&&&: Turning around can get you back to where you started. So, the answer is
+Total Probability for 'Yes': 0.9092792868614197
+Total Probability for 'No': 0.09072057157754898
+The qa pair is: True
+&&&&&&&&: Turning left is the same as turning left. Turn left 9 times for a total of 21 steps. So, the answer is
+Total Probability for 'Yes': 0.5002403259277344
+Total Probability for 'No': 0.49975961446762085
+The qa pair is: False
+&&&&&&&&: Take 4 steps. Take 4 steps. Take 4 steps. So, the answer is
+Total Probability for 'Yes': 0.26796022057533264
+Total Probability for 'No': 0.7320398092269897
+The qa pair is: True
+&&&&&&&&: In order to return to the starting point you must start from the opposite direction you departed from. The answer: Yes.</s>
+Total Probability for 'Yes': 0.4333004057407379
+Total Probability for 'No': 0.5666996240615845
+The qa pair is: False
+&&&&&&&&: The starting point can be found by turning right. The starting point is found by turning around. So, the answer is
+Total Probability for 'Yes': 0.03054964169859886
+Total Probability for 'No': 0.9694504737854004
+The qa pair is: True
+&&&&&&&&: Face forward is always the first thing you should do when you are facing forward. Take 1 step right, then take 3 steps left, then take 2 steps right. So, the answer is
+Total Probability for 'Yes': 0.5830675959587097
+Total Probability for 'No': 0.41693246364593506
+The qa pair is: True
+&&&&&&&&: You aren’t allowed to go backward or sideways after starting a new direction, and not after taking a step backward. You cannot repeat the same steps for each direction. The starting point would not be in front of you if you changed directions. If you return to the starting point, you would be facing the right. So, the answer is
+Total Probability for 'Yes': 0.5602744221687317
+Total Probability for 'No': 0.4397256076335907
+The qa pair is: True
+&&&&&&&&: To return to the starting point, you take 8 steps + 2 steps = 12 steps. So, the answer is
+Total Probability for 'Yes': 0.7829718589782715
+Total Probability for 'No': 0.21702812612056732
+The qa pair is: True
+&&&&&&&&: Take 8 steps back to the beginning. Take 5 steps. Take 10 steps back to the beginning. So, the answer is
+Total Probability for 'Yes': 0.2873707711696625
+Total Probability for 'No': 0.7126291990280151
+The qa pair is: True
+&&&&&&&&: If you never step backwards, the first step is always forward. The first step is always backward, and you can take no more than a step backward from the starting point. The first step is always taken, and you always look upward. So, the answer is
+Total Probability for 'Yes': 0.037402570247650146
+Total Probability for 'No': 0.9625974297523499
+The qa pair is: True
+&&&&&&&&: Doing the instructions always face forward. If you always face forward, you will always take forward steps. Taking 10 steps left is not the same as taking 4 steps forward. So, the answer is
+Total Probability for 'Yes': 0.24479937553405762
+Total Probability for 'No': 0.7552006840705872
+The qa pair is: True
+&&&&&&&&: The first one is always facing forward and is called facing up. The second is facing away and is called facing backward. So, the answer is
+Total Probability for 'Yes': 0.28449928760528564
+Total Probability for 'No': 0.7155006527900696
+The qa pair is: True
+&&&&&&&&: Take the first step. Take the next step. Take the last step. The first and last step are the same. So, the answer is
+Total Probability for 'Yes': 0.25838804244995117
+Total Probability for 'No': 0.7416119575500488
+The qa pair is: True
+&&&&&&&&: Turning right requires a backwards step on the opposite side of the line. You cannot turn right on the opposite side of the line while turning around. So, the answer is
+Total Probability for 'Yes': 0.33360952138900757
+Total Probability for 'No': 0.6663905382156372
+The qa pair is: True
+&&&&&&&&: Turn around is to come to the starting point and return to the same place. So, the answer is
+Total Probability for 'Yes': 0.7141318917274475
+Total Probability for 'No': 0.2858681082725525
+The qa pair is: False
+&&&&&&&&: Turn around and return to starting point.</s>
+Total Probability for 'Yes': 0.38611704111099243
+Total Probability for 'No': 0.6138830184936523
+The qa pair is: True
+&&&&&&&&: If you always face forward you should always take the forward and backward steps. If you always face backward you should always take the backward step and the forward step. If you always face forward you should always take the forward and backward step. Therefore, the answer is
+Total Probability for 'Yes': 0.740740180015564
+Total Probability for 'No': 0.2592598795890808
+The qa pair is: True
+&&&&&&&&: First one must take the first step. The second cannot be taken. So, the answer is
+Total Probability for 'Yes': 0.14889833331108093
+Total Probability for 'No': 0.8511016964912415
+The qa pair is: True
+&&&&&&&&: The instructions were written to point forward. The instructions say to take 10 steps forward, then 10 steps backward, then 3 steps forward, then 7 steps forward and then 9 steps left. So, the answer is
+Total Probability for 'Yes': 0.5615304112434387
+Total Probability for 'No': 0.4384695887565613
+The qa pair is: True
+&&&&&&&&: To go backward you take 10 steps. You then take 10 steps forward, then take 10 steps left. Again to go backward you take 10 steps. Thus, the answer is
+Total Probability for 'Yes': 0.39515694975852966
+Total Probability for 'No': 0.6048430800437927
+The qa pair is: False
+&&&&&&&&: You could take one step for 5 steps. You could take 5 steps. You could take 6 steps. In one step, you take one step and turn around. So, the answer is
+Total Probability for 'Yes': 0.3690888583660126
+Total Probability for 'No': 0.6309111714363098
+The qa pair is: False
+&&&&&&&&: Turning left and taking 6 steps back, you are now right at the starting point. So, the answer is
+Total Probability for 'Yes': 0.7322469353675842
+Total Probability for 'No': 0.26775309443473816
+The qa pair is: True
+&&&&&&&&: If you keep facing forward you take 5 steps forward. If you keep facing backward you take 7 steps backward. So, the answer is
+Total Probability for 'Yes': 0.3051649332046509
+Total Probability for 'No': 0.6948351263999939
+The qa pair is: True
+&&&&&&&&: You can only take 1 step back if you already took 5 steps. So, the answer is
+Total Probability for 'Yes': 0.37078651785850525
+Total Probability for 'No': 0.6292134523391724
+The qa pair is: True
+&&&&&&&&: In the following instructions, you only take 10 steps forward. If you follow this direction, you can go backwards. Thus, the answer is
+Total Probability for 'Yes': 0.5791906714439392
+Total Probability for 'No': 0.42080920934677124
+The qa pair is: False
+&&&&&&&&: You can always take 4 steps left from any position on the line. The final answer: Yes.</s>
+Total Probability for 'Yes': 0.3118610978126526
+Total Probability for 'No': 0.6881388425827026
+The qa pair is: False
+&&&&&&&&: If you always face forward, you are able to go any direction in this sequence. If you take 8 steps right, you are able to go any direction in this sequence. If you take 3 steps forward, you are able to go any direction in this sequence. If you take 2 steps right, you are able to go any direction in this sequence. So, the answer is
+Total Probability for 'Yes': 0.5047608017921448
+Total Probability for 'No': 0.49523916840553284
+The qa pair is: False
+&&&&&&&&: A person always facing forward. Taking 7 steps left gives a person 3 steps left. Taking 10 steps right returns you to the starting point. So, the answer is
+Total Probability for 'Yes': 0.38879406452178955
+Total Probability for 'No': 0.6112059354782104
+The qa pair is: True
+&&&&&&&&: The starting point should be on the right. The first direction on which you go from the starting point must be the one where you turned right. So, the answer is
+Total Probability for 'Yes': 0.7335392832756042
+Total Probability for 'No': 0.2664608359336853
+The qa pair is: True
+&&&&&&&&: If one takes 10 steps, they will get to the starting point. Thus, the answer is
+Total Probability for 'Yes': 0.723918616771698
+Total Probability for 'No': 0.276081383228302
+The qa pair is: False
+&&&&&&&&: The first direction only involves turning around and the second involves turning right. So, the answer is
+Total Probability for 'Yes': 0.5558310747146606
+Total Probability for 'No': 0.4441688656806946
+The qa pair is: False
+&&&&&&&&: Take 1 step. Take 2 steps. Turn right. Take 6 steps. So, the answer is
+Total Probability for 'Yes': 0.6461266279220581
+Total Probability for 'No': 0.3538733422756195
+The qa pair is: True
+&&&&&&&&: You always go in one direction. You can't go up or down without facing forward. So, the answer is
+Total Probability for 'Yes': 0.5032292604446411
+Total Probability for 'No': 0.4967707693576813
+The qa pair is: False
+&&&&&&&&: Turning back to the starting point is the same as returning. So, the answer is
+Total Probability for 'Yes': 0.6911005973815918
+Total Probability for 'No': 0.3088994324207306
+The qa pair is: True
+&&&&&&&&: First face forward. First step backwards. The starting point is always facing forward. So, the answer is
+Total Probability for 'Yes': 0.5704217553138733
+Total Probability for 'No': 0.4295782148838043
+The qa pair is: False
+&&&&&&&&: Turn left. Turn around. Take 3 steps.</s>
+Total Probability for 'Yes': 0.4340062439441681
+Total Probability for 'No': 0.5659937858581543
+The qa pair is: False
+&&&&&&&&: If you don’ t take 1 step in the first three steps then you can’ t get back to the starting point. In the final step, there are 8 steps that you need to take. The answer: Yes.</s>
+Total Probability for 'Yes': 0.44305408000946045
+Total Probability for 'No': 0.5569459795951843
+The qa pair is: False
+&&&&&&&&: You always face forward in the direction of travel.</s>
+Total Probability for 'Yes': 0.22788146138191223
+Total Probability for 'No': 0.7721185088157654
+The qa pair is: True
+&&&&&&&&: To turn around, you need to take 7 steps back. There are 6 steps to take. The second and third sequences is the same sequence. So, the answer is
+Total Probability for 'Yes': 0.2829243540763855
+Total Probability for 'No': 0.7170755863189697
+The qa pair is: False
+&&&&&&&&: Turn left. Turn around. Turn left. Turn around. Turn left. Turn around. Turn left. Thus, the answer is
+Total Probability for 'Yes': 0.33512258529663086
+Total Probability for 'No': 0.6648774743080139
+The qa pair is: False
+&&&&&&&&: Just like the first step, you take 10 steps then turn around to complete the directions. Then you turn around and you get back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8834710121154785
+Total Probability for 'No': 0.11652897298336029
+The qa pair is: True
+&&&&&&&&: You cannot take 1 step right when facing towards the left. Therefore, the answer is
+Total Probability for 'Yes': 0.23518545925617218
+Total Probability for 'No': 0.7648144364356995
+The qa pair is: False
+&&&&&&&&: Turning left allows you to take one step. Turning left does not allow you to take 1 step. Going one step takes 1 step. Going 5 steps does not allow you to take 7 steps. Going 1 step takes 4 steps. So, the answer is
+Total Probability for 'Yes': 0.12229574471712112
+Total Probability for 'No': 0.8777043223381042
+The qa pair is: True
+&&&&&&&&: Turn right and take 4 steps forward, then take 2 steps back, turn right again, take 2 steps forward, turn left, take 2 steps forward, turn right, take 2 steps back, turn right, take 2 steps forward, turn left, take 1 step back. So, the answer is
+Total Probability for 'Yes': 0.29037973284721375
+Total Probability for 'No': 0.7096202969551086
+The qa pair is: True
+[rollout 144 / 128]: : 144it [01:24,  1.70it/s]
+[RANK 0] Evaluating model
+[generation sweep 0/1 | eval batch 0/1]:   0%|                                                                                                                                                   | 0/1 [00:00<?, ?it/s]
+Total Probability for 'Yes': 0.2851412892341614
+Total Probability for 'No': 0.7148587107658386
+The qa pair is: True
+&&&&&&&&: This does not return to the starting point as one has to walk 10 steps first and then walk 2 steps after that. So, the answer is
+Total Probability for 'Yes': 0.27538949251174927
+Total Probability for 'No': 0.7246105074882507
+The qa pair is: True
+&&&&&&&&: You go back at one point in time. So the answer is
+Total Probability for 'Yes': 0.738196611404419
+Total Probability for 'No': 0.26180335879325867
+The qa pair is: True
+&&&&&&&&: The first 7 steps were taken to return to the starting point. There are 10 steps and you took 7 steps, so you were taken 10 steps and back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8611730933189392
+Total Probability for 'No': 0.1388268768787384
+The qa pair is: False
+&&&&&&&&: You can always turn around and walk forward. If you do this from a starting point, you should always face forward. So, the answer is
+Total Probability for 'Yes': 0.34432104229927063
+Total Probability for 'No': 0.6556788682937622
+The qa pair is: True
+&&&&&&&&: To turn around you are taking 7 steps. To turn around you are taking 6 steps. So, the answer is
+Total Probability for 'Yes': 0.24126718938350677
+Total Probability for 'No': 0.7587328553199768
+The qa pair is: False
+&&&&&&&&: As you always face forward, you take forward steps in all directions. So, the answer is
+Total Probability for 'Yes': 0.45679375529289246
+[generation sweep 1/1 | eval batch 1/1]: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:04<00:00,  4.96s/it]
+[RANK 0] Computing rewards
+The qa pair is: False
+&&&&&&&&: If you always look forward, you never face backward. One can either take 10 steps forward or 9 steps right. So, the answer is
+Total Probability for 'Yes': 0.2936972379684448
+Total Probability for 'No': 0.7063028812408447
+The qa pair is: False
+&&&&&&&&: Turn around means to turn around before returning. Turn right means the same thing as turn right. So, the answer is
+Total Probability for 'Yes': 0.6720479726791382
+Total Probability for 'No': 0.3279520869255066
+The qa pair is: True
+&&&&&&&&: You can turn around and get back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8055636882781982
+Total Probability for 'No': 0.19443626701831818
+The qa pair is: False
+&&&&&&&&: To turn left, begin by taking 5 steps from your starting point. The answer: Yes.
+Total Probability for 'Yes': 0.2959371507167816
+Total Probability for 'No': 0.7040629386901855
+The qa pair is: False
+&&&&&&&&: Turn around and take 5 steps. No you do not return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.18575389683246613
+Total Probability for 'No': 0.8142461180686951
+The qa pair is: False
+&&&&&&&&: Turn around. Take 7 steps. Turn around. Take 7 steps. Turn around. Take 7 steps. Turn around. Take 7 steps. Turn around. Take 7 steps. Turn around. Take 7 steps. Turn around. Take 7 steps. Turn around. Take 7 steps. Turn around. Take 7 steps.
+Total Probability for 'Yes': 0.6081845164299011
+Total Probability for 'No': 0.39181557297706604
+The qa pair is: True
+&&&&&&&&: The starting point is "a street" and can be found in the opposite direction you are going. So, the answer is
+Total Probability for 'Yes': 0.5172654986381531
+Total Probability for 'No': 0.48273444175720215
+The qa pair is: False
+&&&&&&&&: If an entire body is turned around, it would require 8 blocks of step to return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.39323511719703674
+Total Probability for 'No': 0.6067648530006409
+The qa pair is: True
+&&&&&&&&: When you walk forward, you face the path ahead, so facing the direction you want to return to will ensure that you only take the direction you want to walk. People do not always face left. So, the answer is
+Total Probability for 'Yes': 0.4356984794139862
+Total Probability for 'No': 0.5643014311790466
+The qa pair is: False
+&&&&&&&&: I could never take 3 steps back to the starting point. I could take 7 steps back to the starting point. So, the answer is
+Total Probability for 'Yes': 0.1896427571773529
+Total Probability for 'No': 0.8103572726249695
+The qa pair is: True
+&&&&&&&&: If someone always faces forward, then one can assume that they will take one step forward and 3 steps forward. If one takes 1 step backward, then i assume one will take 1 step forward and 3 steps forward. So, the answer is
+Total Probability for 'Yes': 0.24766552448272705
+Total Probability for 'No': 0.752334475517273
+The qa pair is: True
+&&&&&&&&: Take five steps ahead, take 5 steps back, take 2 steps left. The starting point is facing forward. So, the answer is
+Total Probability for 'Yes': 0.4782249927520752
+Total Probability for 'No': 0.5217750668525696
+The qa pair is: False
+&&&&&&&&: To take 3 steps left, you need to take 3 steps left, whereas to take 1 step left, you need to take 1 step left, whereas to take 6 steps left, you need to take 6 steps left, whereas to take 4 steps right, you’ll need to take 4 steps right. So, the answer is
+Total Probability for 'Yes': 0.4831794500350952
+Total Probability for 'No': 0.5168206691741943
+The qa pair is: True
+&&&&&&&&: You should always face with your back to the starting point. If you want to get back to the starting point, you can't face backwards to go back. So, the answer is
+Total Probability for 'Yes': 0.04797835275530815
+Total Probability for 'No': 0.952021598815918
+The qa pair is: True
+&&&&&&&&: It says to always face forward. A woman says to keep going in the following directions: As you face forward, you always take 3 steps right. As you start walking forward, you take 6 steps left. If you follow these directions in reverse, you return to taking 3 steps right. So, the answer is
+Total Probability for 'Yes': 0.7284502983093262
+Total Probability for 'No': 0.27154964208602905
+The qa pair is: True
+&&&&&&&&: Move around backwards or around and back; it is back to the beginning. The sequence takes you 8 steps per step. So, the answer is
+Total Probability for 'Yes': 0.5268526077270508
+Total Probability for 'No': 0.4731474220752716
+The qa pair is: False
+&&&&&&&&: Take 9 steps and turn around. Take 3 steps and turn around. Take 6 steps and return to starting point. So, the answer is
+Total Probability for 'Yes': 0.4640386402606964
+Total Probability for 'No': 0.5359613299369812
+The qa pair is: False
+&&&&&&&&: Turn around turns you right. One way turns the other way. You should turn right after turning around. So, the answer is
+Total Probability for 'Yes': 0.6535013318061829
+Total Probability for 'No': 0.34649866819381714
+The qa pair is: False
+&&&&&&&&: There are 7 steps to return on the road. You can turn left after you take 7 steps. So, the answer is
+Total Probability for 'Yes': 0.9167060852050781
+Total Probability for 'No': 0.08329382538795471
+The qa pair is: False
+&&&&&&&&: To return to the starting point, you can turn right and take 1 step. So, the answer is
+Total Probability for 'Yes': 0.806863009929657
+Total Probability for 'No': 0.19313710927963257
+The qa pair is: False
+&&&&&&&&: If you take 3 steps, you must take 6 steps to get back to the starting point. The instructions have a starting point of 1 step and a starting point of 1. So, the answer is
+Total Probability for 'Yes': 0.5685555338859558
+Total Probability for 'No': 0.4314444661140442
+The qa pair is: True
+&&&&&&&&: If you go back to the starting point you would take the same number of steps as when you started. So, the answer is
+Total Probability for 'Yes': 0.4771723449230194
+Total Probability for 'No': 0.5228277444839478
+The qa pair is: True
+&&&&&&&&: If you turn around you take 3 steps, then 7 steps, then 7 steps, and one step to return to the starting point. So, the answer is
+Total Probability for 'Yes': 0.7011298537254333
+Total Probability for 'No': 0.29887017607688904
+The qa pair is: False
+&&&&&&&&: A person that always faces forward does not need to take 5 steps backward. Each of the steps is repeated backward. Thus, the answer is
+Total Probability for 'Yes': 0.1986308991909027
+Total Probability for 'No': 0.8013691306114197
+The qa pair is: True
+&&&&&&&&: The beginning is always facing forward. The instructions say to always always face forward. The final answer: No.
+Total Probability for 'Yes': 0.24639549851417542
+Total Probability for 'No': 0.753604531288147
+The qa pair is: True
+&&&&&&&&: A starting point cannot be turned around. Turning around means coming around and going 4 steps. So, the answer is
+Total Probability for 'Yes': 0.49928179383277893
+Total Probability for 'No': 0.5007181763648987
+The qa pair is: False
+&&&&&&&&: 6 steps right means 6 steps backwards. Facing forward is where you always start, no matter what direction you are facing. So, the answer is
+Total Probability for 'Yes': 0.19538846611976624
+Total Probability for 'No': 0.8046115636825562
+The qa pair is: False
+&&&&&&&&: You can return to the starting point if one turns around and takes 5 steps. So, the answer is
+Total Probability for 'Yes': 0.8231335878372192
+Total Probability for 'No': 0.176866352558136
+The qa pair is: False
+&&&&&&&&: It is not possible to get back to the starting point by facing forward. So, the answer is
+Total Probability for 'Yes': 0.06697581708431244
+Total Probability for 'No': 0.9330241084098816
+The qa pair is: False
+&&&&&&&&: Take 1 step. This is the same as 3 simple steps. Thus, the answer is
+Total Probability for 'Yes': 0.34638887643814087
+Total Probability for 'No': 0.6536111831665039
+The qa pair is: True
+&&&&&&&&: Take 9 steps. Turn around. 9 steps is the same as nine steps. So, the answer is
+Total Probability for 'Yes': 0.9075663685798645
+Total Probability for 'No': 0.09243353456258774
+The qa pair is: True
+&&&&&&&&: Either you go to your starting point or you go backward. If you go backward you must take 3 steps backward, 8 steps left and 3 steps right. Correct. So, the answer is
+Total Probability for 'Yes': 0.6516529321670532
+Total Probability for 'No': 0.3483470678329468
+The qa pair is: False
+&&&&&&&&: If you take 7 steps, you take 7 steps. Turn around every 12 seconds. Turn around 12 seconds. Rewind, take 1 step, then take 6 steps. So, the answer is
+Total Probability for 'Yes': 0.5036141276359558
+Total Probability for 'No': 0.4963858723640442
+The qa pair is: False
+&&&&&&&&: As the instructions states you should always be forward. So, it follows that you return to the starting point from a point of departure and begin at that point. So, the answer is
+Total Probability for 'Yes': 0.3161449730396271
+Total Probability for 'No': 0.6838549971580505
+The qa pair is: True
+&&&&&&&&: If you always face forward, you will only need to take 1 step forward. If you always face forward, you can take 8 steps. If you always face right, you cannot take right. If you always take 5 steps left, you will only need to take one step forward. Thus, the answer is
+Total Probability for 'Yes': 0.22975829243659973
+Total Probability for 'No': 0.7702417969703674
+The qa pair is: True
+&&&&&&&&: The directions are for three actions and one setting. To go backward or forward, you take one action in 4 stages. So, the answer is
+Total Probability for 'Yes': 0.46608078479766846
+Total Probability for 'No': 0.5339192152023315
+The qa pair is: False
+&&&&&&&&: Turn around. Turn around. Take 2 steps. Turn around. Take 8 steps. Turn around. Take 10 steps. Turn around. So, the answer is
+Total Probability for 'Yes': 0.6664741635322571
+Total Probability for 'No': 0.3335259258747101
+The qa pair is: False
+&&&&&&&&: To take 10 steps backwards, you will need to take 10 steps forward. To take 5 steps forward, you will need to take 5 steps forward. So, the answer is
+Total Probability for 'Yes': 0.21280169486999512
+Total Probability for 'No': 0.7871982455253601
+The qa pair is: False
+&&&&&&&&: Take 5 steps will take you to the starting point. Take 5 steps will take you to the starting point. So, the answer is
+Total Probability for 'Yes': 0.8025739789009094
+Total Probability for 'No': 0.19742609560489655
+The qa pair is: False
+&&&&&&&&: If you walked backward 4 steps, you would return to the starting point. It is not possible to always be facing forward. So, the answer is
+Total Probability for 'Yes': 0.21740318834781647
+Total Probability for 'No': 0.7825967669487
+The qa pair is: True
+&&&&&&&&: If you always face forward, you can always go back to the starting point. The answer is
+Total Probability for 'Yes': 0.1295962780714035
+Total Probability for 'No': 0.8704037666320801
+The qa pair is: True
+&&&&&&&&: One needs to turn left after the 10 steps. The other two directions would require you to take five steps and exit the starting point. So, the answer is
+Total Probability for 'Yes': 0.5560263991355896
+Total Probability for 'No': 0.4439736008644104
+The qa pair is: True
+&&&&&&&&: If you always face forward, you will always take 7 left steps. If you always face left, you’ll always take 8 right steps,. If you always take 10 backward steps, you’ll always take 10 backwards steps. Thus, the answer is
+Total Probability for 'Yes': 0.5309852361679077
+Total Probability for 'No': 0.4690147042274475
+The qa pair is: False
+&&&&&&&&: If you always are facing forward with your whole body and you look to the right then they are equal for the starting point and you are facing left. The answer is
+Total Probability for 'Yes': 0.24183869361877441
+Total Probability for 'No': 0.7581614255905151
+The qa pair is: True
+&&&&&&&&: Either you return to the starting point or you change directions or take a different action. You cannot return to the same starting point and back the same direction you started. So, the answer is
+Total Probability for 'Yes': 0.2798742651939392
+Total Probability for 'No': 0.7201257944107056
+The qa pair is: True
+&&&&&&&&: The initial right turn will be towards the left. The first right turn is from the first position. Turn right. So, the answer is
+Total Probability for 'Yes': 0.465009868144989
+Total Probability for 'No': 0.5349900722503662
+The qa pair is: True
+&&&&&&&&: You should always face forward. You cannot face left or right. So, the answer is
+Total Probability for 'Yes': 0.1855584681034088
+Total Probability for 'No': 0.8144415616989136
+The qa pair is: True
+&&&&&&&&: In this way, you can only go forwards if you always face forward. So, the answer is
+Total Probability for 'Yes': 0.29772695899009705
+Total Probability for 'No': 0.7022730112075806
+The qa pair is: False
+&&&&&&&&: In the beginning, the person is facing forward. If you took 10 steps backward, you taken 10 steps forward. If you took 8 steps backward, you took 8 steps backward. If you took 7 steps backward, you took 7 steps right. In the starting point, the person is facing downwards. If you took 10 steps forward, you took 10 steps forward. If you took 10 steps backward, you took 10 steps backward. If you took 7 steps backward, you took 7 steps right. In the starting point, the person is facing the opposite direction. So, the answer is
+[RANK 0] Computing metrics
+[RANK 0] Summarizing evaluation
+Total Probability for 'Yes': 0.23242643475532532
+Total Probability for 'No': 0.7675734758377075
+The qa pair is: False
+&&&&&&&&: If you take 4 steps forward, then you take 4 steps forward. If you take 7 steps backward, the last step is to face right and the last step is to face left. So, the answer is
+Total Probability for 'Yes': 0.3542459309101105

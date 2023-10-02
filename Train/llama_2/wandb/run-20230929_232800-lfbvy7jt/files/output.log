@@ -1,0 +1,808 @@
+
+[2023-09-29 23:28:06,447] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.10.1, git-hash=unknown, git-branch=unknown
+[2023-09-29 23:28:08,839] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2023-09-29 23:28:08,851] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the client Optimizer
+[2023-09-29 23:28:08,852] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2023-09-29 23:28:08,949] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2023-09-29 23:28:08,950] [INFO] [utils.py:54:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2023-09-29 23:28:08,950] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.float32 ZeRO stage 2 optimizer
+[2023-09-29 23:28:08,951] [INFO] [stage_1_and_2.py:146:__init__] Reduce bucket size 500,000,000
+[2023-09-29 23:28:08,951] [INFO] [stage_1_and_2.py:147:__init__] Allgather bucket size 500,000,000
+[2023-09-29 23:28:08,951] [INFO] [stage_1_and_2.py:148:__init__] CPU Offload: False
+[2023-09-29 23:28:08,951] [INFO] [stage_1_and_2.py:149:__init__] Round robin gradient partitioning: False
+Rank: 0 partition count [2] and sizes[(10487810, False)]
+[2023-09-29 23:28:09,697] [INFO] [utils.py:803:see_memory_usage] Before initializing optimizer states
+[2023-09-29 23:28:09,698] [INFO] [utils.py:804:see_memory_usage] MA 6.24 GB         Max_MA 6.24 GB         CA 6.24 GB         Max_CA 6 GB
+[2023-09-29 23:28:09,698] [INFO] [utils.py:811:see_memory_usage] CPU Virtual Memory:  used = 71.89 GB, percent = 11.4%
+[2023-09-29 23:28:09,869] [INFO] [utils.py:803:see_memory_usage] After initializing optimizer states
+[2023-09-29 23:28:09,870] [INFO] [utils.py:804:see_memory_usage] MA 6.31 GB         Max_MA 6.43 GB         CA 6.45 GB         Max_CA 6 GB
+[2023-09-29 23:28:09,870] [INFO] [utils.py:811:see_memory_usage] CPU Virtual Memory:  used = 71.89 GB, percent = 11.4%
+[2023-09-29 23:28:09,871] [INFO] [stage_1_and_2.py:520:__init__] optimizer state initialized
+[2023-09-29 23:28:10,039] [INFO] [utils.py:803:see_memory_usage] After initializing ZeRO optimizer
+[2023-09-29 23:28:10,040] [INFO] [utils.py:804:see_memory_usage] MA 6.31 GB         Max_MA 6.31 GB         CA 6.45 GB         Max_CA 6 GB
+[2023-09-29 23:28:10,040] [INFO] [utils.py:811:see_memory_usage] CPU Virtual Memory:  used = 71.96 GB, percent = 11.4%
+[2023-09-29 23:28:10,046] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = AdamW
+[2023-09-29 23:28:10,046] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2023-09-29 23:28:10,046] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2023-09-29 23:28:10,047] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[5e-05], mom=[[0.9, 0.999]]
+[2023-09-29 23:28:10,051] [INFO] [config.py:960:print] DeepSpeedEngine configuration:
+[2023-09-29 23:28:10,052] [INFO] [config.py:964:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2023-09-29 23:28:10,052] [INFO] [config.py:964:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2023-09-29 23:28:10,052] [INFO] [config.py:964:print]   amp_enabled .................. False
+[2023-09-29 23:28:10,052] [INFO] [config.py:964:print]   amp_params ................... False
+[2023-09-29 23:28:10,052] [INFO] [config.py:964:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2023-09-29 23:28:10,053] [INFO] [config.py:964:print]   bfloat16_enabled ............. False
+[2023-09-29 23:28:10,053] [INFO] [config.py:964:print]   checkpoint_parallel_write_pipeline  False
+[2023-09-29 23:28:10,053] [INFO] [config.py:964:print]   checkpoint_tag_validation_enabled  True
+[2023-09-29 23:28:10,053] [INFO] [config.py:964:print]   checkpoint_tag_validation_fail  False
+[2023-09-29 23:28:10,053] [INFO] [config.py:964:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f68397ecb20>
+[2023-09-29 23:28:10,053] [INFO] [config.py:964:print]   communication_data_type ...... None
+[2023-09-29 23:28:10,054] [INFO] [config.py:964:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2023-09-29 23:28:10,054] [INFO] [config.py:964:print]   curriculum_enabled_legacy .... False
+[2023-09-29 23:28:10,054] [INFO] [config.py:964:print]   curriculum_params_legacy ..... False
+[2023-09-29 23:28:10,054] [INFO] [config.py:964:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2023-09-29 23:28:10,054] [INFO] [config.py:964:print]   data_efficiency_enabled ...... False
+[2023-09-29 23:28:10,054] [INFO] [config.py:964:print]   dataloader_drop_last ......... False
+[2023-09-29 23:28:10,054] [INFO] [config.py:964:print]   disable_allgather ............ False
+[2023-09-29 23:28:10,055] [INFO] [config.py:964:print]   dump_state ................... False
+[2023-09-29 23:28:10,055] [INFO] [config.py:964:print]   dynamic_loss_scale_args ...... None
+[2023-09-29 23:28:10,055] [INFO] [config.py:964:print]   eigenvalue_enabled ........... False
+[2023-09-29 23:28:10,055] [INFO] [config.py:964:print]   eigenvalue_gas_boundary_resolution  1
+[2023-09-29 23:28:10,055] [INFO] [config.py:964:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2023-09-29 23:28:10,055] [INFO] [config.py:964:print]   eigenvalue_layer_num ......... 0
+[2023-09-29 23:28:10,055] [INFO] [config.py:964:print]   eigenvalue_max_iter .......... 100
+[2023-09-29 23:28:10,055] [INFO] [config.py:964:print]   eigenvalue_stability ......... 1e-06
+[2023-09-29 23:28:10,055] [INFO] [config.py:964:print]   eigenvalue_tol ............... 0.01
+[2023-09-29 23:28:10,056] [INFO] [config.py:964:print]   eigenvalue_verbose ........... False
+[2023-09-29 23:28:10,056] [INFO] [config.py:964:print]   elasticity_enabled ........... False
+[2023-09-29 23:28:10,056] [INFO] [config.py:964:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "recompute_fwd_factor": 0.0,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2023-09-29 23:28:10,056] [INFO] [config.py:964:print]   fp16_auto_cast ............... None
+[2023-09-29 23:28:10,056] [INFO] [config.py:964:print]   fp16_enabled ................. False
+[2023-09-29 23:28:10,056] [INFO] [config.py:964:print]   fp16_master_weights_and_gradients  False
+[2023-09-29 23:28:10,056] [INFO] [config.py:964:print]   global_rank .................. 0
+[2023-09-29 23:28:10,056] [INFO] [config.py:964:print]   grad_accum_dtype ............. None
+[2023-09-29 23:28:10,057] [INFO] [config.py:964:print]   gradient_accumulation_steps .. 2
+[2023-09-29 23:28:10,057] [INFO] [config.py:964:print]   gradient_clipping ............ 1.0
+[2023-09-29 23:28:10,057] [INFO] [config.py:964:print]   gradient_predivide_factor .... 1.0
+[2023-09-29 23:28:10,057] [INFO] [config.py:964:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2023-09-29 23:28:10,057] [INFO] [config.py:964:print]   initial_dynamic_scale ........ 65536
+[2023-09-29 23:28:10,057] [INFO] [config.py:964:print]   load_universal_checkpoint .... False
+[2023-09-29 23:28:10,058] [INFO] [config.py:964:print]   loss_scale ................... 0
+[2023-09-29 23:28:10,058] [INFO] [config.py:964:print]   memory_breakdown ............. False
+[2023-09-29 23:28:10,058] [INFO] [config.py:964:print]   mics_hierarchial_params_gather  False
+[2023-09-29 23:28:10,058] [INFO] [config.py:964:print]   mics_shard_size .............. -1
+[2023-09-29 23:28:10,058] [INFO] [config.py:964:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2023-09-29 23:28:10,058] [INFO] [config.py:964:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2023-09-29 23:28:10,058] [INFO] [config.py:964:print]   optimizer_legacy_fusion ...... False
+[2023-09-29 23:28:10,059] [INFO] [config.py:964:print]   optimizer_name ............... None
+[2023-09-29 23:28:10,059] [INFO] [config.py:964:print]   optimizer_params ............. None
+[2023-09-29 23:28:10,059] [INFO] [config.py:964:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2023-09-29 23:28:10,059] [INFO] [config.py:964:print]   pld_enabled .................. False
+[2023-09-29 23:28:10,059] [INFO] [config.py:964:print]   pld_params ................... False
+[2023-09-29 23:28:10,059] [INFO] [config.py:964:print]   prescale_gradients ........... False
+[2023-09-29 23:28:10,059] [INFO] [config.py:964:print]   scheduler_name ............... None
+[2023-09-29 23:28:10,059] [INFO] [config.py:964:print]   scheduler_params ............. None
+[2023-09-29 23:28:10,059] [INFO] [config.py:964:print]   sparse_attention ............. None
+[2023-09-29 23:28:10,060] [INFO] [config.py:964:print]   sparse_gradients_enabled ..... False
+[2023-09-29 23:28:10,060] [INFO] [config.py:964:print]   steps_per_print .............. inf
+[2023-09-29 23:28:10,060] [INFO] [config.py:964:print]   train_batch_size ............. 64
+[2023-09-29 23:28:10,060] [INFO] [config.py:964:print]   train_micro_batch_size_per_gpu  16
+[2023-09-29 23:28:10,060] [INFO] [config.py:964:print]   use_node_local_storage ....... False
+[2023-09-29 23:28:10,060] [INFO] [config.py:964:print]   wall_clock_breakdown ......... False
+[2023-09-29 23:28:10,060] [INFO] [config.py:964:print]   world_size ................... 2
+[2023-09-29 23:28:10,060] [INFO] [config.py:964:print]   zero_allow_untested_optimizer  True
+[2023-09-29 23:28:10,061] [INFO] [config.py:964:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=False load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2023-09-29 23:28:10,061] [INFO] [config.py:964:print]   zero_enabled ................. True
+[2023-09-29 23:28:10,061] [INFO] [config.py:964:print]   zero_force_ds_cpu_optimizer .. True
+[2023-09-29 23:28:10,061] [INFO] [config.py:964:print]   zero_optimization_stage ...... 2
+[2023-09-29 23:28:10,061] [INFO] [config.py:950:print_user_config]   json = {
+    "train_batch_size": 64,
+    "train_micro_batch_size_per_gpu": 16,
+    "gradient_accumulation_steps": 2,
+    "zero_optimization": {
+        "stage": 2,
+        "offload_optimizer": {
+            "device": "none",
+            "nvme_path": null
+        },
+        "offload_param": {
+            "device": "none",
+            "nvme_path": null
+        },
+        "stage3_gather_16bit_weights_on_model_save": false
+    },
+    "gradient_clipping": 1.0,
+    "steps_per_print": inf,
+    "fp16": {
+        "enabled": false,
+        "auto_cast": false
+    },
+    "bf16": {
+        "enabled": false
+    },
+    "zero_allow_untested_optimizer": true
+}
+[RANK 0] Starting training
+[RANK 0] Collecting rollouts
+[rollout 0 / 128]:   0%|                                                                                                                                                                | 0/128 [00:00<?, ?it/s]You're using a T5TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+Total Probability for 'Yes' and 'No': 0.244632750749588 0.7553672194480896
+$$$$$$$$$ 0.5107344388961792
+Total Probability for 'Yes' and 'No': 0.40312659740448 0.5968734622001648
+$$$$$$$$$ 0.1937469244003296
+Total Probability for 'Yes' and 'No': 0.38339871168136597 0.616601288318634
+$$$$$$$$$ 0.23320257663726807
+Total Probability for 'Yes' and 'No': 0.5661040544509888 0.4338959753513336
+$$$$$$$$$ -0.13220804929733276
+Total Probability for 'Yes' and 'No': 0.26941269636154175 0.7305873036384583
+$$$$$$$$$ -0.4611746072769165
+Total Probability for 'Yes' and 'No': 0.8215764164924622 0.17842361330986023
+$$$$$$$$$ -0.6431527733802795
+Total Probability for 'Yes' and 'No': 0.27293553948402405 0.7270645499229431
+$$$$$$$$$ 0.45412909984588623
+Total Probability for 'Yes' and 'No': 0.31680580973625183 0.6831942200660706
+$$$$$$$$$ 0.3663884401321411
+Total Probability for 'Yes' and 'No': 0.2038346379995346 0.7961653470993042
+$$$$$$$$$ 0.5923306941986084
+Total Probability for 'Yes' and 'No': 0.13140912353992462 0.868590772151947
+$$$$$$$$$ -0.7371817529201508
+Total Probability for 'Yes' and 'No': 0.239009827375412 0.7609901428222656
+$$$$$$$$$ 0.5219802856445312
+Total Probability for 'Yes' and 'No': 0.06615036725997925 0.933849573135376
+$$$$$$$$$ 0.867699146270752
+Total Probability for 'Yes' and 'No': 0.4143908619880676 0.5856090784072876
+$$$$$$$$$ -0.17121827602386475
+Total Probability for 'Yes' and 'No': 0.5156262516975403 0.4843737781047821
+$$$$$$$$$ -0.03125244379043579
+Total Probability for 'Yes' and 'No': 0.1822887808084488 0.8177112340927124
+$$$$$$$$$ -0.6354224383831024
+Total Probability for 'Yes' and 'No': 0.7820694446563721 0.2179306596517563
+$$$$$$$$$ 0.5641388893127441
+Total Probability for 'Yes' and 'No': 0.6651657223701477 0.3348343074321747
+$$$$$$$$$ 0.3303314447402954
+Total Probability for 'Yes' and 'No': 0.4488721191883087 0.5511279106140137
+$$$$$$$$$ 0.10225582122802734
+Total Probability for 'Yes' and 'No': 0.19108207523822784 0.8089179992675781
+$$$$$$$$$ 0.6178359985351562
+Total Probability for 'Yes' and 'No': 0.6771092414855957 0.3228907585144043
+$$$$$$$$$ -0.3542184829711914
+Total Probability for 'Yes' and 'No': 0.49021026492118835 0.5097896456718445
+$$$$$$$$$ 0.019579291343688965
+Total Probability for 'Yes' and 'No': 0.5249958038330078 0.4750041961669922
+$$$$$$$$$ -0.049991607666015625
+Total Probability for 'Yes' and 'No': 0.7767001390457153 0.22329989075660706
+$$$$$$$$$ 0.5534002780914307
+Total Probability for 'Yes' and 'No': 0.8992160558700562 0.10078387707471848
+$$$$$$$$$ 0.7984321117401123
+Total Probability for 'Yes' and 'No': 0.38608264923095703 0.613917350769043
+$$$$$$$$$ 0.22783470153808594
+Total Probability for 'Yes' and 'No': 0.37871843576431274 0.6212815642356873
+$$$$$$$$$ 0.2425631284713745
+Total Probability for 'Yes' and 'No': 0.25288087129592896 0.7471190094947815
+$$$$$$$$$ 0.494238018989563
+Total Probability for 'Yes' and 'No': 0.7765695452690125 0.22343042492866516
+$$$$$$$$$ -0.5531391501426697
+Total Probability for 'Yes' and 'No': 0.19845473766326904 0.8015453219413757
+$$$$$$$$$ 0.6030906438827515
+Total Probability for 'Yes' and 'No': 0.7263339161872864 0.2736661434173584
+$$$$$$$$$ -0.4526677131652832
+Total Probability for 'Yes' and 'No': 0.7024341225624084 0.29756590723991394
+$$$$$$$$$ 0.4048682451248169
+Total Probability for 'Yes' and 'No': 0.6800779700279236 0.31992200016975403
+$$$$$$$$$ 0.36015594005584717
+Total Probability for 'Yes' and 'No': 0.05573517084121704 0.944264829158783
+$$$$$$$$$ -0.8885296583175659
+Total Probability for 'Yes' and 'No': 0.3191194534301758 0.680880606174469
+$$$$$$$$$ 0.361761212348938
+Total Probability for 'Yes' and 'No': 0.30121755599975586 0.6987823843955994
+$$$$$$$$$ 0.39756476879119873
+Total Probability for 'Yes' and 'No': 0.4832074046134949 0.5167925953865051
+$$$$$$$$$ -0.033585190773010254
+Total Probability for 'Yes' and 'No': 0.32308781147003174 0.6769121289253235
+$$$$$$$$$ 0.353824257850647
+Total Probability for 'Yes' and 'No': 0.27084943652153015 0.729150652885437
+$$$$$$$$$ -0.4583011269569397
+Total Probability for 'Yes' and 'No': 0.4021003842353821 0.5978996157646179
+$$$$$$$$$ -0.19579923152923584
+Total Probability for 'Yes' and 'No': 0.37264788150787354 0.6273521184921265
+$$$$$$$$$ 0.25470423698425293
+Total Probability for 'Yes' and 'No': 0.2703033983707428 0.7296966314315796
+$$$$$$$$$ 0.4593932628631592
+Total Probability for 'Yes' and 'No': 0.33051860332489014 0.6694813966751099
+$$$$$$$$$ 0.3389627933502197
+Total Probability for 'Yes' and 'No': 0.5204305052757263 0.4795694947242737
+$$$$$$$$$ -0.04086101055145264
+Total Probability for 'Yes' and 'No': 0.2746363878250122 0.7253636717796326
+$$$$$$$$$ 0.45072734355926514
+Total Probability for 'Yes' and 'No': 0.46021774411201477 0.5397822260856628
+$$$$$$$$$ 0.07956445217132568
+Total Probability for 'Yes' and 'No': 0.34707778692245483 0.6529221534729004
+$$$$$$$$$ 0.3058443069458008
+Total Probability for 'Yes' and 'No': 0.2943185567855835 0.7056813836097717
+$$$$$$$$$ 0.41136276721954346
+Total Probability for 'Yes' and 'No': 0.4710735082626343 0.5289264917373657
+$$$$$$$$$ 0.057852983474731445
+Total Probability for 'Yes' and 'No': 0.5215573906898499 0.47844260931015015
+$$$$$$$$$ -0.04311478137969971
+Total Probability for 'Yes' and 'No': 0.6458904147148132 0.35410964488983154
+$$$$$$$$$ -0.2917807102203369
+Total Probability for 'Yes' and 'No': 0.21427415311336517 0.7857258319854736
+$$$$$$$$$ 0.5714516639709473
+Total Probability for 'Yes' and 'No': 0.21701349318027496 0.782986581325531
+$$$$$$$$$ 0.565973162651062
+Total Probability for 'Yes' and 'No': 0.24835814535617828 0.7516419291496277
+$$$$$$$$$ 0.5032838582992554
+Total Probability for 'Yes' and 'No': 0.1063053086400032 0.8936946392059326
+$$$$$$$$$ 0.7873892784118652
+Total Probability for 'Yes' and 'No': 0.7946770191192627 0.2053229808807373
+$$$$$$$$$ -0.5893540382385254
+Total Probability for 'Yes' and 'No': 0.4177405834197998 0.5822594165802002
+$$$$$$$$$ 0.1645188331604004
+Total Probability for 'Yes' and 'No': 0.4555003345012665 0.5444997549057007
+$$$$$$$$$ -0.08899933099746704
+Total Probability for 'Yes' and 'No': 0.7329011559486389 0.2670987844467163
+$$$$$$$$$ 0.46580231189727783
+Total Probability for 'Yes' and 'No': 0.16246359050273895 0.8375363945960999
+$$$$$$$$$ -0.6750728189945221
+Total Probability for 'Yes' and 'No': 0.31101757287979126 0.6889824271202087
+$$$$$$$$$ -0.3779648542404175
+Total Probability for 'Yes' and 'No': 0.22666813433170319 0.7733319401741028
+$$$$$$$$$ 0.5466638803482056
+Total Probability for 'Yes' and 'No': 0.25738510489463806 0.7426149845123291
+$$$$$$$$$ 0.4852299690246582
+Total Probability for 'Yes' and 'No': 0.8802223205566406 0.11977778375148773
+$$$$$$$$$ 0.7604446411132812
+Total Probability for 'Yes' and 'No': 0.6262391805648804 0.37376078963279724
+$$$$$$$$$ -0.2524784207344055
+[rollout 32 / 128]:  25%|█████████████████████████████████████▌                                                                                                                | 32/128 [00:12<00:38,  2.50it/s]
+Total Probability for 'Yes' and 'No': 0.4371907413005829 0.5628092885017395
+$$$$$$$$$ -0.12561851739883423
+Total Probability for 'Yes' and 'No': 0.30169743299484253 0.6983025670051575
+$$$$$$$$$ -0.39660513401031494
+Total Probability for 'Yes' and 'No': 0.6964401006698608 0.3035599887371063
+$$$$$$$$$ 0.3928802013397217
+Total Probability for 'Yes' and 'No': 0.6658895611763 0.33411043882369995
+$$$$$$$$$ -0.3317791223526001
+Total Probability for 'Yes' and 'No': 0.1464618742465973 0.8535381555557251
+$$$$$$$$$ -0.7070762515068054
+Total Probability for 'Yes' and 'No': 0.401629239320755 0.5983707904815674
+$$$$$$$$$ 0.19674158096313477
+Total Probability for 'Yes' and 'No': 0.3765069246292114 0.6234930753707886
+$$$$$$$$$ -0.24698615074157715
+Total Probability for 'Yes' and 'No': 0.3126976788043976 0.68730229139328
+$$$$$$$$$ -0.37460464239120483
+Total Probability for 'Yes' and 'No': 0.3113561272621155 0.6886438727378845
+$$$$$$$$$ -0.37728774547576904
+Total Probability for 'Yes' and 'No': 0.28326505422592163 0.7167348861694336
+$$$$$$$$$ 0.4334697723388672
+Total Probability for 'Yes' and 'No': 0.5588802695274353 0.4411197900772095
+$$$$$$$$$ -0.11776041984558105
+Total Probability for 'Yes' and 'No': 0.606207013130188 0.39379292726516724
+$$$$$$$$$ -0.21241414546966553
+Total Probability for 'Yes' and 'No': 0.6391384601593018 0.36086153984069824
+$$$$$$$$$ 0.2782769203186035
+Total Probability for 'Yes' and 'No': 0.7683543562889099 0.23164574801921844
+$$$$$$$$$ -0.5367085039615631
+Total Probability for 'Yes' and 'No': 0.6666367053985596 0.33336323499679565
+$$$$$$$$$ 0.33327341079711914
+Total Probability for 'Yes' and 'No': 0.6436998844146729 0.3563002049922943
+$$$$$$$$$ 0.2873997688293457
+Total Probability for 'Yes' and 'No': 0.20428074896335602 0.7957192063331604
+$$$$$$$$$ 0.5914384126663208
+Total Probability for 'Yes' and 'No': 0.7788110375404358 0.22118902206420898
+$$$$$$$$$ 0.5576220750808716
+Total Probability for 'Yes' and 'No': 0.6757268309593201 0.3242731988430023
+$$$$$$$$$ 0.35145366191864014
+Total Probability for 'Yes' and 'No': 0.27686378359794617 0.7231361865997314
+$$$$$$$$$ 0.4462723731994629
+Total Probability for 'Yes' and 'No': 0.4932810366153717 0.5067189931869507
+$$$$$$$$$ 0.013437986373901367
+Total Probability for 'Yes' and 'No': 0.49807292222976685 0.5019270777702332
+$$$$$$$$$ 0.0038541555404663086
+Total Probability for 'Yes' and 'No': 0.6422350406646729 0.35776498913764954
+$$$$$$$$$ -0.2844700217247009
+Total Probability for 'Yes' and 'No': 0.23241977393627167 0.7675802707672119
+$$$$$$$$$ -0.5351604521274567
+Total Probability for 'Yes' and 'No': 0.46136441826820374 0.5386355519294739
+$$$$$$$$$ -0.07727116346359253
+Total Probability for 'Yes' and 'No': 0.2793692350387573 0.7206307649612427
+$$$$$$$$$ 0.44126152992248535
+Total Probability for 'Yes' and 'No': 0.5546150207519531 0.4453849494457245
+$$$$$$$$$ -0.10923010110855103
+Total Probability for 'Yes' and 'No': 0.5864404439926147 0.4135594964027405
+$$$$$$$$$ -0.17288100719451904
+Total Probability for 'Yes' and 'No': 0.36755722761154175 0.6324427723884583
+$$$$$$$$$ -0.2648855447769165
+Total Probability for 'Yes' and 'No': 0.5113588571548462 0.4886411130428314
+$$$$$$$$$ 0.022717714309692383
+Total Probability for 'Yes' and 'No': 0.17146293818950653 0.828537106513977
+$$$$$$$$$ 0.6570742130279541
+Total Probability for 'Yes' and 'No': 0.2663298547267914 0.7336702346801758
+$$$$$$$$$ 0.46734046936035156
+Total Probability for 'Yes' and 'No': 0.40139952301979065 0.5986003875732422
+$$$$$$$$$ -0.1972009539604187
+Total Probability for 'Yes' and 'No': 0.4506934583187103 0.5493066310882568
+$$$$$$$$$ -0.09861308336257935
+Total Probability for 'Yes' and 'No': 0.5165094137191772 0.48349061608314514
+$$$$$$$$$ -0.03301876783370972
+Total Probability for 'Yes' and 'No': 0.5988208651542664 0.4011792540550232
+$$$$$$$$$ 0.19764173030853271
+Total Probability for 'Yes' and 'No': 0.09638328850269318 0.903616726398468
+$$$$$$$$$ -0.8072334229946136
+Total Probability for 'Yes' and 'No': 0.07375745475292206 0.9262426495552063
+$$$$$$$$$ 0.8524852991104126
+Total Probability for 'Yes' and 'No': 0.3217170536518097 0.6782828569412231
+$$$$$$$$$ 0.3565657138824463
+Total Probability for 'Yes' and 'No': 0.8207935690879822 0.17920643091201782
+$$$$$$$$$ -0.6415871381759644
+Total Probability for 'Yes' and 'No': 0.37948280572891235 0.6205171942710876
+$$$$$$$$$ -0.2410343885421753
+Total Probability for 'Yes' and 'No': 0.49611106514930725 0.5038889646530151
+$$$$$$$$$ -0.007777869701385498
+Total Probability for 'Yes' and 'No': 0.15659837424755096 0.8434016704559326
+$$$$$$$$$ 0.6868033409118652
+Total Probability for 'Yes' and 'No': 0.33706134557724 0.66293865442276
+$$$$$$$$$ -0.32587730884552
+Total Probability for 'Yes' and 'No': 0.6392424702644348 0.3607574999332428
+$$$$$$$$$ -0.2784850001335144
+Total Probability for 'Yes' and 'No': 0.10212372988462448 0.8978762626647949
+$$$$$$$$$ 0.7957525253295898
+Total Probability for 'Yes' and 'No': 0.2959984540939331 0.7040016055107117
+$$$$$$$$$ -0.4080030918121338
+Total Probability for 'Yes' and 'No': 0.2296290546655655 0.7703709602355957
+$$$$$$$$$ 0.5407419204711914
+Total Probability for 'Yes' and 'No': 0.48245880007743835 0.517541229724884
+$$$$$$$$$ 0.035082459449768066
+Total Probability for 'Yes' and 'No': 0.22178876399993896 0.778211236000061
+$$$$$$$$$ -0.5564224720001221
+Total Probability for 'Yes' and 'No': 0.6523112654685974 0.347688764333725
+$$$$$$$$$ 0.3046225309371948
+Total Probability for 'Yes' and 'No': 0.23495186865329742 0.7650482058525085
+$$$$$$$$$ -0.5300962626934052
+Total Probability for 'Yes' and 'No': 0.6766513586044312 0.32334864139556885
+$$$$$$$$$ 0.3533027172088623
+Total Probability for 'Yes' and 'No': 0.7416951656341553 0.2583048641681671
+$$$$$$$$$ 0.48339033126831055
+Total Probability for 'Yes' and 'No': 0.3861333131790161 0.6138666868209839
+$$$$$$$$$ 0.22773337364196777
+Total Probability for 'Yes' and 'No': 0.6329054236412048 0.3670945167541504
+$$$$$$$$$ -0.2658109664916992
+Total Probability for 'Yes' and 'No': 0.5499525666236877 0.45004746317863464
+$$$$$$$$$ 0.09990513324737549
+Total Probability for 'Yes' and 'No': 0.5716313123703003 0.4283686578273773
+$$$$$$$$$ 0.14326262474060059
+Total Probability for 'Yes' and 'No': 0.5128679275512695 0.4871320426464081
+$$$$$$$$$ 0.025735855102539062
+Total Probability for 'Yes' and 'No': 0.5662133097648621 0.43378666043281555
+$$$$$$$$$ -0.1324266791343689
+Total Probability for 'Yes' and 'No': 0.06350146234035492 0.9364985823631287
+$$$$$$$$$ -0.8729970753192902
+Total Probability for 'Yes' and 'No': 0.36005112528800964 0.6399489641189575
+$$$$$$$$$ -0.2798977494239807
+Total Probability for 'Yes' and 'No': 0.9343867301940918 0.06561329960823059
+$$$$$$$$$ -0.8687734007835388
+Total Probability for 'Yes' and 'No': 0.21108217537403107 0.7889178395271301
+
+[rollout 64 / 128]:  50%|███████████████████████████████████████████████████████████████████████████                                                                           | 64/128 [00:23<00:23,  2.70it/s]
+Total Probability for 'Yes' and 'No': 0.6003588438034058 0.39964112639427185
+$$$$$$$$$ -0.2007177472114563
+Total Probability for 'Yes' and 'No': 0.33578911423683167 0.664210855960846
+$$$$$$$$$ 0.3284217119216919
+Total Probability for 'Yes' and 'No': 0.5750129222869873 0.4249870479106903
+$$$$$$$$$ 0.1500258445739746
+Total Probability for 'Yes' and 'No': 0.681096076965332 0.31890401244163513
+$$$$$$$$$ -0.36219197511672974
+Total Probability for 'Yes' and 'No': 0.3695732057094574 0.6304267048835754
+$$$$$$$$$ -0.2608535885810852
+Total Probability for 'Yes' and 'No': 0.2824108302593231 0.7175891995429993
+$$$$$$$$$ 0.43517839908599854
+Total Probability for 'Yes' and 'No': 0.5516501665115356 0.44834980368614197
+$$$$$$$$$ 0.10330033302307129
+Total Probability for 'Yes' and 'No': 0.5486212968826294 0.4513786733150482
+$$$$$$$$$ -0.09724265336990356
+Total Probability for 'Yes' and 'No': 0.13355949521064758 0.8664405345916748
+$$$$$$$$$ -0.7328810095787048
+Total Probability for 'Yes' and 'No': 0.4240502119064331 0.5759497880935669
+$$$$$$$$$ 0.1518995761871338
+Total Probability for 'Yes' and 'No': 0.21851976215839386 0.7814801931381226
+$$$$$$$$$ 0.5629603862762451
+Total Probability for 'Yes' and 'No': 0.3702143132686615 0.6297855973243713
+$$$$$$$$$ 0.2595711946487427
+Total Probability for 'Yes' and 'No': 0.24399656057357788 0.7560033798217773
+$$$$$$$$$ -0.5120068788528442
+Total Probability for 'Yes' and 'No': 0.16447894275188446 0.8355211019515991
+$$$$$$$$$ -0.6710421144962311
+Total Probability for 'Yes' and 'No': 0.2813785970211029 0.7186214327812195
+$$$$$$$$$ 0.43724286556243896
+Total Probability for 'Yes' and 'No': 0.41038239002227783 0.5896176695823669
+$$$$$$$$$ 0.1792353391647339
+Total Probability for 'Yes' and 'No': 0.7921799421310425 0.20781999826431274
+$$$$$$$$$ -0.5843600034713745
+Total Probability for 'Yes' and 'No': 0.67585289478302 0.32414716482162476
+$$$$$$$$$ 0.35170578956604004
+Total Probability for 'Yes' and 'No': 0.36426928639411926 0.6357306838035583
+$$$$$$$$$ 0.2714613676071167
+Total Probability for 'Yes' and 'No': 0.40094345808029175 0.5990564823150635
+$$$$$$$$$ -0.1981130838394165
+Total Probability for 'Yes' and 'No': 0.2860907316207886 0.7139092683792114
+$$$$$$$$$ 0.42781853675842285
+Total Probability for 'Yes' and 'No': 0.4520193934440613 0.547980546951294
+$$$$$$$$$ -0.09596121311187744
+Total Probability for 'Yes' and 'No': 0.4602143466472626 0.539785623550415
+$$$$$$$$$ 0.07957124710083008
+Total Probability for 'Yes' and 'No': 0.2032233327627182 0.7967767119407654
+$$$$$$$$$ 0.5935534238815308
+Total Probability for 'Yes' and 'No': 0.7058285474777222 0.29417136311531067
+$$$$$$$$$ 0.41165709495544434
+Total Probability for 'Yes' and 'No': 0.7526503801345825 0.24734964966773987
+$$$$$$$$$ -0.5053007006645203
+Total Probability for 'Yes' and 'No': 0.311614453792572 0.6883856058120728
+$$$$$$$$$ 0.3767712116241455
+Total Probability for 'Yes' and 'No': 0.3400651216506958 0.659934937953949
+$$$$$$$$$ 0.31986987590789795
+Total Probability for 'Yes' and 'No': 0.3522324562072754 0.6477676033973694
+$$$$$$$$$ 0.29553520679473877
+Total Probability for 'Yes' and 'No': 0.2964801788330078 0.7035198211669922
+$$$$$$$$$ -0.4070396423339844
+Total Probability for 'Yes' and 'No': 0.3203493654727936 0.679650604724884
+$$$$$$$$$ -0.35930126905441284
+Total Probability for 'Yes' and 'No': 0.5908884406089783 0.4091115891933441
+$$$$$$$$$ -0.18177682161331177
+Total Probability for 'Yes' and 'No': 0.4889172613620758 0.5110827088356018
+$$$$$$$$$ 0.022165417671203613
+Total Probability for 'Yes' and 'No': 0.5916940569877625 0.408305823802948
+$$$$$$$$$ 0.1833881139755249
+Total Probability for 'Yes' and 'No': 0.552119791507721 0.44788026809692383
+$$$$$$$$$ -0.10423946380615234
+Total Probability for 'Yes' and 'No': 0.09780305624008179 0.9021969437599182
+$$$$$$$$$ 0.8043938875198364
+Total Probability for 'Yes' and 'No': 0.4867737293243408 0.5132262706756592
+$$$$$$$$$ -0.02645254135131836
+Total Probability for 'Yes' and 'No': 0.4195071756839752 0.5804927349090576
+$$$$$$$$$ 0.16098546981811523
+Total Probability for 'Yes' and 'No': 0.13510729372501373 0.8648927211761475
+$$$$$$$$$ 0.7297854423522949
+Total Probability for 'Yes' and 'No': 0.3299007713794708 0.6700991988182068
+$$$$$$$$$ -0.34019845724105835
+Total Probability for 'Yes' and 'No': 0.44482994079589844 0.5551701188087463
+$$$$$$$$$ -0.11034011840820312
+Total Probability for 'Yes' and 'No': 0.2928397059440613 0.7071603536605835
+$$$$$$$$$ 0.414320707321167
+Total Probability for 'Yes' and 'No': 0.33711352944374084 0.6628865003585815
+$$$$$$$$$ -0.3257729411125183
+Total Probability for 'Yes' and 'No': 0.3308078348636627 0.6691921353340149
+$$$$$$$$$ 0.3383842706680298
+Total Probability for 'Yes' and 'No': 0.2797430157661438 0.7202569842338562
+$$$$$$$$$ 0.4405139684677124
+Total Probability for 'Yes' and 'No': 0.40765470266342163 0.5923452973365784
+$$$$$$$$$ -0.18469059467315674
+Total Probability for 'Yes' and 'No': 0.3333297669887543 0.6666702032089233
+$$$$$$$$$ -0.33334046602249146
+Total Probability for 'Yes' and 'No': 0.8802940845489502 0.119705930352211
+$$$$$$$$$ 0.7605881690979004
+Total Probability for 'Yes' and 'No': 0.31177854537963867 0.6882213950157166
+$$$$$$$$$ 0.3764427900314331
+Total Probability for 'Yes' and 'No': 0.32272574305534363 0.677274227142334
+$$$$$$$$$ -0.35454851388931274
+Total Probability for 'Yes' and 'No': 0.26936888694763184 0.7306310534477234
+$$$$$$$$$ 0.4612621068954468
+Total Probability for 'Yes' and 'No': 0.4341698884963989 0.5658301115036011
+$$$$$$$$$ 0.13166022300720215
+Total Probability for 'Yes' and 'No': 0.4671774208545685 0.5328226089477539
+$$$$$$$$$ -0.06564515829086304
+Total Probability for 'Yes' and 'No': 0.43089962005615234 0.5691003799438477
+$$$$$$$$$ 0.1382007598876953
+Total Probability for 'Yes' and 'No': 0.9628965854644775 0.03710348531603813
+$$$$$$$$$ 0.9257931709289551
+Total Probability for 'Yes' and 'No': 0.361275851726532 0.6387240886688232
+$$$$$$$$$ -0.27744829654693604
+Total Probability for 'Yes' and 'No': 0.12729933857917786 0.8727006912231445
+$$$$$$$$$ 0.7454013824462891
+Total Probability for 'Yes' and 'No': 0.42112600803375244 0.5788739323616028
+$$$$$$$$$ -0.15774798393249512
+Total Probability for 'Yes' and 'No': 0.10207956284284592 0.8979204893112183
+$$$$$$$$$ 0.7958409786224365
+Total Probability for 'Yes' and 'No': 0.6177756786346436 0.38222432136535645
+$$$$$$$$$ -0.2355513572692871
+Total Probability for 'Yes' and 'No': 0.30364182591438293 0.6963581442832947
+$$$$$$$$$ 0.39271628856658936
+Total Probability for 'Yes' and 'No': 0.18878944218158722 0.811210572719574
+$$$$$$$$$ 0.622421145439148
+Total Probability for 'Yes' and 'No': 0.23321183025836945 0.766788125038147
+$$$$$$$$$ 0.533576250076294
+Total Probability for 'Yes' and 'No': 0.14613673090934753 0.8538632392883301
+
+[rollout 96 / 128]:  75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                     | 96/128 [00:33<00:10,  2.96it/s]
+Total Probability for 'Yes' and 'No': 0.4357503056526184 0.5642496943473816
+$$$$$$$$$ 0.12849938869476318
+Total Probability for 'Yes' and 'No': 0.1951509267091751 0.8048491477966309
+$$$$$$$$$ 0.6096982955932617
+Total Probability for 'Yes' and 'No': 0.45742660760879517 0.5425733923912048
+$$$$$$$$$ 0.08514678478240967
+Total Probability for 'Yes' and 'No': 0.3409581184387207 0.6590419411659241
+$$$$$$$$$ -0.3180837631225586
+Total Probability for 'Yes' and 'No': 0.448623925447464 0.5513761639595032
+$$$$$$$$$ 0.10275232791900635
+Total Probability for 'Yes' and 'No': 0.4319957494735718 0.568004310131073
+$$$$$$$$$ 0.136008620262146
+Total Probability for 'Yes' and 'No': 0.18353848159313202 0.816461443901062
+$$$$$$$$$ 0.632922887802124
+Total Probability for 'Yes' and 'No': 0.2896200120449066 0.7103800177574158
+$$$$$$$$$ -0.42075997591018677
+Total Probability for 'Yes' and 'No': 0.5766335725784302 0.4233664572238922
+$$$$$$$$$ -0.15326708555221558
+Total Probability for 'Yes' and 'No': 0.45553791522979736 0.5444621443748474
+$$$$$$$$$ 0.08892428874969482
+Total Probability for 'Yes' and 'No': 0.20896132290363312 0.7910386919975281
+$$$$$$$$$ 0.5820773839950562
+Total Probability for 'Yes' and 'No': 0.35071828961372375 0.6492817401885986
+$$$$$$$$$ 0.29856348037719727
+Total Probability for 'Yes' and 'No': 0.5512340068817139 0.44876596331596375
+$$$$$$$$$ 0.10246801376342773
+Total Probability for 'Yes' and 'No': 0.30404192209243774 0.6959580779075623
+$$$$$$$$$ 0.3919161558151245
+Total Probability for 'Yes' and 'No': 0.2242155820131302 0.7757843732833862
+$$$$$$$$$ 0.5515687465667725
+Total Probability for 'Yes' and 'No': 0.6278799176216125 0.3721201717853546
+$$$$$$$$$ -0.25575965642929077
+Total Probability for 'Yes' and 'No': 0.40358179807662964 0.5964183211326599
+$$$$$$$$$ 0.19283664226531982
+Total Probability for 'Yes' and 'No': 0.3578142523765564 0.6421858072280884
+$$$$$$$$$ -0.2843714952468872
+Total Probability for 'Yes' and 'No': 0.6088361144065857 0.3911638557910919
+$$$$$$$$$ -0.21767228841781616
+Total Probability for 'Yes' and 'No': 0.17601153254508972 0.8239884376525879
+$$$$$$$$$ 0.6479768753051758
+Total Probability for 'Yes' and 'No': 0.3139118552207947 0.6860881447792053
+$$$$$$$$$ -0.37217628955841064
+Total Probability for 'Yes' and 'No': 0.680173933506012 0.31982606649398804
+$$$$$$$$$ -0.3603478670120239
+Total Probability for 'Yes' and 'No': 0.3402060866355896 0.6597938537597656
+$$$$$$$$$ -0.3195878267288208
+Total Probability for 'Yes' and 'No': 0.6346298456192017 0.36537012457847595
+$$$$$$$$$ 0.2692596912384033
+Total Probability for 'Yes' and 'No': 0.7194164395332336 0.2805835008621216
+$$$$$$$$$ 0.4388328790664673
+Total Probability for 'Yes' and 'No': 0.4161258339881897 0.5838742256164551
+$$$$$$$$$ 0.16774845123291016
+Total Probability for 'Yes' and 'No': 0.1952635794878006 0.8047364354133606
+$$$$$$$$$ 0.6094728708267212
+Total Probability for 'Yes' and 'No': 0.43948349356651306 0.5605165958404541
+$$$$$$$$$ 0.1210331916809082
+Total Probability for 'Yes' and 'No': 0.40906044840812683 0.5909395813941956
+$$$$$$$$$ 0.1818791627883911
+Total Probability for 'Yes' and 'No': 0.4381537437438965 0.5618462562561035
+$$$$$$$$$ 0.12369251251220703
+Total Probability for 'Yes' and 'No': 0.8719885349273682 0.12801142036914825
+$$$$$$$$$ 0.7439770698547363
+Total Probability for 'Yes' and 'No': 0.31089526414871216 0.6891047358512878
+$$$$$$$$$ -0.3782094717025757
+Total Probability for 'Yes' and 'No': 0.5102328658103943 0.4897671043872833
+$$$$$$$$$ -0.02046579122543335
+Total Probability for 'Yes' and 'No': 0.3945137858390808 0.6054862141609192
+$$$$$$$$$ 0.21097242832183838
+Total Probability for 'Yes' and 'No': 0.35964906215667725 0.640350878238678
+$$$$$$$$$ 0.28070175647735596
+Total Probability for 'Yes' and 'No': 0.32866501808166504 0.6713349223136902
+$$$$$$$$$ 0.34266984462738037
+Total Probability for 'Yes' and 'No': 0.3244611620903015 0.6755388379096985
+$$$$$$$$$ 0.351077675819397
+Total Probability for 'Yes' and 'No': 0.22205673158168793 0.7779433131217957
+$$$$$$$$$ 0.5558866262435913
+Total Probability for 'Yes' and 'No': 0.680465579032898 0.31953442096710205
+$$$$$$$$$ 0.3609311580657959
+Total Probability for 'Yes' and 'No': 0.3766971230506897 0.6233028769493103
+$$$$$$$$$ -0.2466057538986206
+Total Probability for 'Yes' and 'No': 0.6626185178756714 0.3373814821243286
+$$$$$$$$$ 0.3252370357513428
+Total Probability for 'Yes' and 'No': 0.23784039914608002 0.7621596455574036
+$$$$$$$$$ 0.5243192911148071
+Total Probability for 'Yes' and 'No': 0.3432196378707886 0.6567803025245667
+$$$$$$$$$ 0.3135606050491333
+Total Probability for 'Yes' and 'No': 0.2279459536075592 0.7720540761947632
+$$$$$$$$$ -0.5441080927848816
+Total Probability for 'Yes' and 'No': 0.2851216495037079 0.7148783206939697
+$$$$$$$$$ 0.42975664138793945
+Total Probability for 'Yes' and 'No': 0.07784192264080048 0.9221580028533936
+$$$$$$$$$ -0.844316154718399
+Total Probability for 'Yes' and 'No': 0.6072152853012085 0.3927847146987915
+$$$$$$$$$ 0.214430570602417
+Total Probability for 'Yes' and 'No': 0.5779116749763489 0.42208829522132874
+$$$$$$$$$ -0.15582340955734253
+Total Probability for 'Yes' and 'No': 0.4205785393714905 0.5794215202331543
+$$$$$$$$$ 0.1588430404663086
+Total Probability for 'Yes' and 'No': 0.3850732147693634 0.6149267554283142
+$$$$$$$$$ 0.22985351085662842
+Total Probability for 'Yes' and 'No': 0.37574198842048645 0.6242580413818359
+$$$$$$$$$ 0.24851608276367188
+Total Probability for 'Yes' and 'No': 0.3673114478588104 0.6326885223388672
+$$$$$$$$$ 0.2653770446777344
+Total Probability for 'Yes' and 'No': 0.32616478204727173 0.6738352179527283
+$$$$$$$$$ 0.34767043590545654
+Total Probability for 'Yes' and 'No': 0.16762351989746094 0.8323764204978943
+$$$$$$$$$ 0.6647528409957886
+Total Probability for 'Yes' and 'No': 0.19362621009349823 0.8063737750053406
+$$$$$$$$$ 0.6127475500106812
+Total Probability for 'Yes' and 'No': 0.5406591892242432 0.45934078097343445
+$$$$$$$$$ -0.0813184380531311
+Total Probability for 'Yes' and 'No': 0.3223547339439392 0.6776452660560608
+$$$$$$$$$ 0.3552905321121216
+Total Probability for 'Yes' and 'No': 0.18035390973091125 0.8196460604667664
+$$$$$$$$$ 0.6392921209335327
+Total Probability for 'Yes' and 'No': 0.5933536291122437 0.40664640069007874
+$$$$$$$$$ -0.18670719861984253
+Total Probability for 'Yes' and 'No': 0.545388400554657 0.45461153984069824
+$$$$$$$$$ -0.09077692031860352
+Total Probability for 'Yes' and 'No': 0.3412470519542694 0.658752977848053
+$$$$$$$$$ 0.31750595569610596
+Total Probability for 'Yes' and 'No': 0.6661807298660278 0.33381927013397217
+$$$$$$$$$ -0.33236145973205566
+Total Probability for 'Yes' and 'No': 0.42012885212898254 0.5798711776733398
+$$$$$$$$$ 0.1597423553466797
+Total Probability for 'Yes' and 'No': 0.18582120537757874 0.8141788840293884
+[rollout 128 / 128]: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 128/128 [00:43<00:00,  2.97it/s]
+[RANK 0] Evaluating model
+[generation sweep 1/1 | eval batch 1/1]: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.83s/it]
+[RANK 0] Computing rewards
+Total Probability for 'Yes' and 'No': 0.3019413352012634 0.6980587840080261
+$$$$$$$$$ -0.39611732959747314
+Total Probability for 'Yes' and 'No': 0.6940234303474426 0.30597662925720215
+$$$$$$$$$ 0.38804686069488525
+Total Probability for 'Yes' and 'No': 0.7289537191390991 0.2710462510585785
+$$$$$$$$$ 0.45790743827819824
+Total Probability for 'Yes' and 'No': 0.5038583874702454 0.49614158272743225
+$$$$$$$$$ -0.007716834545135498
+Total Probability for 'Yes' and 'No': 0.18069447576999664 0.8193054795265198
+$$$$$$$$$ -0.6386110484600067
+Total Probability for 'Yes' and 'No': 0.48264703154563904 0.5173529386520386
+$$$$$$$$$ -0.034705936908721924
+Total Probability for 'Yes' and 'No': 0.8672794103622437 0.13272058963775635
+$$$$$$$$$ 0.7345588207244873
+Total Probability for 'Yes' and 'No': 0.37125489115715027 0.6287451386451721
+$$$$$$$$$ 0.25749027729034424
+Total Probability for 'Yes' and 'No': 0.18997162580490112 0.8100283741950989
+$$$$$$$$$ 0.6200567483901978
+Total Probability for 'Yes' and 'No': 0.3009313941001892 0.699068546295166
+$$$$$$$$$ -0.3981372117996216
+Total Probability for 'Yes' and 'No': 0.6398317217826843 0.3601682186126709
+$$$$$$$$$ 0.27966344356536865
+Total Probability for 'Yes' and 'No': 0.3496984839439392 0.6503015160560608
+$$$$$$$$$ 0.3006030321121216
+Total Probability for 'Yes' and 'No': 0.44433659315109253 0.5556634068489075
+$$$$$$$$$ 0.11132681369781494
+Total Probability for 'Yes' and 'No': 0.3978568911552429 0.6021431088447571
+$$$$$$$$$ 0.20428621768951416
+Total Probability for 'Yes' and 'No': 0.11500754952430725 0.8849923610687256
+$$$$$$$$$ -0.7699849009513855
+Total Probability for 'Yes' and 'No': 0.6387938261032104 0.36120620369911194
+$$$$$$$$$ -0.2775875926017761
+Total Probability for 'Yes' and 'No': 0.5218006372451782 0.4781992733478546
+$$$$$$$$$ 0.043601274490356445
+Total Probability for 'Yes' and 'No': 0.7840986251831055 0.21590135991573334
+$$$$$$$$$ -0.5681972801685333
+Total Probability for 'Yes' and 'No': 0.20801495015621185 0.791985034942627
+$$$$$$$$$ 0.5839700698852539
+Total Probability for 'Yes' and 'No': 0.6866127848625183 0.3133871853351593
+$$$$$$$$$ -0.3732256293296814
+Total Probability for 'Yes' and 'No': 0.37880662083625793 0.6211934089660645
+$$$$$$$$$ 0.2423868179321289
+Total Probability for 'Yes' and 'No': 0.6011655926704407 0.39883437752723694
+$$$$$$$$$ 0.20233118534088135
+Total Probability for 'Yes' and 'No': 0.6101005673408508 0.38989946246147156
+$$$$$$$$$ 0.22020113468170166
+Total Probability for 'Yes' and 'No': 0.3712852895259857 0.6287146210670471
+$$$$$$$$$ 0.25742924213409424
+Total Probability for 'Yes' and 'No': 0.6220666766166687 0.37793344259262085
+$$$$$$$$$ -0.2441331148147583
+Total Probability for 'Yes' and 'No': 0.9224353432655334 0.07756458222866058
+$$$$$$$$$ 0.8448706865310669
+Total Probability for 'Yes' and 'No': 0.40163540840148926 0.5983644723892212
+$$$$$$$$$ -0.19672918319702148
+Total Probability for 'Yes' and 'No': 0.6789231300354004 0.321076899766922
+$$$$$$$$$ 0.3578462600708008
+Total Probability for 'Yes' and 'No': 0.3238108158111572 0.6761892437934875
+$$$$$$$$$ -0.35237836837768555
+Total Probability for 'Yes' and 'No': 0.6129840612411499 0.3870159387588501
+$$$$$$$$$ -0.2259681224822998
+Total Probability for 'Yes' and 'No': 0.7320632338523865 0.26793673634529114
+$$$$$$$$$ 0.46412646770477295
+Total Probability for 'Yes' and 'No': 0.6715049743652344 0.32849499583244324
+$$$$$$$$$ -0.3430100083351135
+Total Probability for 'Yes' and 'No': 0.5131922364234924 0.48680776357650757
+$$$$$$$$$ 0.026384472846984863
+Total Probability for 'Yes' and 'No': 0.25795361399650574 0.7420463562011719
+$$$$$$$$$ -0.4840927720069885
+Total Probability for 'Yes' and 'No': 0.30886077880859375 0.6911392211914062
+$$$$$$$$$ 0.3822784423828125
+Total Probability for 'Yes' and 'No': 0.45368692278862 0.5463130474090576
+$$$$$$$$$ 0.09262609481811523
+Total Probability for 'Yes' and 'No': 0.5922062397003174 0.4077938199043274
+$$$$$$$$$ 0.18441247940063477
+Total Probability for 'Yes' and 'No': 0.1257478892803192 0.8742521405220032
+$$$$$$$$$ -0.7485042214393616
+Total Probability for 'Yes' and 'No': 0.9435399770736694 0.056460026651620865
+$$$$$$$$$ -0.8870799466967583
+Total Probability for 'Yes' and 'No': 0.6332302093505859 0.3667698800563812
+$$$$$$$$$ -0.26646023988723755
+Total Probability for 'Yes' and 'No': 0.6055722832679749 0.39442771673202515
+$$$$$$$$$ 0.2111445665359497
+Total Probability for 'Yes' and 'No': 0.29834067821502686 0.7016593217849731
+$$$$$$$$$ 0.4033186435699463
+Total Probability for 'Yes' and 'No': 0.8196707367897034 0.18032924830913544
+$$$$$$$$$ -0.6393415033817291
+[RANK 0] Computing metrics
+[RANK 0] Summarizing evaluation
+Total Probability for 'Yes' and 'No': 0.5591561794281006 0.4408438205718994
+$$$$$$$$$ 0.11831235885620117
+Total Probability for 'Yes' and 'No': 0.556154727935791 0.44384533166885376
+$$$$$$$$$ -0.11230933666229248
+Total Probability for 'Yes' and 'No': 0.48695242404937744 0.5130475759506226
+$$$$$$$$$ 0.026095151901245117
+Total Probability for 'Yes' and 'No': 0.38973450660705566 0.6102656126022339
+$$$$$$$$$ -0.22053098678588867
+Total Probability for 'Yes' and 'No': 0.5329800844192505 0.46701985597610474
+$$$$$$$$$ -0.06596028804779053
+Total Probability for 'Yes' and 'No': 0.2521809935569763 0.7478190064430237
+$$$$$$$$$ 0.49563801288604736
+Total Probability for 'Yes' and 'No': 0.429130882024765 0.5708690881729126
+$$$$$$$$$ 0.1417381763458252
+[3m                                                                        Evaluation #0 reward/mean: 0.00804 metrics/Answer Matching: 0.44                                                                        
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃[1m prompt                                                                                  [22m┃[1m output                                                                                  [22m┃[1m reward [22m┃[1m Answer Matching [22m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ If you follow these instructions, do you return to the starting point? Always face      │ If you always face forward, you cannot take a backward step backward. So, the answer is │ -0.396 │ 0               │
+│ forward. Take 9 steps left. Take 10 steps forward. Take 9 steps right. Take 10 steps    │ No.                                                                                     │        │                 │
+│ backward. Options: - Yes - No Let’ s think step by step.                                │                                                                                         │        │                 │
+├─────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────┼────────┼─────────────────┤
+│ If you follow these instructions, do you return to the starting point? Take 4 steps.    │ You can turn right and back the directions in one trip. So, the answer is Yes.          │ 0.388  │ 1.0             │
+│ Turn around. Take 4 steps. Turn around. Turn right. Options: - Yes - No Let’ s think    │                                                                                         │        │                 │
+│ step by step.                                                                           │                                                                                         │        │                 │
+├─────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────┼────────┼─────────────────┤
+│ If you follow these instructions, do you return to the starting point? Take 6 steps.    │ In order to go back to your starting point, you have to proceed at least 2 feet         │ 0.458  │ 1.0             │
+│ Take 4 steps. Turn around. Take 10 steps. Options: - Yes - No Let’ s think step by      │ backwards. So, the answer is Yes.                                                       │        │                 │
+│ step.                                                                                   │                                                                                         │        │                 │

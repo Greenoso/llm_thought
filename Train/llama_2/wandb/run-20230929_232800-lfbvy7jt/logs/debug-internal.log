@@ -1,0 +1,418 @@
+2023-09-29 23:28:01,076 INFO    StreamThr :3249 [internal.py:wandb_internal():86] W&B internal server running at pid: 3249, started at: 2023-09-29 23:28:01.075914
+2023-09-29 23:28:01,078 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status
+2023-09-29 23:28:01,082 INFO    WriterThread:3249 [datastore.py:open_for_write():85] open: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/run-lfbvy7jt.wandb
+2023-09-29 23:28:01,082 DEBUG   SenderThread:3249 [sender.py:send():379] send: header
+2023-09-29 23:28:01,408 DEBUG   SenderThread:3249 [sender.py:send():379] send: run
+2023-09-29 23:28:02,183 INFO    SenderThread:3249 [dir_watcher.py:__init__():211] watching files in: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files
+2023-09-29 23:28:02,183 INFO    SenderThread:3249 [sender.py:_start_run_threads():1121] run started: lfbvy7jt with start time 1696001281.076639
+2023-09-29 23:28:02,185 DEBUG   SenderThread:3249 [sender.py:send_request():406] send_request: summary_record
+2023-09-29 23:28:02,185 INFO    SenderThread:3249 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-29 23:28:02,192 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: check_version
+2023-09-29 23:28:02,194 DEBUG   SenderThread:3249 [sender.py:send_request():406] send_request: check_version
+2023-09-29 23:28:02,353 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: run_start
+2023-09-29 23:28:02,362 DEBUG   HandlerThread:3249 [system_info.py:__init__():31] System info init
+2023-09-29 23:28:02,362 DEBUG   HandlerThread:3249 [system_info.py:__init__():46] System info init done
+2023-09-29 23:28:02,362 INFO    HandlerThread:3249 [system_monitor.py:start():181] Starting system monitor
+2023-09-29 23:28:02,362 INFO    SystemMonitor:3249 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-29 23:28:02,363 INFO    HandlerThread:3249 [system_monitor.py:probe():201] Collecting system info
+2023-09-29 23:28:02,364 INFO    SystemMonitor:3249 [interfaces.py:start():190] Started cpu monitoring
+2023-09-29 23:28:02,365 INFO    SystemMonitor:3249 [interfaces.py:start():190] Started disk monitoring
+2023-09-29 23:28:02,365 INFO    SystemMonitor:3249 [interfaces.py:start():190] Started gpu monitoring
+2023-09-29 23:28:02,368 INFO    SystemMonitor:3249 [interfaces.py:start():190] Started memory monitoring
+2023-09-29 23:28:02,368 INFO    SystemMonitor:3249 [interfaces.py:start():190] Started network monitoring
+2023-09-29 23:28:02,387 DEBUG   HandlerThread:3249 [system_info.py:probe():195] Probing system
+2023-09-29 23:28:02,396 DEBUG   HandlerThread:3249 [system_info.py:_probe_git():180] Probing git
+2023-09-29 23:28:02,408 DEBUG   HandlerThread:3249 [system_info.py:_probe_git():188] Probing git done
+2023-09-29 23:28:02,409 DEBUG   HandlerThread:3249 [system_info.py:probe():240] Probing system done
+2023-09-29 23:28:02,409 DEBUG   HandlerThread:3249 [system_monitor.py:probe():210] {'os': 'Linux-5.4.0-99-generic-x86_64-with-glibc2.17', 'python': '3.8.10', 'heartbeatAt': '2023-09-29T15:28:02.387822', 'startedAt': '2023-09-29T15:28:00.994848', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/root/autodl-tmp/msc_ml/llm_thought/Train/flan_t5/flan_t5_train.py', 'codePath': 'Train/flan_t5/flan_t5_train.py', 'git': {'remote': 'https://github.com/Greenoso/llm_thought.git', 'commit': '8429b2fe47004e9d98c4486c6e156e867b3ab5c7'}, 'email': 'jiacheng.liu.19.ucl@gmail.com', 'root': '/root/autodl-tmp/msc_ml/llm_thought', 'host': 'autodl-container-55da118bfa-7e0e117f', 'username': 'root', 'executable': '/root/miniconda3/bin/python', 'cpu_count': 40, 'cpu_count_logical': 80, 'cpu_freq': {'current': 2999.864000000001, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 30.0, 'used': 13.205699920654297}, 'gpu': 'Tesla V100S-PCIE-32GB', 'gpu_count': 2, 'gpu_devices': [{'name': 'Tesla V100S-PCIE-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100S-PCIE-32GB', 'memory_total': 34359738368}], 'memory': {'total': 629.8885612487793}}
+2023-09-29 23:28:02,409 INFO    HandlerThread:3249 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-29 23:28:02,409 INFO    HandlerThread:3249 [system_monitor.py:probe():214] Publishing system info
+2023-09-29 23:28:02,409 DEBUG   HandlerThread:3249 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-09-29 23:28:02,410 DEBUG   HandlerThread:3249 [system_info.py:_save_pip():67] Saving pip packages done
+2023-09-29 23:28:02,410 DEBUG   HandlerThread:3249 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-09-29 23:28:03,185 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/requirements.txt
+2023-09-29 23:28:03,186 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/wandb-summary.json
+2023-09-29 23:28:03,186 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/conda-environment.yaml
+2023-09-29 23:28:06,420 DEBUG   HandlerThread:3249 [system_info.py:_save_conda():86] Saving conda packages done
+2023-09-29 23:28:06,421 INFO    HandlerThread:3249 [system_monitor.py:probe():216] Finished publishing system info
+2023-09-29 23:28:06,426 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:06,427 DEBUG   SenderThread:3249 [sender.py:send():379] send: files
+2023-09-29 23:28:06,427 INFO    SenderThread:3249 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-09-29 23:28:06,432 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 23:28:06,432 DEBUG   SenderThread:3249 [sender.py:send_request():406] send_request: stop_status
+2023-09-29 23:28:06,880 DEBUG   SenderThread:3249 [sender.py:send():379] send: telemetry
+2023-09-29 23:28:06,880 DEBUG   SenderThread:3249 [sender.py:send():379] send: config
+2023-09-29 23:28:07,064 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/lfbvy7jt/wandb-metadata.json?Expires=1696087686&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=rAk3jHGSmMxYpHhoGTR%2BP3FfSP9TlMnBP99xMy9yf0QsOCE8gVj8Q0u46LXpQj%2BSLyIhO7SgWoIS%2BpyoBkwu5tjkcRe3XOhQSGHi9RI3ff%2FDmOAywgw39fpcYLuaCEYcCrKlCdT9JhZp4VD8ZRs%2F1IKdD0luI6%2Fpc2duT4LgY3AYV7Bwpw3RctUCS2pRduNJjzyBv1%2B59DKbuqf%2B9xxDyu9RLdRVW4JKhjaPFJiMig7RQo0oHYDvYq1XRk4uENE2SmY23w%2FdjaikFncDatL7YBTTCLNRJ0WRKpjqrqs9JXYhpgVwZqrmyEXWf7X5HNkNFfVnmdqGlgnvctmOAscTlw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:28:07,064 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9459'}
+2023-09-29 23:28:07,065 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:28:07,185 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/conda-environment.yaml
+2023-09-29 23:28:07,186 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:07,186 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/wandb-metadata.json
+2023-09-29 23:28:08,283 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/lfbvy7jt/wandb-metadata.json?Expires=1696087686&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=rAk3jHGSmMxYpHhoGTR%2BP3FfSP9TlMnBP99xMy9yf0QsOCE8gVj8Q0u46LXpQj%2BSLyIhO7SgWoIS%2BpyoBkwu5tjkcRe3XOhQSGHi9RI3ff%2FDmOAywgw39fpcYLuaCEYcCrKlCdT9JhZp4VD8ZRs%2F1IKdD0luI6%2Fpc2duT4LgY3AYV7Bwpw3RctUCS2pRduNJjzyBv1%2B59DKbuqf%2B9xxDyu9RLdRVW4JKhjaPFJiMig7RQo0oHYDvYq1XRk4uENE2SmY23w%2FdjaikFncDatL7YBTTCLNRJ0WRKpjqrqs9JXYhpgVwZqrmyEXWf7X5HNkNFfVnmdqGlgnvctmOAscTlw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:28:08,284 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9459'}
+2023-09-29 23:28:08,284 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:28:09,186 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:10,507 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/lfbvy7jt/wandb-metadata.json?Expires=1696087686&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=rAk3jHGSmMxYpHhoGTR%2BP3FfSP9TlMnBP99xMy9yf0QsOCE8gVj8Q0u46LXpQj%2BSLyIhO7SgWoIS%2BpyoBkwu5tjkcRe3XOhQSGHi9RI3ff%2FDmOAywgw39fpcYLuaCEYcCrKlCdT9JhZp4VD8ZRs%2F1IKdD0luI6%2Fpc2duT4LgY3AYV7Bwpw3RctUCS2pRduNJjzyBv1%2B59DKbuqf%2B9xxDyu9RLdRVW4JKhjaPFJiMig7RQo0oHYDvYq1XRk4uENE2SmY23w%2FdjaikFncDatL7YBTTCLNRJ0WRKpjqrqs9JXYhpgVwZqrmyEXWf7X5HNkNFfVnmdqGlgnvctmOAscTlw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:28:10,508 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9459'}
+2023-09-29 23:28:10,508 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:28:10,508 INFO    wandb-upload_0:3249 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1092, in _validate_conn
+    conn.connect()
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1092, in _validate_conn
+    conn.connect()
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2491, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2520, in upload_file
+    raise _e.with_traceback(sys.exc_info()[2])
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2491, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+wandb.sdk.lib.retry.TransientError: None
+2023-09-29 23:28:11,187 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:12,107 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:12,187 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:15,332 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/lfbvy7jt/wandb-metadata.json?Expires=1696087686&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=rAk3jHGSmMxYpHhoGTR%2BP3FfSP9TlMnBP99xMy9yf0QsOCE8gVj8Q0u46LXpQj%2BSLyIhO7SgWoIS%2BpyoBkwu5tjkcRe3XOhQSGHi9RI3ff%2FDmOAywgw39fpcYLuaCEYcCrKlCdT9JhZp4VD8ZRs%2F1IKdD0luI6%2Fpc2duT4LgY3AYV7Bwpw3RctUCS2pRduNJjzyBv1%2B59DKbuqf%2B9xxDyu9RLdRVW4JKhjaPFJiMig7RQo0oHYDvYq1XRk4uENE2SmY23w%2FdjaikFncDatL7YBTTCLNRJ0WRKpjqrqs9JXYhpgVwZqrmyEXWf7X5HNkNFfVnmdqGlgnvctmOAscTlw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:28:15,333 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9459'}
+2023-09-29 23:28:15,333 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:28:17,108 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:19,190 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:21,191 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:21,433 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 23:28:21,434 DEBUG   SenderThread:3249 [sender.py:send_request():406] send_request: stop_status
+2023-09-29 23:28:22,718 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:23,191 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:24,192 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:24,258 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/lfbvy7jt/wandb-metadata.json?Expires=1696087686&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=rAk3jHGSmMxYpHhoGTR%2BP3FfSP9TlMnBP99xMy9yf0QsOCE8gVj8Q0u46LXpQj%2BSLyIhO7SgWoIS%2BpyoBkwu5tjkcRe3XOhQSGHi9RI3ff%2FDmOAywgw39fpcYLuaCEYcCrKlCdT9JhZp4VD8ZRs%2F1IKdD0luI6%2Fpc2duT4LgY3AYV7Bwpw3RctUCS2pRduNJjzyBv1%2B59DKbuqf%2B9xxDyu9RLdRVW4JKhjaPFJiMig7RQo0oHYDvYq1XRk4uENE2SmY23w%2FdjaikFncDatL7YBTTCLNRJ0WRKpjqrqs9JXYhpgVwZqrmyEXWf7X5HNkNFfVnmdqGlgnvctmOAscTlw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:28:24,258 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9459'}
+2023-09-29 23:28:24,258 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:28:27,869 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:29,194 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:31,195 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:32,941 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:33,195 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:34,196 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/config.yaml
+2023-09-29 23:28:35,196 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:36,197 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:36,433 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 23:28:36,434 DEBUG   SenderThread:3249 [sender.py:send_request():406] send_request: stop_status
+2023-09-29 23:28:38,241 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:39,198 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:41,198 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:41,594 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/lfbvy7jt/wandb-metadata.json?Expires=1696087686&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=rAk3jHGSmMxYpHhoGTR%2BP3FfSP9TlMnBP99xMy9yf0QsOCE8gVj8Q0u46LXpQj%2BSLyIhO7SgWoIS%2BpyoBkwu5tjkcRe3XOhQSGHi9RI3ff%2FDmOAywgw39fpcYLuaCEYcCrKlCdT9JhZp4VD8ZRs%2F1IKdD0luI6%2Fpc2duT4LgY3AYV7Bwpw3RctUCS2pRduNJjzyBv1%2B59DKbuqf%2B9xxDyu9RLdRVW4JKhjaPFJiMig7RQo0oHYDvYq1XRk4uENE2SmY23w%2FdjaikFncDatL7YBTTCLNRJ0WRKpjqrqs9JXYhpgVwZqrmyEXWf7X5HNkNFfVnmdqGlgnvctmOAscTlw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:28:41,594 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9459'}
+2023-09-29 23:28:41,594 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:28:43,199 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:43,668 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:45,200 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:46,200 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:48,705 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:49,205 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:51,206 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:51,433 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 23:28:51,433 DEBUG   SenderThread:3249 [sender.py:send_request():406] send_request: stop_status
+2023-09-29 23:28:53,207 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:53,235 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:28:54,207 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:54,238 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:28:58,209 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:59,210 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:28:59,318 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: status_report
+2023-09-29 23:29:01,215 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:29:01,510 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: log_artifact
+2023-09-29 23:29:01,510 DEBUG   SenderThread:3249 [sender.py:send_request():406] send_request: log_artifact
+2023-09-29 23:29:01,529 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:02,216 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:29:02,216 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/media/table/samples_0_5a163b6c643545425f99.table.json
+2023-09-29 23:29:02,216 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/media
+2023-09-29 23:29:02,216 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/media/table
+2023-09-29 23:29:02,229 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:02,369 DEBUG   SystemMonitor:3249 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-09-29 23:29:02,946 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:03,151 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/102467903/588715602/70754e2eaefc6c2b1d219db76a7f232b?Expires=1696087742&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=pH1CfcMuVAiEz%2FlpgymBGlRlFY3oqexFu3CTPTDU89Eliqj76bHbs89qz8m0iSdRpAR3QQ5IYPVsgYsc1GtutZifQNscbkxyasHVeb0i7GuXRKFywDEVtV5bcZOwH%2BWn0eZ%2FCDEb%2Faz9myPuU4WKL7l%2B3V6CTRimlgKFVdchTrw1g%2BFiAxGymjdkbKL%2FtIp5%2FyaNAO2qxNtsNeB4k8zoYRtWDShQCXEys8fBRmwjuFNyyWKwEa2tDaEpmu%2F46O4G8tqr7yxUMbLUqCjtuN%2BERcWPJuJ5GBtkNEVeN2YQyvsjeGBNbdOR4ESS0Uc20q41jSco9g%2ByMb7sCvJlRZYtFA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:29:03,151 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'cHVOLq78bCsdIZ23an8jKw==', 'Content-Type': 'application/json', 'Content-Length': '20867'}
+2023-09-29 23:29:03,151 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:29:03,216 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/output.log
+2023-09-29 23:29:03,619 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:04,338 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:04,472 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/102467903/588715602/70754e2eaefc6c2b1d219db76a7f232b?Expires=1696087742&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=pH1CfcMuVAiEz%2FlpgymBGlRlFY3oqexFu3CTPTDU89Eliqj76bHbs89qz8m0iSdRpAR3QQ5IYPVsgYsc1GtutZifQNscbkxyasHVeb0i7GuXRKFywDEVtV5bcZOwH%2BWn0eZ%2FCDEb%2Faz9myPuU4WKL7l%2B3V6CTRimlgKFVdchTrw1g%2BFiAxGymjdkbKL%2FtIp5%2FyaNAO2qxNtsNeB4k8zoYRtWDShQCXEys8fBRmwjuFNyyWKwEa2tDaEpmu%2F46O4G8tqr7yxUMbLUqCjtuN%2BERcWPJuJ5GBtkNEVeN2YQyvsjeGBNbdOR4ESS0Uc20q41jSco9g%2ByMb7sCvJlRZYtFA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:29:04,473 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'cHVOLq78bCsdIZ23an8jKw==', 'Content-Type': 'application/json', 'Content-Length': '20867'}
+2023-09-29 23:29:04,473 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:29:05,016 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:05,732 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:06,419 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:06,433 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-29 23:29:07,148 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:07,164 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/102467903/588715602/70754e2eaefc6c2b1d219db76a7f232b?Expires=1696087742&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=pH1CfcMuVAiEz%2FlpgymBGlRlFY3oqexFu3CTPTDU89Eliqj76bHbs89qz8m0iSdRpAR3QQ5IYPVsgYsc1GtutZifQNscbkxyasHVeb0i7GuXRKFywDEVtV5bcZOwH%2BWn0eZ%2FCDEb%2Faz9myPuU4WKL7l%2B3V6CTRimlgKFVdchTrw1g%2BFiAxGymjdkbKL%2FtIp5%2FyaNAO2qxNtsNeB4k8zoYRtWDShQCXEys8fBRmwjuFNyyWKwEa2tDaEpmu%2F46O4G8tqr7yxUMbLUqCjtuN%2BERcWPJuJ5GBtkNEVeN2YQyvsjeGBNbdOR4ESS0Uc20q41jSco9g%2ByMb7sCvJlRZYtFA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:29:07,164 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'cHVOLq78bCsdIZ23an8jKw==', 'Content-Type': 'application/json', 'Content-Length': '20867'}
+2023-09-29 23:29:07,164 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:29:07,164 INFO    wandb-upload_2:3249 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1092, in _validate_conn
+    conn.connect()
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1092, in _validate_conn
+    conn.connect()
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/miniconda3/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/root/miniconda3/lib/python3.8/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2491, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2520, in upload_file
+    raise _e.with_traceback(sys.exc_info()[2])
+  File "/root/miniconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2491, in upload_file
+    response = self._upload_file_session.put(
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 649, in put
+    return self.request("PUT", url, data=data, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+wandb.sdk.lib.retry.TransientError: None
+2023-09-29 23:29:07,788 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:08,456 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:09,083 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:09,758 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:10,397 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:11,078 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:11,712 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:29:11,715 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:12,384 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:12,914 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:13,484 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:14,010 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:14,577 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:15,101 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:15,671 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:16,201 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:16,721 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:29:16,774 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:17,327 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:17,930 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:18,484 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:19,079 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:19,638 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:20,234 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:20,793 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:21,389 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:29:21,715 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/lfbvy7jt/wandb-metadata.json?Expires=1696087686&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=rAk3jHGSmMxYpHhoGTR%2BP3FfSP9TlMnBP99xMy9yf0QsOCE8gVj8Q0u46LXpQj%2BSLyIhO7SgWoIS%2BpyoBkwu5tjkcRe3XOhQSGHi9RI3ff%2FDmOAywgw39fpcYLuaCEYcCrKlCdT9JhZp4VD8ZRs%2F1IKdD0luI6%2Fpc2duT4LgY3AYV7Bwpw3RctUCS2pRduNJjzyBv1%2B59DKbuqf%2B9xxDyu9RLdRVW4JKhjaPFJiMig7RQo0oHYDvYq1XRk4uENE2SmY23w%2FdjaikFncDatL7YBTTCLNRJ0WRKpjqrqs9JXYhpgVwZqrmyEXWf7X5HNkNFfVnmdqGlgnvctmOAscTlw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:29:21,715 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9459'}
+2023-09-29 23:29:21,715 ERROR   wandb-upload_0:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:29:21,790 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:29:26,792 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:29:31,793 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:29:36,796 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:29:41,797 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:29:46,885 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:29:51,886 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:29:56,887 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:01,888 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:06,889 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:07,165 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:07,854 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:08,583 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:09,275 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:10,011 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:10,699 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:11,426 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:12,011 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:12,103 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:12,828 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:13,494 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:14,211 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:14,890 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:15,609 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:16,287 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:17,005 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:17,284 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:17,678 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:18,390 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:18,987 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:22,285 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:27,286 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:32,438 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:37,585 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:55,043 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:30:56,463 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: log_artifact
+2023-09-29 23:30:56,475 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:57,065 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:57,267 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_created():271] file/dir created: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/media/table/samples_49_b1171df58b3d2f3602ed.table.json
+2023-09-29 23:30:57,268 INFO    Thread-12 :3249 [dir_watcher.py:_on_file_modified():288] file/dir modified: /root/autodl-tmp/msc_ml/llm_thought/Train/llama_2/wandb/run-20230929_232800-lfbvy7jt/files/media/table
+2023-09-29 23:30:57,703 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:57,830 ERROR   wandb-upload_3:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/lfbvy7jt/media/table/samples_49_b1171df58b3d2f3602ed.table.json?Expires=1696087857&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=OSfUis5YKQQfv7W6Hd4sEI1PVNoLELcumkckAjl96mKj2%2FGl%2Fc%2Fo0d1fgtNYEC1%2BCwmA2Ng21cVxqe0XGTC28p2lKwyGm2rnWnJxN79uMK44Ya%2BKEjHD9EGMUTh2IGShhBoL6KwXtRwisNxBJY60EMGvDoP89TJ94Nz4Gzdg2dl5nWJbHX%2FZCFnVP7fjkEpBqYzt%2FLqGJHJfpHIS0ST09NoE7lks1X6qx0eNIvCXWbLC%2FWtS4fny8UDzdITrBWRRKAmDn4LDC0qnAm2N05YhFkG%2FSC16TYiDoTE4ZT4Ew7zGD6MejnSm67%2Fr1Q6NttOaJ07WdlbW7zbA9WuxfOZ%2Bkw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:30:57,830 ERROR   wandb-upload_3:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '20845'}
+2023-09-29 23:30:57,830 ERROR   wandb-upload_3:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:30:58,301 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:58,934 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:30:59,284 ERROR   wandb-upload_3:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/ucl_2023_com00087/trlx/lfbvy7jt/media/table/samples_49_b1171df58b3d2f3602ed.table.json?Expires=1696087857&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=OSfUis5YKQQfv7W6Hd4sEI1PVNoLELcumkckAjl96mKj2%2FGl%2Fc%2Fo0d1fgtNYEC1%2BCwmA2Ng21cVxqe0XGTC28p2lKwyGm2rnWnJxN79uMK44Ya%2BKEjHD9EGMUTh2IGShhBoL6KwXtRwisNxBJY60EMGvDoP89TJ94Nz4Gzdg2dl5nWJbHX%2FZCFnVP7fjkEpBqYzt%2FLqGJHJfpHIS0ST09NoE7lks1X6qx0eNIvCXWbLC%2FWtS4fny8UDzdITrBWRRKAmDn4LDC0qnAm2N05YhFkG%2FSC16TYiDoTE4ZT4Ew7zGD6MejnSm67%2Fr1Q6NttOaJ07WdlbW7zbA9WuxfOZ%2Bkw%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:30:59,285 ERROR   wandb-upload_3:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '20845'}
+2023-09-29 23:30:59,285 ERROR   wandb-upload_3:3249 [internal_api.py:upload_file():2500] upload_file response body: 
+2023-09-29 23:30:59,531 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:00,063 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:31:00,164 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:00,742 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:01,375 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:01,948 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:02,573 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:03,154 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:03,778 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:04,364 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:04,985 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-29 23:31:05,151 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:31:10,153 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:31:15,154 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:31:20,156 DEBUG   HandlerThread:3249 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-29 23:31:22,120 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2496] upload_file exception https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/102467903/588715602/70754e2eaefc6c2b1d219db76a7f232b?Expires=1696087742&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=pH1CfcMuVAiEz%2FlpgymBGlRlFY3oqexFu3CTPTDU89Eliqj76bHbs89qz8m0iSdRpAR3QQ5IYPVsgYsc1GtutZifQNscbkxyasHVeb0i7GuXRKFywDEVtV5bcZOwH%2BWn0eZ%2FCDEb%2Faz9myPuU4WKL7l%2B3V6CTRimlgKFVdchTrw1g%2BFiAxGymjdkbKL%2FtIp5%2FyaNAO2qxNtsNeB4k8zoYRtWDShQCXEys8fBRmwjuFNyyWKwEa2tDaEpmu%2F46O4G8tqr7yxUMbLUqCjtuN%2BERcWPJuJ5GBtkNEVeN2YQyvsjeGBNbdOR4ESS0Uc20q41jSco9g%2ByMb7sCvJlRZYtFA%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2023-09-29 23:31:22,120 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2498] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-MD5': 'cHVOLq78bCsdIZ23an8jKw==', 'Content-Type': 'application/json', 'Content-Length': '20867'}
+2023-09-29 23:31:22,120 ERROR   wandb-upload_2:3249 [internal_api.py:upload_file():2500] upload_file response body: 

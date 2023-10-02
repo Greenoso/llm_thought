@@ -1,0 +1,87 @@
+2023-10-02 02:53:48,432 INFO    StreamThr :36587 [internal.py:wandb_internal():86] W&B internal server running at pid: 36587, started at: 2023-10-02 02:53:48.431747
+2023-10-02 02:53:48,433 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status
+2023-10-02 02:53:48,437 INFO    WriterThread:36587 [datastore.py:open_for_write():85] open: /root/autodl-tmp/msc_ml/llm_thought/Train/flan_t5/wandb/offline-run-20231002_025348-0dur0rc7/run-0dur0rc7.wandb
+2023-10-02 02:53:48,804 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: run_start
+2023-10-02 02:53:48,814 DEBUG   HandlerThread:36587 [system_info.py:__init__():31] System info init
+2023-10-02 02:53:48,814 DEBUG   HandlerThread:36587 [system_info.py:__init__():46] System info init done
+2023-10-02 02:53:48,814 INFO    HandlerThread:36587 [system_monitor.py:start():181] Starting system monitor
+2023-10-02 02:53:48,814 INFO    SystemMonitor:36587 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-10-02 02:53:48,815 INFO    HandlerThread:36587 [system_monitor.py:probe():201] Collecting system info
+2023-10-02 02:53:48,815 INFO    SystemMonitor:36587 [interfaces.py:start():190] Started cpu monitoring
+2023-10-02 02:53:48,816 INFO    SystemMonitor:36587 [interfaces.py:start():190] Started disk monitoring
+2023-10-02 02:53:48,817 INFO    SystemMonitor:36587 [interfaces.py:start():190] Started gpu monitoring
+2023-10-02 02:53:48,818 INFO    SystemMonitor:36587 [interfaces.py:start():190] Started memory monitoring
+2023-10-02 02:53:48,818 INFO    SystemMonitor:36587 [interfaces.py:start():190] Started network monitoring
+2023-10-02 02:53:48,845 DEBUG   HandlerThread:36587 [system_info.py:probe():195] Probing system
+2023-10-02 02:53:48,852 DEBUG   HandlerThread:36587 [system_info.py:_probe_git():180] Probing git
+2023-10-02 02:53:48,863 DEBUG   HandlerThread:36587 [system_info.py:_probe_git():188] Probing git done
+2023-10-02 02:53:48,863 DEBUG   HandlerThread:36587 [system_info.py:probe():240] Probing system done
+2023-10-02 02:53:48,863 DEBUG   HandlerThread:36587 [system_monitor.py:probe():210] {'os': 'Linux-5.4.0-99-generic-x86_64-with-glibc2.17', 'python': '3.8.10', 'heartbeatAt': '2023-10-01T18:53:48.845157', 'startedAt': '2023-10-01T18:53:48.426659', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/root/autodl-tmp/msc_ml/llm_thought/Train/flan_t5/flan_t5_train.py', 'codePath': 'Train/flan_t5/flan_t5_train.py', 'git': {'remote': 'https://github.com/Greenoso/llm_thought.git', 'commit': '8429b2fe47004e9d98c4486c6e156e867b3ab5c7'}, 'email': 'jiacheng.liu.19.ucl@gmail.com', 'root': '/root/autodl-tmp/msc_ml/llm_thought', 'host': 'autodl-container-55da118bfa-7e0e117f', 'username': 'root', 'executable': '/root/miniconda3/bin/python', 'cpu_count': 40, 'cpu_count_logical': 80, 'cpu_freq': {'current': 2999.864000000001, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}, {'current': 2999.864, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 30.0, 'used': 13.236854553222656}, 'gpu': 'Tesla V100S-PCIE-32GB', 'gpu_count': 4, 'gpu_devices': [{'name': 'Tesla V100S-PCIE-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100S-PCIE-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100S-PCIE-32GB', 'memory_total': 34359738368}, {'name': 'Tesla V100S-PCIE-32GB', 'memory_total': 34359738368}], 'memory': {'total': 629.8885612487793}}
+2023-10-02 02:53:48,864 INFO    HandlerThread:36587 [system_monitor.py:probe():211] Finished collecting system info
+2023-10-02 02:53:48,864 INFO    HandlerThread:36587 [system_monitor.py:probe():214] Publishing system info
+2023-10-02 02:53:48,864 DEBUG   HandlerThread:36587 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-10-02 02:53:48,864 DEBUG   HandlerThread:36587 [system_info.py:_save_pip():67] Saving pip packages done
+2023-10-02 02:53:48,864 DEBUG   HandlerThread:36587 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-10-02 02:53:52,122 DEBUG   HandlerThread:36587 [system_info.py:_save_conda():86] Saving conda packages done
+2023-10-02 02:53:52,123 INFO    HandlerThread:36587 [system_monitor.py:probe():216] Finished publishing system info
+2023-10-02 02:53:53,436 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:53:53,437 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:53:58,438 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:53:58,438 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:03,439 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:03,440 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:08,441 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:08,441 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:13,443 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:13,443 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:18,444 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:18,445 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:23,446 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:23,446 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:28,447 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:28,448 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:33,449 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:33,449 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:38,451 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:38,451 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:43,452 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:43,453 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:48,454 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:48,454 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:48,818 DEBUG   SystemMonitor:36587 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-10-02 02:54:53,456 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:53,456 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:54:58,457 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:54:58,458 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:55:03,459 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:55:03,459 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:55:08,461 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:55:08,462 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:55:09,553 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-02 02:55:13,463 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:55:13,463 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:55:18,465 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:55:18,465 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:55:23,466 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:55:23,467 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:55:28,468 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:55:28,468 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:55:33,470 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:55:33,470 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:55:38,471 DEBUG   HandlerThread:36587 [handler.py:handle_request():144] handle_request: status_report
+2023-10-02 02:55:38,472 DEBUG   SenderThread:36587 [sender.py:send_request():406] send_request: status_report
+2023-10-02 02:55:40,842 INFO    memory    :36587 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2023-10-02 02:55:40,843 DEBUG   SystemMonitor:36587 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-10-02 02:55:40,843 DEBUG   SystemMonitor:36587 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-10-02 02:55:41,555 WARNING StreamThr :36587 [internal.py:is_dead():414] Internal process exiting, parent pid 35854 disappeared
+2023-10-02 02:55:41,555 ERROR   StreamThr :36587 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-10-02 02:55:41,830 INFO    MainThread:36587 [internal.py:handle_exit():76] Internal process exited
+2023-10-02 02:55:41,844 INFO    HandlerThread:36587 [handler.py:finish():857] shutting down handler
+2023-10-02 02:55:41,844 INFO    HandlerThread:36587 [system_monitor.py:finish():190] Stopping system monitor
+2023-10-02 02:55:41,844 INFO    HandlerThread:36587 [interfaces.py:finish():202] Joined cpu monitor
+2023-10-02 02:55:41,845 INFO    HandlerThread:36587 [interfaces.py:finish():202] Joined disk monitor
+2023-10-02 02:55:41,845 INFO    HandlerThread:36587 [interfaces.py:finish():202] Joined gpu monitor
+2023-10-02 02:55:41,845 INFO    HandlerThread:36587 [interfaces.py:finish():202] Joined memory monitor
+2023-10-02 02:55:41,845 INFO    HandlerThread:36587 [interfaces.py:finish():202] Joined network monitor
+2023-10-02 02:55:41,849 INFO    WriterThread:36587 [datastore.py:close():294] close: /root/autodl-tmp/msc_ml/llm_thought/Train/flan_t5/wandb/offline-run-20231002_025348-0dur0rc7/run-0dur0rc7.wandb
+2023-10-02 02:55:42,473 INFO    SenderThread:36587 [sender.py:finish():1552] shutting down sender

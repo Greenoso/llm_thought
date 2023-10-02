@@ -1,0 +1,154 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.10
+    cli_version: 0.15.8
+    framework: huggingface
+    huggingface_version: 4.32.0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1695518206.658916
+    t:
+      1:
+      - 1
+      - 11
+      - 30
+      - 49
+      - 51
+      - 55
+      - 71
+      - 85
+      - 98
+      - 105
+      2:
+      - 1
+      - 11
+      - 30
+      - 49
+      - 51
+      - 55
+      - 71
+      - 85
+      - 98
+      - 105
+      3:
+      - 13
+      - 15
+      - 23
+      4: 3.8.10
+      5: 0.15.8
+      6: 4.32.0
+      8:
+      - 5
+method:
+  desc: null
+  value:
+    name: PPOConfig
+    ppo_epochs: 4
+    num_rollouts: 128
+    chunk_size: 16
+    init_kl_coef: 0.05
+    target: 6
+    horizon: 10000
+    gamma: 1
+    lam: 0.95
+    cliprange: 0.2
+    cliprange_value: 0.2
+    vf_coef: 1
+    scale_reward: null
+    ref_mean: null
+    ref_std: null
+    cliprange_reward: 10
+    gen_kwargs:
+      max_new_tokens: 256
+    gen_experience_kwargs:
+      max_new_tokens: 256
+      do_sample: true
+      temperature: 1.0
+      top_k: 50
+      top_p: 0.95
+model:
+  desc: null
+  value:
+    model_path: /root/autodl-tmp/flan-t5-large
+    model_arch_type: seq2seq
+    num_layers_unfrozen: -1
+    peft_config:
+      peft_type: LORA
+      auto_mapping: null
+      base_model_name_or_path: /root/autodl-tmp/flan-t5-large
+      revision: null
+      task_type: SEQ_2_SEQ_LM
+      inference_mode: false
+      r: 64
+      target_modules:
+      - q
+      - v
+      lora_alpha: 16
+      lora_dropout: 0.1
+      fan_in_fan_out: false
+      bias: none
+      modules_to_save: null
+      init_lora_weights: true
+      layers_to_transform: null
+      layers_pattern: null
+optimizer:
+  desc: null
+  value:
+    name: adamw
+    kwargs:
+      lr: 5.0e-05
+      betas:
+      - 0.9
+      - 0.999
+      eps: 1.0e-08
+      weight_decay: 1.0e-06
+scheduler:
+  desc: null
+  value:
+    name: cosine_annealing
+    kwargs:
+      T_max: 10000
+      eta_min: 1.0e-06
+tokenizer:
+  desc: null
+  value:
+    tokenizer_path: /root/autodl-tmp/flan-t5-large
+    padding_side: left
+    truncation_side: right
+train:
+  desc: null
+  value:
+    total_steps: 100000
+    seq_length: 512
+    epochs: 100
+    batch_size: 8
+    checkpoint_interval: 500
+    eval_interval: 200
+    pipeline: PromptPipeline
+    trainer: AcceleratePPOTrainer
+    trainer_kwargs: {}
+    project_name: trlx
+    entity_name: null
+    group_name: null
+    checkpoint_dir: /root/autodl-tmp/msc_ml/t5_large_checkpoints/navigate
+    rollout_logging_dir: null
+    save_best: true
+    save_optimizer: true
+    tracker: wandb
+    logging_dir: null
+    tags: []
+    seed: 1000
+    minibatch_size: null
+distributed:
+  desc: null
+  value:
+    mixed_precision: 'no'
+    num_gpus: 4
+    gradient_accumulation_steps: 4
+    gradient_clipping: 1.0
+    zero_stage: 2
+    offload_optimizer_device: none
+    offload_param_device: none

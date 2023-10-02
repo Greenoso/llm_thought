@@ -248,7 +248,7 @@ Thoughts:
 * Step 1: Identify the given information: Lewis earns $403 per week during the 233 weeks of harvest, and he has to pay $49 rent every week.
 * Step 2: Calculate the total amount of money Lewis earns during harvest season: 233 weeks x $403 per week = $93,530.
 * Step 3: Subtract the amount of rent Lewis has to pay each week: $93,530 - $49 per week = $89,530.
-Answer: $89,530.","89,530.",93899.0
+Answer: $89,530.",89530.,93899.0
 11,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
@@ -582,7 +582,7 @@ Thoughts:
 * He has to pay $702 in taxes, which is a percentage of his total earnings. Let's assume the tax rate is 15%.
 * To find out how much money Lewis will have at the end of the harvest season, we need to subtract the tax amount from his total earnings. So, $4,466 - $702 = $3,764.
 * Therefore, Lewis will have $3,764 at the end of the harvest season.
-Answer: $3,764","3,764",3834.0
+Answer: $3,764",3764,3834.0
 25,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
@@ -647,7 +647,7 @@ Thoughts:
 	+ Total number of sacks = 66 x 87 = 5,632 sacks
 	+ Total number of oranges = 5,632 x 25 = 1,357,500 oranges
 * Finally, let's give the answer as a number:
-Answer: 1,357,500 oranges.","1,357,500",143550.0
+Answer: 1,357,500 oranges.",1357500,143550.0
 28,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
@@ -872,7 +872,7 @@ Now, let's find the difference in price between a t-shirt and a jersey by subtra
 $29,044 dollars - $656 dollars = $28,388 dollars
 So, the difference in price between a t-shirt and a jersey is $28,388 dollars.
 Answer:
-$28,388 dollars","28,388",158.0
+$28,388 dollars",28388,158.0
 37,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
@@ -893,7 +893,7 @@ Thoughts:
 * He has to pay $388 rent every week.
 * To find out how much money he pays as rent during the harvest season, we need to multiply the number of weeks of harvest by the amount of rent he pays per week.
 * So, the answer is $52,770 (1359 x $388).
-Answer: $52,770","52,770",527292.0
+Answer: $52,770",52770,527292.0
 38,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
@@ -1032,7 +1032,7 @@ Thoughts:
 * So, if 221 pickers fill 221 drums of grapes per day, then 221 x 77 = 16,577 drums of grapes will be filled in 77 days.
 Answer: 16,577
 
-I hope this helps! Let me know if you have any questions or need further clarification.","16,577",17017.0
+I hope this helps! Let me know if you have any questions or need further clarification.",16577,17017.0
 44,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
@@ -1705,7 +1705,7 @@ Thoughts:
 2. To find the total number of visitors, we can multiply the number of paintings by the number of visitors. So, the total number of visitors to the palace on that day is 39 x 661 = 25,599.
 3. Now, we are asked how many more visitors visited the palace on that day than on the previous day. We know that there were 600 visitors to the palace the previous day, so we can find the difference by subtracting the previous day's visitors from the current day's visitors.
 4. The difference between the number of visitors on the current day and the previous day is 25,599 - 600 = 24,999 visitors.
-Answer: 24,999","24,999",61.0
+Answer: 24,999",24999,61.0
 74,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
@@ -3099,7 +3099,7 @@ Thoughts:
 	+ Each grade has 75 students.
 * Now, let's think about how many students there are in total:
 	+ If there are 304 grades, and each grade has 75 students, then the total number of students is 304 x 75 = 22,550 students.
-Answer: 22,550","22,550",22800.0
+Answer: 22,550",22550,22800.0
 134,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
@@ -4627,7 +4627,7 @@ Step 5: Find out how much money the Razorback t-shirt shop made from selling 47 
 = 47 t-shirts x $87 per t-shirt
 = $4,099
 
-Answer: $9,361","9,361",8265.0
+Answer: $9,361",9361,8265.0
 201,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
@@ -6914,7 +6914,7 @@ Thoughts:
 	+ Total days = 22 days
 	+ Total amount of money made = $144 per day x 22 days = $3,112
 * So, the ring toss game made $3,112 during the 22 days it was at the carnival.
-Answer: $3,112","3,112",3168.0
+Answer: $3,112",3112,3168.0
 297,"[INST] «SYS»
 
 Given an arithmetic question, generate thoughts about the question step by step and then only give the answer as a number. Please follow the format below:
